@@ -1,0 +1,774 @@
+syntax = "proto2";
+
+message Root {
+    optional MsgCmdType msgtype1 = 1;
+    optional MsgDevice sender2 = 2;
+    optional MsgDevice receiver3 = 3;
+    optional MsgAttr msgattr4 = 4;
+    optional int32 seqs5 = 5;
+    optional int32 version6 = 6;
+    optional int32 subtype7 = 7;
+    optional CommEsp subMsg8 = 8;
+    optional MctlSys subMsg10 = 10;
+    optional MctlNav subMsg11 = 11;
+    optional MctlDriver subMsg12 = 12;
+    optional MsgNull subMsg14 = 14;
+    optional uint64 timestamp15 = 15;
+}
+
+enum MsgCmdType {
+    MsgCmdType_START = 0;
+    MsgCmdType_NAV = 240;
+    MsgCmdType_LOCALIZATION = 241;
+    MsgCmdType_PLANNING = 242;
+    MsgCmdType_EMBED_DRIVER = 243;
+    MsgCmdType_EMBED_SYS = 244;
+    MsgCmdType_EMBED_MIDWARE = 245;
+    MsgCmdType_EMBED_OTA = 246;
+    MsgCmdType_APPLICATION = 247;
+    MsgCmdType_ESP = 248;
+    MsgCmdType_UNRECOGNIZED = -1;
+}
+
+enum MsgAttr {
+    MsgAttr_NONE = 0;
+    MsgAttr_REQ = 1;
+    MsgAttr_RESP = 2;
+    MsgAttr_REPORT = 3;
+    MsgAttr_UNRECOGNIZED = -1;
+}
+
+enum MsgDevice {
+    MsgDevice_COMM_ESP = 0;
+    MsgDevice_MAINCTL = 1;
+    MsgDevice_LEFTMOTOR = 2;
+    MsgDevice_RIGHTMOTOR = 3;
+    MsgDevice_BASESTATION = 4;
+    MsgDevice_RTKCLI = 5;
+    MsgDevice_USBHOST = 6;
+    MsgDevice_MOBILEAPP = 7;
+    MsgDevice_IOTSERVER = 8;
+    MsgDevice_BMS = 9;
+    MsgDevice_UNRECOGNIZED = -1;
+}
+
+message CommEsp {
+    optional int32 subtype1 = 1;
+    optional EspSubTypeCase subtype2 = 2;
+    optional DrvWifiUpload espSubType3 = 3;
+    optional DrvWifiList espSubType4 = 4;
+    optional DrvWifiSet espSubType5 = 5;
+    optional DrvWifiMsg espSubType6 = 6;
+    optional DrvWifiConf espSubType7 = 7;
+    optional DrvListUpload espSubType8 = 8;
+    optional DrvUploadFileReq espSubType9 = 9;
+    optional DrvUploadFileCancel espSubType10 = 10;
+    optional DrvDevInfoReq espSubType11 = 11;
+    optional DrvDevInfoResp espSubType12 = 12;
+    optional DrvUpgradeReport espSubType13 = 13;
+    optional WifiIotStatusReport espSubType14 = 14;
+    optional DrvUploadFileToAppReq espSubType15 = 15;
+    optional DrvUploadFileToAppRsp espSubType16 = 16;
+    optional GetNetworkInfoReq espSubType17 = 17;
+    optional GetNetworkInfoRsp espSubType18 = 18;
+}
+
+enum EspSubTypeCase {
+    EspSubTypeCase_TODEV_BLE_SYNC = 1;
+    EspSubTypeCase_TODEV_CONFTYPE = 2;
+    EspSubTypeCase_TODEV_WIFIMSGUPLOAD = 3;
+    EspSubTypeCase_TODEV_WIFILISTUPLOAD = 4;
+    EspSubTypeCase_TODEV_WIFI_CONFIGURATION = 5;
+    EspSubTypeCase_TOAPP_WIFIMSG = 6;
+    EspSubTypeCase_TOAPP_WIFICONF = 7;
+    EspSubTypeCase_TOAPP_LISTUPLOAD = 8;
+    EspSubTypeCase_TODEV_REQ_LOG_INFO = 9;
+    EspSubTypeCase_TODEV_LOG_DATA_CANCEL = 10;
+    EspSubTypeCase_TODEV_DEVINFO_REQ = 11;
+    EspSubTypeCase_TOAPP_DEVINFO_RESP = 12;
+    EspSubTypeCase_TOAPP_UPGRADE_REPORT = 13;
+    EspSubTypeCase_TOAPP_WIFI_IOT_STATUS = 14;
+    EspSubTypeCase_TODEV_UPLOADFILE_REQ = 15;
+    EspSubTypeCase_TOAPP_UPLOADFILE_RSP = 16;
+    EspSubTypeCase_TODEV_NETWORKINFO_REQ = 17;
+    EspSubTypeCase_TOAPP_NETWORKINFO_RSP = 18;
+    EspSubTypeCase_ESPSUBTYPE_NOT_SET = 0;
+}
+
+message DrvWifiUpload {
+    optional int32 wifiMsgUpload1 = 1;
+}
+
+message DrvWifiList {
+    optional int32 nVSWifiUpload1 = 1;
+}
+
+message DrvWifiSet {
+    optional int32 configParam1 = 1;
+    optional string confssid2 = 2;
+}
+
+message DrvWifiMsg {
+    optional bool status11 = 1;
+    optional bool status2 = 2;
+    optional string IP3 = 3;
+    optional string msgssid4 = 4;
+    optional string password5 = 5;
+    optional int32 rssi6 = 6;
+    optional string productKey7 = 7;
+    optional string deviceName8 = 8;
+}
+
+message DrvWifiConf {
+    optional bool succFlag1 = 1;
+    optional int32 code2 = 2;
+    optional string confssid3 = 3;
+}
+
+message DrvListUpload {
+    optional int32 sum1 = 1;
+    optional int32 current2 = 2;
+    optional int32 status3 = 3;
+    optional string memssid4 = 4;
+    optional int32 rssi5 = 5;
+}
+
+message DrvUploadFileReq {
+    optional string bizId1 = 1;
+    optional string url2 = 2;
+    optional string userId3 = 3;
+    optional int32 num4 = 4;
+    optional int32 type5 = 5;
+}
+
+message DrvUploadFileCancel {
+    optional int32 bizId1 = 1;
+}
+
+message DrvDevInfoReq {
+    repeated int32 reqIds1 = 1;
+}
+
+message DrvDevInfoResp {
+    repeated int32 respIds1 = 1;
+}
+
+message DrvUpgradeReport {
+    optional string devname1 = 1;
+    optional string otaid2 = 2;
+    optional string version3 = 3;
+    optional int32 progress4 = 4;
+    optional int32 result5 = 5;
+    optional string message6 = 6;
+    optional string properties7 = 7;
+}
+
+message WifiIotStatusReport {
+    optional bool wifiConnected1 = 1;
+    optional bool iotConnected2 = 2;
+    optional string productKey3 = 3;
+    optional string deviceName4 = 4;
+}
+
+message DrvUploadFileToAppReq {
+    optional string bizId1 = 1;
+    optional int32 operation2 = 2;
+    optional fixed32 serverIp3 = 3;
+    optional int32 serverPort4 = 4;
+    optional int32 num5 = 5;
+    optional int32 type6 = 6;
+}
+
+message DrvUploadFileToAppRsp {
+    optional string bizId1 = 1;
+    optional int32 operation2 = 2;
+    optional int32 result3 = 3;
+}
+
+message GetNetworkInfoReq {
+    optional int32 reqIds1 = 1;
+}
+
+message GetNetworkInfoRsp {
+    optional int32 reqIds1 = 1;
+    optional string wifiSsid2 = 2;
+    optional string wifiMac3 = 3;
+    optional int32 wifiRssi4 = 4;
+    optional fixed32 ip5 = 5;
+    optional fixed32 mask6 = 6;
+    optional fixed32 gateway7 = 7;
+}
+
+message MctlSys {
+    optional SysBatUp subSysMsg1 = 1;
+    optional SysWorkState subSysMsg2 = 2;
+    optional SysSetTimeZone subSysMsg3 = 3;
+    optional SysSetDateTime subSysMsg4 = 4;
+    optional SysJobPlan subSysMsg6 = 6;
+    optional SysDevErrCode subSysMsg7 = 7;
+    optional SysJobPlanTime subSysMsg10 = 10;
+    optional SysMowInfo subSysMsg11 = 11;
+    optional SysCommCmd subSysMsg12 = 12;
+    optional int64 subSysMsg14 = 14;
+    optional SysBorder subSysMsg15 = 15;
+    optional SysPlanJobStatus subSysMsg18 = 18;
+    optional SysUploadFileProgress subSysMsg19 = 19;
+    optional SysDelJobPlan subSysMsg20 = 20;
+    optional int32 subSysMsg21 = 21;
+    optional SysKnifeControl subSysMsg22 = 22;
+    optional int32 subSysMsg23 = 23;
+    optional SysResetSystemStatus subSysMsg24 = 24;
+    optional systemRapidStateTunnel_msg subSysMsg25 = 25;
+    optional systemTardStateTunnel_msg subSysMsg26 = 26;
+    optional systemUpdateBuf_msg subSysMsg27 = 27;
+    optional TimeCtrlLight subSysMsg28 = 28;
+    optional systemTmpCycleTx_msg subSysMsg29 = 29;
+    optional SysOffChipFlash subSysMsg30 = 30;
+    optional int32 subSysMsg31 = 31;
+    optional device_fw_info subSysMsg32 = 32;
+    optional LoraCfgReq subSysMsg33 = 33;
+    optional LoraCfgRsp subSysMsg34 = 34;
+    optional mow_to_app_info_t subSysMsg35 = 35;
+}
+
+message SysBatUp {
+    optional int32 batVal1 = 1;
+}
+
+message SysWorkState {
+    optional int32 deviceState1 = 1;
+    optional int32 chargeState2 = 2;
+    optional int64 cmHash3 = 3;
+    optional int64 pathHash4 = 4;
+}
+
+message SysSetTimeZone {
+    optional int32 timeStamp1 = 1;
+    optional int32 timeArea2 = 2;
+}
+
+message SysSetDateTime {
+    optional int32 year1 = 1;
+    optional int32 month2 = 2;
+    optional int32 date3 = 3;
+    optional int32 week4 = 4;
+    optional int32 hours5 = 5;
+    optional int32 minutes6 = 6;
+    optional int32 seconds7 = 7;
+    optional int32 timeZone8 = 8;
+    optional int32 daylight9 = 9;
+}
+
+message SysJobPlan {
+    optional int64 jobId1 = 1;
+    optional int32 jobMode2 = 2;
+    optional int32 rainTactics3 = 3;
+    optional int32 knifeHeight4 = 4;
+}
+
+message SysDevErrCode {
+    optional int32 errorCode1 = 1;
+}
+
+message SysJobPlanTime {
+    optional int64 planId1 = 1;
+    optional int32 startJobTime2 = 2;
+    optional int32 endJobTime3 = 3;
+    optional int32 timeInDay4 = 4;
+    optional int32 jobPlanMode5 = 5;
+    optional int32 jobPlanEnable6 = 6;
+    optional int32 everyDay9 = 9;
+    optional SysJobPlan jobPlan10 = 10;
+}
+
+message SysMowInfo {
+    optional int32 deviceState1 = 1;
+    optional int32 batVal2 = 2;
+    optional int32 knifeHeight3 = 3;
+    optional int32 RTKstatus4 = 4;
+    optional int32 RTKstars5 = 5;
+}
+
+message SysCommCmd {
+    optional int32 rw1 = 1;
+    optional int32 id2 = 2;
+    optional int32 context3 = 3;
+}
+
+message SysBorder {
+    optional int32 borderVal1 = 1;
+}
+
+message SysPlanJobStatus {
+    optional int32 planjobStatus1 = 1;
+}
+
+message SysUploadFileProgress {
+    optional string bizId1 = 1;
+    optional int32 result2 = 2;
+    optional int32 progress3 = 3;
+}
+
+message SysDelJobPlan {
+    optional string deviceId1 = 1;
+    optional string planId2 = 2;
+}
+
+message SysKnifeControl {
+    optional int32 knifeStatus1 = 1;
+    optional int32 knifeHeight2 = 2;
+}
+
+message SysResetSystemStatus {
+    optional int32 resetStatus1 = 1;
+}
+
+message systemRapidStateTunnel_msg {
+}
+
+message systemTardStateTunnel_msg {
+}
+
+message systemUpdateBuf_msg {
+}
+
+message TimeCtrlLight {
+    optional int32 operate1 = 1;
+    optional int32 enable2 = 2;
+    optional int32 startHour3 = 3;
+    optional int32 startMin4 = 4;
+    optional int32 endHour5 = 5;
+    optional int32 endMin6 = 6;
+    optional int32 action7 = 7;
+}
+
+message systemTmpCycleTx_msg {
+}
+
+message SysOffChipFlash {
+    optional Operation op1 = 1;
+    optional OffPartId id2 = 2;
+    optional uint32 startAddr3 = 3;
+    optional uint32 offset4 = 4;
+    optional int32 length5 = 5;
+    optional bytes data6 = 6;
+    optional int32 code7 = 7;
+    optional string msg8 = 8;
+}
+
+enum Operation {
+    Operation_WRITE = 0;
+    Operation_READ = 1;
+    Operation_ERASE = 2;
+    Operation_UNRECOGNIZED = -1;
+}
+
+enum OffPartId {
+    OffPartId_OFF_PART_DL_IMG = 0;
+    OffPartId_OFF_PART_UPDINFO_BACK = 1;
+    OffPartId_OFF_PART_UPDINFO = 2;
+    OffPartId_OFF_PART_NAKEDB = 3;
+    OffPartId_OFF_PART_FLASHDB = 4;
+    OffPartId_OFF_PART_UPD_APP_IMG = 5;
+    OffPartId_OFF_PART_UPD_BMS_IMG = 6;
+    OffPartId_OFF_PART_UPD_TMP_IMG = 7;
+    OffPartId_OFF_PART_DEV_INFO = 8;
+    OffPartId_OFF_PART_NAKEDB_BACK = 9;
+    OffPartId_OFF_PART_MAX = 10;
+    OffPartId_UNRECOGNIZED = -1;
+}
+
+message device_fw_info {
+    optional int32 result1 = 1;
+    optional string version2 = 2;
+    repeated string mod3 = 3;
+}
+
+message LoraCfgReq {
+    optional int32 op1 = 1;
+    optional string cfg2 = 2;
+}
+
+message LoraCfgRsp {
+    optional int32 result1 = 1;
+    optional int32 op2 = 2;
+    optional string cfg3 = 3;
+    optional string facCfg4 = 4;
+}
+
+message mow_to_app_info_t {
+    optional int32 type1 = 1;
+    optional int32 cmd2 = 2;
+}
+
+message MctlNav {
+    optional NavLatLonUp subNavMsg1 = 1;
+    optional NavPosUp subNavMsg2 = 2;
+    optional NavCHlLineData subNavMsg3 = 3;
+    optional NavTaskInfo subNavMsg4 = 4;
+    optional NavOptLineUp subNavMsg5 = 5;
+    optional NavOptiBorderInfo subNavMsg6 = 6;
+    optional NavOptObsInfo subNavMsg7 = 7;
+    optional NavResFrame subNavMsg8 = 8;
+    optional NavResFrame subNavMsg9 = 9;
+    optional NavResFrame subNavMsg10 = 10;
+    optional NavResFrame subNavMsg11 = 11;
+    optional chargePileType subNavMsg12 = 12;
+    optional int32 subNavMsg13 = 13;
+    optional int32 subNavMsg14 = 14;
+    optional int32 subNavMsg15 = 15;
+    optional int32 subNavMsg16 = 16;
+    optional int32 subNavMsg17 = 17;
+    optional int32 subNavMsg18 = 18;
+    optional int32 subNavMsg19 = 19;
+    optional int32 subNavMsg20 = 20;
+    optional int32 subNavMsg21 = 21;
+    optional int32 subNavMsg22 = 22;
+    optional int32 subNavMsg23 = 23;
+    optional int32 subNavMsg24 = 24;
+    optional int32 subNavMsg25 = 25;
+    optional int32 subNavMsg26 = 26;
+    optional NavStartJob subNavMsg27 = 27;
+    optional NavBorderState subNavMsg28 = 28;
+    optional int32 subNavMsg29 = 29;
+    optional NavGetHashList subNavMsg30 = 30;
+    optional NavGetHashListAck subNavMsg31 = 31;
+    optional NavGetCommData subNavMsg32 = 32;
+    optional NavGetCommDataAck subNavMsg33 = 33;
+    optional NavReqCoverPath subNavMsg34 = 34;
+    optional NavUploadZigZagResult subNavMsg35 = 35;
+    optional NavUploadZigZagResultAck subNavMsg36 = 36;
+    optional NavTaskCtrl subNavMsg37 = 37;
+    optional NavTaskIdRw subNavMsg38 = 38;
+    optional NavTaskBreakPoint subNavMsg39 = 39;
+    optional NavPlanJobSet subNavMsg40 = 40;
+    optional NavUnableTimeSet subNavMsg41 = 41;
+    optional SimulationCmdData subNavMsg42 = 42;
+    optional WorkReportUpdateCmd subNavMsg43 = 43;
+    optional WorkReportUpdateAck subNavMsg44 = 44;
+    optional WorkReportCmdData subNavMsg45 = 45;
+    optional WorkReportInfoAck subNavMsg46 = 46;
+}
+
+message NavLatLonUp {
+    optional double lat1 = 1;
+    optional double lon2 = 2;
+}
+
+message NavPosUp {
+    optional float x1 = 1;
+    optional float y2 = 2;
+    optional int32 status3 = 3;
+    optional int32 toward4 = 4;
+    optional int32 stars5 = 5;
+    optional float age6 = 6;
+    optional float latStddev7 = 7;
+    optional float lonStddev8 = 8;
+    optional int32 l2DfStars9 = 9;
+    optional int32 posType10 = 10;
+    optional int64 cHashId11 = 11;
+    optional int32 posLevel12 = 12;
+}
+
+message NavCHlLineData {
+    optional int32 startJobRI1 = 1;
+    optional int32 endJobRI2 = 2;
+    optional int32 currentFrame3 = 3;
+    optional int32 channelLineLen4 = 4;
+}
+
+message NavTaskInfo {
+    optional int32 area1 = 1;
+    optional int32 time2 = 2;
+    optional int32 allFrame3 = 3;
+    optional int32 currentFrame4 = 4;
+    optional int32 pathlen5 = 5;
+    repeated CommDataCouple dc6 = 6;
+}
+
+message CommDataCouple {
+    optional float x1 = 1;
+    optional float y2 = 2;
+}
+
+message NavOptLineUp {
+    optional int32 startJobRI1 = 1;
+    optional int32 endJobRI2 = 2;
+    optional int32 allFrame3 = 3;
+    optional int32 currentFrame4 = 4;
+    optional int32 channelDataLen5 = 5;
+    repeated CommDataCouple dc6 = 6;
+}
+
+message NavOptiBorderInfo {
+    optional int32 jobId1 = 1;
+    optional int32 allFrame2 = 2;
+    optional int32 currentFrame3 = 3;
+    optional int32 borderDataLen4 = 4;
+    repeated CommDataCouple dc5 = 5;
+}
+
+message NavOptObsInfo {
+    optional int32 obstacleId1 = 1;
+    optional int32 allFrame2 = 2;
+    optional int32 currentFrame3 = 3;
+    optional int32 obstacleDataLen4 = 4;
+    repeated CommDataCouple dc5 = 5;
+}
+
+message NavResFrame {
+    optional int32 frameId1 = 1;
+}
+
+message chargePileType {
+    optional int32 toward1 = 1;
+    optional float x2 = 2;
+    optional float y3 = 3;
+}
+
+message NavStartJob {
+    optional int64 jobId1 = 1;
+    optional int32 jobVer2 = 2;
+    optional int32 jobMode3 = 3;
+    optional int32 rainTactics4 = 4;
+    optional int32 kinfeHeight5 = 5;
+    optional float speed6 = 6;
+    optional int32 channelWidth7 = 7;
+    optional int32 ultraWave8 = 8;
+    optional int32 channelMode9 = 9;
+}
+
+message NavBorderState {
+    optional int32 bdstate1 = 1;
+}
+
+message NavGetHashList {
+    optional int32 pver1 = 1;
+    optional int32 subCmd2 = 2;
+    optional int32 totalFrame3 = 3;
+    optional int32 currentFrame4 = 4;
+    optional fixed64 dataHash5 = 5;
+    optional string reserved6 = 6;
+}
+
+message NavGetHashListAck {
+    optional int32 pver1 = 1;
+    optional int32 subCmd2 = 2;
+    optional int32 totalFrame3 = 3;
+    optional int32 currentFrame4 = 4;
+    optional fixed64 dataHash5 = 5;
+    optional int32 hashLen6 = 6;
+    optional string reserved7 = 7;
+}
+
+message NavGetCommData {
+    optional int32 pver1 = 1;
+    optional int32 subCmd2 = 2;
+    optional int32 action3 = 3;
+    optional int32 type4 = 4;
+    optional int64 hash5 = 5;
+    optional int64 paternalHashA6 = 6;
+    optional int64 paternalHashB7 = 7;
+    optional int32 totalFrame8 = 8;
+    optional int32 currentFrame9 = 9;
+    optional fixed64 dataHash10 = 10;
+    optional string reserved11 = 11;
+}
+
+message NavGetCommDataAck {
+    optional int32 pver1 = 1;
+    optional int32 subCmd2 = 2;
+    optional int32 result3 = 3;
+    optional int32 action4 = 4;
+    optional int32 type5 = 5;
+    optional fixed64 hash6 = 6;
+    optional fixed64 paternalHashA7 = 7;
+    optional fixed64 paternalHashB8 = 8;
+    optional int32 totalFrame9 = 9;
+    optional int32 currentFrame10 = 10;
+    optional fixed64 dataHash11 = 11;
+    optional int32 dataLen12 = 12;
+    repeated CommDataCouple dataCouple13 = 13;
+    optional string reserved14 = 14;
+}
+
+message NavReqCoverPath {
+    optional int32 pver1 = 1;
+    optional fixed64 jobId2 = 2;
+    optional int32 jobVer3 = 3;
+    optional int32 jobMode4 = 4;
+    optional int32 subCmd5 = 5;
+    optional int32 edgeMode6 = 6;
+    optional int32 knifeHeight7 = 7;
+    optional int32 channelWidth8 = 8;
+    optional int32 ultraWave9 = 9;
+    optional int32 channelMode10 = 10;
+    optional int32 toward11 = 11;
+    optional float speed12 = 12;
+    optional fixed64 pathHash14 = 14;
+    optional string reserved15 = 15;
+    optional int32 result16 = 16;
+}
+
+message NavUploadZigZagResult {
+    optional int32 pver1 = 1;
+    optional fixed64 jobId2 = 2;
+    optional int32 jobVer3 = 3;
+    optional int32 result4 = 4;
+    optional int32 area5 = 5;
+    optional int32 time6 = 6;
+    optional int32 totalZoneNum7 = 7;
+    optional int32 currentZonePathNum8 = 8;
+    optional int32 currentZonePathId9 = 9;
+    optional int32 currentZone10 = 10;
+    optional fixed64 currentHash11 = 11;
+    optional int32 totalFrame12 = 12;
+    optional int32 currentFrame13 = 13;
+    optional int32 channelMode14 = 14;
+    optional int32 channelModeId15 = 15;
+    optional fixed64 dataHash16 = 16;
+    optional int32 dataLen17 = 17;
+    optional string reserved18 = 18;
+    repeated CommDataCouple dataCouple19 = 19;
+    optional int32 subCmd20 = 20;
+}
+
+message NavUploadZigZagResultAck {
+    optional int32 pver1 = 1;
+    optional int32 currentZone2 = 2;
+    optional fixed64 currentHash3 = 3;
+    optional int32 totalFrame4 = 4;
+    optional int32 currentFrame5 = 5;
+    optional fixed64 dataHash6 = 6;
+    optional string reserved7 = 7;
+    optional int32 subCmd8 = 8;
+}
+
+message NavTaskCtrl {
+    optional int32 type1 = 1;
+    optional int32 action2 = 2;
+    optional int32 result3 = 3;
+    optional string reserved4 = 4;
+}
+
+message NavTaskIdRw {
+    optional int32 pver1 = 1;
+    optional int32 subCmd2 = 2;
+    optional string taskName3 = 3;
+    optional string taskId4 = 4;
+    optional int32 result5 = 5;
+    optional string reserved6 = 6;
+}
+
+message NavTaskBreakPoint {
+    optional float x1 = 1;
+    optional float y2 = 2;
+    optional int32 toward3 = 3;
+    optional int32 flag4 = 4;
+    optional int32 action5 = 5;
+    optional fixed64 zoneHash6 = 6;
+}
+
+message NavPlanJobSet {
+    optional int32 pver1 = 1;
+    optional int32 subCmd2 = 2;
+    optional int32 area3 = 3;
+    optional int32 workTime4 = 4;
+    optional string version5 = 5;
+    optional string id6 = 6;
+    optional string userId7 = 7;
+    optional string deviceId8 = 8;
+    optional string planId9 = 9;
+    optional string taskId10 = 10;
+    optional string jobId11 = 11;
+    optional string startTime12 = 12;
+    optional string endTime13 = 13;
+    optional int32 week14 = 14;
+    optional int32 knifeHeight15 = 15;
+    optional int32 model16 = 16;
+    optional int32 edgeMode17 = 17;
+    optional int32 requiredTime18 = 18;
+    optional int32 routeAngle19 = 19;
+    optional int32 routeModel20 = 20;
+    optional int32 routeSpacing21 = 21;
+    optional int32 ultrasonicBarrier22 = 22;
+    optional int32 totalPlanNum23 = 23;
+    optional int32 planIndex24 = 24;
+    optional int32 result25 = 25;
+    optional float speed26 = 26;
+    optional string taskName27 = 27;
+    optional string jobName28 = 28;
+    optional string reserved30 = 30;
+}
+
+message NavUnableTimeSet {
+    optional int32 subCmd1 = 1;
+    optional string deviceId2 = 2;
+    optional string unableStartTime3 = 3;
+    optional string unableEndTime4 = 4;
+    optional int32 result5 = 5;
+    optional string reserved6 = 6;
+}
+
+message SimulationCmdData {
+    optional int32 subCmd1 = 1;
+    optional int32 paramId2 = 2;
+}
+
+message WorkReportUpdateCmd {
+    optional int32 subCmd1 = 1;
+}
+
+message WorkReportUpdateAck {
+    optional bool updateFlag1 = 1;
+    optional int32 infoNum2 = 2;
+}
+
+message WorkReportCmdData {
+    optional int32 subCmd1 = 1;
+    optional int32 getInfoNum2 = 2;
+}
+
+message WorkReportInfoAck {
+    optional bool interruptFlag1 = 1;
+    optional int64 startWorkTime2 = 2;
+    optional int64 endWorkTime3 = 3;
+    optional int32 workTimeUsed4 = 4;
+    optional double workAres5 = 5;
+    optional int32 workProgress6 = 6;
+    optional int32 heightOfKnife7 = 7;
+    optional int32 workType8 = 8;
+    optional int32 workResult9 = 9;
+    optional int32 totalAckNum10 = 10;
+    optional int32 currentAckNum11 = 11;
+}
+
+message MctlDriver {
+    optional DrvMotionCtrl subDrvMsg1 = 1;
+    optional DrvKnifeHeight subDrvMsg2 = 2;
+    optional DrvSrSpeed subDrvMsg3 = 3;
+    optional DrvKnifeHeight subDrvMsg4 = 4;
+    optional DrvKnifeStatus subDrvMsg5 = 5;
+}
+
+message DrvMotionCtrl {
+    optional int32 setLinearSpeed1 = 1;
+    optional int32 setAngularSpeed2 = 2;
+}
+
+message DrvKnifeHeight {
+    optional int32 knifeHeight1 = 1;
+}
+
+message DrvSrSpeed {
+    optional int32 rw1 = 1;
+    optional float speed2 = 2;
+}
+
+message DrvKnifeStatus {
+    optional int32 knifeStatus1 = 1;
+}
+
+message MsgNull {
+}
+

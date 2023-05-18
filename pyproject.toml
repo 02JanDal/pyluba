@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "pyluba"
+version = "0.0.1"
+description = ""
+authors = ["Jan Dalheimer <jan@dalheimer.de>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+aiohttp = "^3.8.4"
+pydantic = "^1.10.7"
+aiocoap = {version = "^0.4.7", extras = ["all"]}
+protobuf = "^4.23.1"
+aliyun-iot-linkkit = "^1.2.8"
+
+[tool.poetry.group.dev.dependencies]
+types-protobuf = "^4.23.0.1"
+mypy-protobuf = "^3.4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
