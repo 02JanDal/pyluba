@@ -212,56 +212,57 @@ global___OffPartId = OffPartId
 class Root(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    MSGTYPE1_FIELD_NUMBER: builtins.int
-    SENDER2_FIELD_NUMBER: builtins.int
-    RECEIVER3_FIELD_NUMBER: builtins.int
-    MSGATTR4_FIELD_NUMBER: builtins.int
-    SEQS5_FIELD_NUMBER: builtins.int
-    VERSION6_FIELD_NUMBER: builtins.int
-    SUBTYPE7_FIELD_NUMBER: builtins.int
-    SUBMSG8_FIELD_NUMBER: builtins.int
-    SUBMSG10_FIELD_NUMBER: builtins.int
-    SUBMSG11_FIELD_NUMBER: builtins.int
-    SUBMSG12_FIELD_NUMBER: builtins.int
-    SUBMSG14_FIELD_NUMBER: builtins.int
-    TIMESTAMP15_FIELD_NUMBER: builtins.int
-    msgtype1: global___MsgCmdType.ValueType
-    sender2: global___MsgDevice.ValueType
-    receiver3: global___MsgDevice.ValueType
-    msgattr4: global___MsgAttr.ValueType
-    seqs5: builtins.int
-    version6: builtins.int
-    subtype7: builtins.int
+    MSGTYPE_FIELD_NUMBER: builtins.int
+    SENDER_FIELD_NUMBER: builtins.int
+    RECEIVER_FIELD_NUMBER: builtins.int
+    MSGATTR_FIELD_NUMBER: builtins.int
+    SEQS_FIELD_NUMBER: builtins.int
+    VERSION_FIELD_NUMBER: builtins.int
+    SUBTYPE_FIELD_NUMBER: builtins.int
+    COMMESP_FIELD_NUMBER: builtins.int
+    SYS_FIELD_NUMBER: builtins.int
+    NAV_FIELD_NUMBER: builtins.int
+    DRIVER_FIELD_NUMBER: builtins.int
+    NULL_FIELD_NUMBER: builtins.int
+    TIMESTAMP_FIELD_NUMBER: builtins.int
+    msgtype: global___MsgCmdType.ValueType
+    sender: global___MsgDevice.ValueType
+    receiver: global___MsgDevice.ValueType
+    msgattr: global___MsgAttr.ValueType
+    seqs: builtins.int
+    version: builtins.int
+    subtype: builtins.int
     @property
-    def subMsg8(self) -> global___CommEsp: ...
+    def commEsp(self) -> global___CommEsp: ...
     @property
-    def subMsg10(self) -> global___MctlSys: ...
+    def sys(self) -> global___MctlSys: ...
     @property
-    def subMsg11(self) -> global___MctlNav: ...
+    def nav(self) -> global___MctlNav: ...
     @property
-    def subMsg12(self) -> global___MctlDriver: ...
+    def driver(self) -> global___MctlDriver: ...
     @property
-    def subMsg14(self) -> global___MsgNull: ...
-    timestamp15: builtins.int
+    def null(self) -> global___MsgNull: ...
+    timestamp: builtins.int
     def __init__(
         self,
         *,
-        msgtype1: global___MsgCmdType.ValueType | None = ...,
-        sender2: global___MsgDevice.ValueType | None = ...,
-        receiver3: global___MsgDevice.ValueType | None = ...,
-        msgattr4: global___MsgAttr.ValueType | None = ...,
-        seqs5: builtins.int | None = ...,
-        version6: builtins.int | None = ...,
-        subtype7: builtins.int | None = ...,
-        subMsg8: global___CommEsp | None = ...,
-        subMsg10: global___MctlSys | None = ...,
-        subMsg11: global___MctlNav | None = ...,
-        subMsg12: global___MctlDriver | None = ...,
-        subMsg14: global___MsgNull | None = ...,
-        timestamp15: builtins.int | None = ...,
+        msgtype: global___MsgCmdType.ValueType | None = ...,
+        sender: global___MsgDevice.ValueType | None = ...,
+        receiver: global___MsgDevice.ValueType | None = ...,
+        msgattr: global___MsgAttr.ValueType | None = ...,
+        seqs: builtins.int | None = ...,
+        version: builtins.int | None = ...,
+        subtype: builtins.int | None = ...,
+        commEsp: global___CommEsp | None = ...,
+        sys: global___MctlSys | None = ...,
+        nav: global___MctlNav | None = ...,
+        driver: global___MctlDriver | None = ...,
+        null: global___MsgNull | None = ...,
+        timestamp: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["msgattr4", b"msgattr4", "msgtype1", b"msgtype1", "receiver3", b"receiver3", "sender2", b"sender2", "seqs5", b"seqs5", "subMsg10", b"subMsg10", "subMsg11", b"subMsg11", "subMsg12", b"subMsg12", "subMsg14", b"subMsg14", "subMsg8", b"subMsg8", "subtype7", b"subtype7", "timestamp15", b"timestamp15", "version6", b"version6"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["msgattr4", b"msgattr4", "msgtype1", b"msgtype1", "receiver3", b"receiver3", "sender2", b"sender2", "seqs5", b"seqs5", "subMsg10", b"subMsg10", "subMsg11", b"subMsg11", "subMsg12", b"subMsg12", "subMsg14", b"subMsg14", "subMsg8", b"subMsg8", "subtype7", b"subtype7", "timestamp15", b"timestamp15", "version6", b"version6"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["commEsp", b"commEsp", "driver", b"driver", "msgattr", b"msgattr", "msgtype", b"msgtype", "nav", b"nav", "null", b"null", "receiver", b"receiver", "sender", b"sender", "seqs", b"seqs", "subMsg", b"subMsg", "subtype", b"subtype", "sys", b"sys", "timestamp", b"timestamp", "version", b"version"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["commEsp", b"commEsp", "driver", b"driver", "msgattr", b"msgattr", "msgtype", b"msgtype", "nav", b"nav", "null", b"null", "receiver", b"receiver", "sender", b"sender", "seqs", b"seqs", "subMsg", b"subMsg", "subtype", b"subtype", "sys", b"sys", "timestamp", b"timestamp", "version", b"version"]) -> None: ...
+    def WhichOneof(self, oneof_group: typing_extensions.Literal["subMsg", b"subMsg"]) -> typing_extensions.Literal["commEsp", "sys", "nav", "driver", "null"] | None: ...
 
 global___Root = Root
 
@@ -269,82 +270,83 @@ global___Root = Root
 class CommEsp(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    SUBTYPE1_FIELD_NUMBER: builtins.int
-    SUBTYPE2_FIELD_NUMBER: builtins.int
-    ESPSUBTYPE3_FIELD_NUMBER: builtins.int
-    ESPSUBTYPE4_FIELD_NUMBER: builtins.int
-    ESPSUBTYPE5_FIELD_NUMBER: builtins.int
-    ESPSUBTYPE6_FIELD_NUMBER: builtins.int
-    ESPSUBTYPE7_FIELD_NUMBER: builtins.int
-    ESPSUBTYPE8_FIELD_NUMBER: builtins.int
-    ESPSUBTYPE9_FIELD_NUMBER: builtins.int
-    ESPSUBTYPE10_FIELD_NUMBER: builtins.int
-    ESPSUBTYPE11_FIELD_NUMBER: builtins.int
-    ESPSUBTYPE12_FIELD_NUMBER: builtins.int
-    ESPSUBTYPE13_FIELD_NUMBER: builtins.int
-    ESPSUBTYPE14_FIELD_NUMBER: builtins.int
-    ESPSUBTYPE15_FIELD_NUMBER: builtins.int
-    ESPSUBTYPE16_FIELD_NUMBER: builtins.int
-    ESPSUBTYPE17_FIELD_NUMBER: builtins.int
-    ESPSUBTYPE18_FIELD_NUMBER: builtins.int
-    subtype1: builtins.int
-    subtype2: global___EspSubTypeCase.ValueType
+    SUBTYPERAW_FIELD_NUMBER: builtins.int
+    SUBTYPE_FIELD_NUMBER: builtins.int
+    TODEV_WIFIUPLOAD_FIELD_NUMBER: builtins.int
+    TODEV_WIFILIST_FIELD_NUMBER: builtins.int
+    TODEV_WIFISET_FIELD_NUMBER: builtins.int
+    TOAPP_WIFIMSG_FIELD_NUMBER: builtins.int
+    TOAPP_WIFICONF_FIELD_NUMBER: builtins.int
+    TOAPP_LISTUPLOAD_FIELD_NUMBER: builtins.int
+    TODEV_UPLOADFILEREQ_FIELD_NUMBER: builtins.int
+    TODEV_UPLOADFILECANCEL_FIELD_NUMBER: builtins.int
+    TODEV_DEVINFOREQ_FIELD_NUMBER: builtins.int
+    TOAPP_DEVINFORESP_FIELD_NUMBER: builtins.int
+    TOAPP_UPGRADEREPORT_FIELD_NUMBER: builtins.int
+    TOAPP_WIFIIOTSTATUSREPORT_FIELD_NUMBER: builtins.int
+    TODEV_UPLOADFILETOAPPREQ_FIELD_NUMBER: builtins.int
+    TOAPP_UPLOADFILETOAPPRSP_FIELD_NUMBER: builtins.int
+    TODEV_GETNETWORKINFOREQ_FIELD_NUMBER: builtins.int
+    TOAPP_GETNETWORKINFORSP_FIELD_NUMBER: builtins.int
+    subtypeRaw: builtins.int
+    subtype: global___EspSubTypeCase.ValueType
     @property
-    def espSubType3(self) -> global___DrvWifiUpload: ...
+    def toDev_wifiUpload(self) -> global___DrvWifiUpload: ...
     @property
-    def espSubType4(self) -> global___DrvWifiList: ...
+    def toDev_wifiList(self) -> global___DrvWifiList: ...
     @property
-    def espSubType5(self) -> global___DrvWifiSet: ...
+    def toDev_wifiSet(self) -> global___DrvWifiSet: ...
     @property
-    def espSubType6(self) -> global___DrvWifiMsg: ...
+    def toApp_wifiMsg(self) -> global___DrvWifiMsg: ...
     @property
-    def espSubType7(self) -> global___DrvWifiConf: ...
+    def toApp_wifiConf(self) -> global___DrvWifiConf: ...
     @property
-    def espSubType8(self) -> global___DrvListUpload: ...
+    def toApp_listUpload(self) -> global___DrvListUpload: ...
     @property
-    def espSubType9(self) -> global___DrvUploadFileReq: ...
+    def toDev_uploadFileReq(self) -> global___DrvUploadFileReq: ...
     @property
-    def espSubType10(self) -> global___DrvUploadFileCancel: ...
+    def toDev_uploadFileCancel(self) -> global___DrvUploadFileCancel: ...
     @property
-    def espSubType11(self) -> global___DrvDevInfoReq: ...
+    def toDev_devInfoReq(self) -> global___DrvDevInfoReq: ...
     @property
-    def espSubType12(self) -> global___DrvDevInfoResp: ...
+    def toApp_devInfoResp(self) -> global___DrvDevInfoResp: ...
     @property
-    def espSubType13(self) -> global___DrvUpgradeReport: ...
+    def toApp_upgradeReport(self) -> global___DrvUpgradeReport: ...
     @property
-    def espSubType14(self) -> global___WifiIotStatusReport: ...
+    def toApp_wifiIotStatusReport(self) -> global___WifiIotStatusReport: ...
     @property
-    def espSubType15(self) -> global___DrvUploadFileToAppReq: ...
+    def toDev_uploadFileToAppReq(self) -> global___DrvUploadFileToAppReq: ...
     @property
-    def espSubType16(self) -> global___DrvUploadFileToAppRsp: ...
+    def toApp_uploadFileToAppRsp(self) -> global___DrvUploadFileToAppRsp: ...
     @property
-    def espSubType17(self) -> global___GetNetworkInfoReq: ...
+    def toDev_getNetworkInfoReq(self) -> global___GetNetworkInfoReq: ...
     @property
-    def espSubType18(self) -> global___GetNetworkInfoRsp: ...
+    def toApp_getNetworkInfoRsp(self) -> global___GetNetworkInfoRsp: ...
     def __init__(
         self,
         *,
-        subtype1: builtins.int | None = ...,
-        subtype2: global___EspSubTypeCase.ValueType | None = ...,
-        espSubType3: global___DrvWifiUpload | None = ...,
-        espSubType4: global___DrvWifiList | None = ...,
-        espSubType5: global___DrvWifiSet | None = ...,
-        espSubType6: global___DrvWifiMsg | None = ...,
-        espSubType7: global___DrvWifiConf | None = ...,
-        espSubType8: global___DrvListUpload | None = ...,
-        espSubType9: global___DrvUploadFileReq | None = ...,
-        espSubType10: global___DrvUploadFileCancel | None = ...,
-        espSubType11: global___DrvDevInfoReq | None = ...,
-        espSubType12: global___DrvDevInfoResp | None = ...,
-        espSubType13: global___DrvUpgradeReport | None = ...,
-        espSubType14: global___WifiIotStatusReport | None = ...,
-        espSubType15: global___DrvUploadFileToAppReq | None = ...,
-        espSubType16: global___DrvUploadFileToAppRsp | None = ...,
-        espSubType17: global___GetNetworkInfoReq | None = ...,
-        espSubType18: global___GetNetworkInfoRsp | None = ...,
+        subtypeRaw: builtins.int | None = ...,
+        subtype: global___EspSubTypeCase.ValueType | None = ...,
+        toDev_wifiUpload: global___DrvWifiUpload | None = ...,
+        toDev_wifiList: global___DrvWifiList | None = ...,
+        toDev_wifiSet: global___DrvWifiSet | None = ...,
+        toApp_wifiMsg: global___DrvWifiMsg | None = ...,
+        toApp_wifiConf: global___DrvWifiConf | None = ...,
+        toApp_listUpload: global___DrvListUpload | None = ...,
+        toDev_uploadFileReq: global___DrvUploadFileReq | None = ...,
+        toDev_uploadFileCancel: global___DrvUploadFileCancel | None = ...,
+        toDev_devInfoReq: global___DrvDevInfoReq | None = ...,
+        toApp_devInfoResp: global___DrvDevInfoResp | None = ...,
+        toApp_upgradeReport: global___DrvUpgradeReport | None = ...,
+        toApp_wifiIotStatusReport: global___WifiIotStatusReport | None = ...,
+        toDev_uploadFileToAppReq: global___DrvUploadFileToAppReq | None = ...,
+        toApp_uploadFileToAppRsp: global___DrvUploadFileToAppRsp | None = ...,
+        toDev_getNetworkInfoReq: global___GetNetworkInfoReq | None = ...,
+        toApp_getNetworkInfoRsp: global___GetNetworkInfoRsp | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["espSubType10", b"espSubType10", "espSubType11", b"espSubType11", "espSubType12", b"espSubType12", "espSubType13", b"espSubType13", "espSubType14", b"espSubType14", "espSubType15", b"espSubType15", "espSubType16", b"espSubType16", "espSubType17", b"espSubType17", "espSubType18", b"espSubType18", "espSubType3", b"espSubType3", "espSubType4", b"espSubType4", "espSubType5", b"espSubType5", "espSubType6", b"espSubType6", "espSubType7", b"espSubType7", "espSubType8", b"espSubType8", "espSubType9", b"espSubType9", "subtype1", b"subtype1", "subtype2", b"subtype2"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["espSubType10", b"espSubType10", "espSubType11", b"espSubType11", "espSubType12", b"espSubType12", "espSubType13", b"espSubType13", "espSubType14", b"espSubType14", "espSubType15", b"espSubType15", "espSubType16", b"espSubType16", "espSubType17", b"espSubType17", "espSubType18", b"espSubType18", "espSubType3", b"espSubType3", "espSubType4", b"espSubType4", "espSubType5", b"espSubType5", "espSubType6", b"espSubType6", "espSubType7", b"espSubType7", "espSubType8", b"espSubType8", "espSubType9", b"espSubType9", "subtype1", b"subtype1", "subtype2", b"subtype2"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["espSubType", b"espSubType", "subtype", b"subtype", "subtypeRaw", b"subtypeRaw", "toApp_devInfoResp", b"toApp_devInfoResp", "toApp_getNetworkInfoRsp", b"toApp_getNetworkInfoRsp", "toApp_listUpload", b"toApp_listUpload", "toApp_upgradeReport", b"toApp_upgradeReport", "toApp_uploadFileToAppRsp", b"toApp_uploadFileToAppRsp", "toApp_wifiConf", b"toApp_wifiConf", "toApp_wifiIotStatusReport", b"toApp_wifiIotStatusReport", "toApp_wifiMsg", b"toApp_wifiMsg", "toDev_devInfoReq", b"toDev_devInfoReq", "toDev_getNetworkInfoReq", b"toDev_getNetworkInfoReq", "toDev_uploadFileCancel", b"toDev_uploadFileCancel", "toDev_uploadFileReq", b"toDev_uploadFileReq", "toDev_uploadFileToAppReq", b"toDev_uploadFileToAppReq", "toDev_wifiList", b"toDev_wifiList", "toDev_wifiSet", b"toDev_wifiSet", "toDev_wifiUpload", b"toDev_wifiUpload"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["espSubType", b"espSubType", "subtype", b"subtype", "subtypeRaw", b"subtypeRaw", "toApp_devInfoResp", b"toApp_devInfoResp", "toApp_getNetworkInfoRsp", b"toApp_getNetworkInfoRsp", "toApp_listUpload", b"toApp_listUpload", "toApp_upgradeReport", b"toApp_upgradeReport", "toApp_uploadFileToAppRsp", b"toApp_uploadFileToAppRsp", "toApp_wifiConf", b"toApp_wifiConf", "toApp_wifiIotStatusReport", b"toApp_wifiIotStatusReport", "toApp_wifiMsg", b"toApp_wifiMsg", "toDev_devInfoReq", b"toDev_devInfoReq", "toDev_getNetworkInfoReq", b"toDev_getNetworkInfoReq", "toDev_uploadFileCancel", b"toDev_uploadFileCancel", "toDev_uploadFileReq", b"toDev_uploadFileReq", "toDev_uploadFileToAppReq", b"toDev_uploadFileToAppReq", "toDev_wifiList", b"toDev_wifiList", "toDev_wifiSet", b"toDev_wifiSet", "toDev_wifiUpload", b"toDev_wifiUpload"]) -> None: ...
+    def WhichOneof(self, oneof_group: typing_extensions.Literal["espSubType", b"espSubType"]) -> typing_extensions.Literal["toDev_wifiUpload", "toDev_wifiList", "toDev_wifiSet", "toApp_wifiMsg", "toApp_wifiConf", "toApp_listUpload", "toDev_uploadFileReq", "toDev_uploadFileCancel", "toDev_devInfoReq", "toApp_devInfoResp", "toApp_upgradeReport", "toApp_wifiIotStatusReport", "toDev_uploadFileToAppReq", "toApp_uploadFileToAppRsp", "toDev_getNetworkInfoReq", "toApp_getNetworkInfoRsp"] | None: ...
 
 global___CommEsp = CommEsp
 
@@ -352,15 +354,15 @@ global___CommEsp = CommEsp
 class DrvWifiUpload(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    WIFIMSGUPLOAD1_FIELD_NUMBER: builtins.int
-    wifiMsgUpload1: builtins.int
+    WIFIMSGUPLOAD_FIELD_NUMBER: builtins.int
+    wifiMsgUpload: builtins.int
     def __init__(
         self,
         *,
-        wifiMsgUpload1: builtins.int | None = ...,
+        wifiMsgUpload: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["wifiMsgUpload1", b"wifiMsgUpload1"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["wifiMsgUpload1", b"wifiMsgUpload1"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["wifiMsgUpload", b"wifiMsgUpload"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["wifiMsgUpload", b"wifiMsgUpload"]) -> None: ...
 
 global___DrvWifiUpload = DrvWifiUpload
 
@@ -368,15 +370,15 @@ global___DrvWifiUpload = DrvWifiUpload
 class DrvWifiList(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    NVSWIFIUPLOAD1_FIELD_NUMBER: builtins.int
-    nVSWifiUpload1: builtins.int
+    NVSWIFIUPLOAD_FIELD_NUMBER: builtins.int
+    nVSWifiUpload: builtins.int
     def __init__(
         self,
         *,
-        nVSWifiUpload1: builtins.int | None = ...,
+        nVSWifiUpload: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["nVSWifiUpload1", b"nVSWifiUpload1"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["nVSWifiUpload1", b"nVSWifiUpload1"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["nVSWifiUpload", b"nVSWifiUpload"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["nVSWifiUpload", b"nVSWifiUpload"]) -> None: ...
 
 global___DrvWifiList = DrvWifiList
 
@@ -384,18 +386,18 @@ global___DrvWifiList = DrvWifiList
 class DrvWifiSet(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    CONFIGPARAM1_FIELD_NUMBER: builtins.int
-    CONFSSID2_FIELD_NUMBER: builtins.int
-    configParam1: builtins.int
-    confssid2: builtins.str
+    CONFIGPARAM_FIELD_NUMBER: builtins.int
+    CONFSSID_FIELD_NUMBER: builtins.int
+    configParam: builtins.int
+    confssid: builtins.str
     def __init__(
         self,
         *,
-        configParam1: builtins.int | None = ...,
-        confssid2: builtins.str | None = ...,
+        configParam: builtins.int | None = ...,
+        confssid: builtins.str | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["configParam1", b"configParam1", "confssid2", b"confssid2"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["configParam1", b"configParam1", "confssid2", b"confssid2"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["configParam", b"configParam", "confssid", b"confssid"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["configParam", b"configParam", "confssid", b"confssid"]) -> None: ...
 
 global___DrvWifiSet = DrvWifiSet
 
@@ -403,36 +405,36 @@ global___DrvWifiSet = DrvWifiSet
 class DrvWifiMsg(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    STATUS11_FIELD_NUMBER: builtins.int
-    STATUS2_FIELD_NUMBER: builtins.int
-    IP3_FIELD_NUMBER: builtins.int
-    MSGSSID4_FIELD_NUMBER: builtins.int
-    PASSWORD5_FIELD_NUMBER: builtins.int
-    RSSI6_FIELD_NUMBER: builtins.int
-    PRODUCTKEY7_FIELD_NUMBER: builtins.int
-    DEVICENAME8_FIELD_NUMBER: builtins.int
-    status11: builtins.bool
-    status2: builtins.bool
-    IP3: builtins.str
-    msgssid4: builtins.str
-    password5: builtins.str
-    rssi6: builtins.int
-    productKey7: builtins.str
-    deviceName8: builtins.str
+    STATUS1_FIELD_NUMBER: builtins.int
+    STATUS_FIELD_NUMBER: builtins.int
+    IP_FIELD_NUMBER: builtins.int
+    MSGSSID_FIELD_NUMBER: builtins.int
+    PASSWORD_FIELD_NUMBER: builtins.int
+    RSSI_FIELD_NUMBER: builtins.int
+    PRODUCTKEY_FIELD_NUMBER: builtins.int
+    DEVICENAME_FIELD_NUMBER: builtins.int
+    status1: builtins.bool
+    status: builtins.bool
+    IP: builtins.str
+    msgssid: builtins.str
+    password: builtins.str
+    rssi: builtins.int
+    productKey: builtins.str
+    deviceName: builtins.str
     def __init__(
         self,
         *,
-        status11: builtins.bool | None = ...,
-        status2: builtins.bool | None = ...,
-        IP3: builtins.str | None = ...,
-        msgssid4: builtins.str | None = ...,
-        password5: builtins.str | None = ...,
-        rssi6: builtins.int | None = ...,
-        productKey7: builtins.str | None = ...,
-        deviceName8: builtins.str | None = ...,
+        status1: builtins.bool | None = ...,
+        status: builtins.bool | None = ...,
+        IP: builtins.str | None = ...,
+        msgssid: builtins.str | None = ...,
+        password: builtins.str | None = ...,
+        rssi: builtins.int | None = ...,
+        productKey: builtins.str | None = ...,
+        deviceName: builtins.str | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["IP3", b"IP3", "deviceName8", b"deviceName8", "msgssid4", b"msgssid4", "password5", b"password5", "productKey7", b"productKey7", "rssi6", b"rssi6", "status11", b"status11", "status2", b"status2"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["IP3", b"IP3", "deviceName8", b"deviceName8", "msgssid4", b"msgssid4", "password5", b"password5", "productKey7", b"productKey7", "rssi6", b"rssi6", "status11", b"status11", "status2", b"status2"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["IP", b"IP", "deviceName", b"deviceName", "msgssid", b"msgssid", "password", b"password", "productKey", b"productKey", "rssi", b"rssi", "status", b"status", "status1", b"status1"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["IP", b"IP", "deviceName", b"deviceName", "msgssid", b"msgssid", "password", b"password", "productKey", b"productKey", "rssi", b"rssi", "status", b"status", "status1", b"status1"]) -> None: ...
 
 global___DrvWifiMsg = DrvWifiMsg
 
@@ -440,21 +442,21 @@ global___DrvWifiMsg = DrvWifiMsg
 class DrvWifiConf(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    SUCCFLAG1_FIELD_NUMBER: builtins.int
-    CODE2_FIELD_NUMBER: builtins.int
-    CONFSSID3_FIELD_NUMBER: builtins.int
-    succFlag1: builtins.bool
-    code2: builtins.int
-    confssid3: builtins.str
+    SUCCFLAG_FIELD_NUMBER: builtins.int
+    CODE_FIELD_NUMBER: builtins.int
+    CONFSSID_FIELD_NUMBER: builtins.int
+    succFlag: builtins.bool
+    code: builtins.int
+    confssid: builtins.str
     def __init__(
         self,
         *,
-        succFlag1: builtins.bool | None = ...,
-        code2: builtins.int | None = ...,
-        confssid3: builtins.str | None = ...,
+        succFlag: builtins.bool | None = ...,
+        code: builtins.int | None = ...,
+        confssid: builtins.str | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["code2", b"code2", "confssid3", b"confssid3", "succFlag1", b"succFlag1"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["code2", b"code2", "confssid3", b"confssid3", "succFlag1", b"succFlag1"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["code", b"code", "confssid", b"confssid", "succFlag", b"succFlag"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["code", b"code", "confssid", b"confssid", "succFlag", b"succFlag"]) -> None: ...
 
 global___DrvWifiConf = DrvWifiConf
 
@@ -462,27 +464,27 @@ global___DrvWifiConf = DrvWifiConf
 class DrvListUpload(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    SUM1_FIELD_NUMBER: builtins.int
-    CURRENT2_FIELD_NUMBER: builtins.int
-    STATUS3_FIELD_NUMBER: builtins.int
-    MEMSSID4_FIELD_NUMBER: builtins.int
-    RSSI5_FIELD_NUMBER: builtins.int
-    sum1: builtins.int
-    current2: builtins.int
-    status3: builtins.int
-    memssid4: builtins.str
-    rssi5: builtins.int
+    SUM_FIELD_NUMBER: builtins.int
+    CURRENT_FIELD_NUMBER: builtins.int
+    STATUS_FIELD_NUMBER: builtins.int
+    MEMSSID_FIELD_NUMBER: builtins.int
+    RSSI_FIELD_NUMBER: builtins.int
+    sum: builtins.int
+    current: builtins.int
+    status: builtins.int
+    memssid: builtins.str
+    rssi: builtins.int
     def __init__(
         self,
         *,
-        sum1: builtins.int | None = ...,
-        current2: builtins.int | None = ...,
-        status3: builtins.int | None = ...,
-        memssid4: builtins.str | None = ...,
-        rssi5: builtins.int | None = ...,
+        sum: builtins.int | None = ...,
+        current: builtins.int | None = ...,
+        status: builtins.int | None = ...,
+        memssid: builtins.str | None = ...,
+        rssi: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["current2", b"current2", "memssid4", b"memssid4", "rssi5", b"rssi5", "status3", b"status3", "sum1", b"sum1"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["current2", b"current2", "memssid4", b"memssid4", "rssi5", b"rssi5", "status3", b"status3", "sum1", b"sum1"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["current", b"current", "memssid", b"memssid", "rssi", b"rssi", "status", b"status", "sum", b"sum"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["current", b"current", "memssid", b"memssid", "rssi", b"rssi", "status", b"status", "sum", b"sum"]) -> None: ...
 
 global___DrvListUpload = DrvListUpload
 
@@ -490,27 +492,27 @@ global___DrvListUpload = DrvListUpload
 class DrvUploadFileReq(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    BIZID1_FIELD_NUMBER: builtins.int
-    URL2_FIELD_NUMBER: builtins.int
-    USERID3_FIELD_NUMBER: builtins.int
-    NUM4_FIELD_NUMBER: builtins.int
-    TYPE5_FIELD_NUMBER: builtins.int
-    bizId1: builtins.str
-    url2: builtins.str
-    userId3: builtins.str
-    num4: builtins.int
-    type5: builtins.int
+    BIZID_FIELD_NUMBER: builtins.int
+    URL_FIELD_NUMBER: builtins.int
+    USERID_FIELD_NUMBER: builtins.int
+    NUM_FIELD_NUMBER: builtins.int
+    TYPE_FIELD_NUMBER: builtins.int
+    bizId: builtins.str
+    url: builtins.str
+    userId: builtins.str
+    num: builtins.int
+    type: builtins.int
     def __init__(
         self,
         *,
-        bizId1: builtins.str | None = ...,
-        url2: builtins.str | None = ...,
-        userId3: builtins.str | None = ...,
-        num4: builtins.int | None = ...,
-        type5: builtins.int | None = ...,
+        bizId: builtins.str | None = ...,
+        url: builtins.str | None = ...,
+        userId: builtins.str | None = ...,
+        num: builtins.int | None = ...,
+        type: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["bizId1", b"bizId1", "num4", b"num4", "type5", b"type5", "url2", b"url2", "userId3", b"userId3"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["bizId1", b"bizId1", "num4", b"num4", "type5", b"type5", "url2", b"url2", "userId3", b"userId3"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["bizId", b"bizId", "num", b"num", "type", b"type", "url", b"url", "userId", b"userId"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["bizId", b"bizId", "num", b"num", "type", b"type", "url", b"url", "userId", b"userId"]) -> None: ...
 
 global___DrvUploadFileReq = DrvUploadFileReq
 
@@ -518,15 +520,15 @@ global___DrvUploadFileReq = DrvUploadFileReq
 class DrvUploadFileCancel(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    BIZID1_FIELD_NUMBER: builtins.int
-    bizId1: builtins.int
+    BIZID_FIELD_NUMBER: builtins.int
+    bizId: builtins.int
     def __init__(
         self,
         *,
-        bizId1: builtins.int | None = ...,
+        bizId: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["bizId1", b"bizId1"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["bizId1", b"bizId1"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["bizId", b"bizId"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["bizId", b"bizId"]) -> None: ...
 
 global___DrvUploadFileCancel = DrvUploadFileCancel
 
@@ -534,15 +536,15 @@ global___DrvUploadFileCancel = DrvUploadFileCancel
 class DrvDevInfoReq(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    REQIDS1_FIELD_NUMBER: builtins.int
+    REQIDS_FIELD_NUMBER: builtins.int
     @property
-    def reqIds1(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.int]: ...
+    def reqIds(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.int]: ...
     def __init__(
         self,
         *,
-        reqIds1: collections.abc.Iterable[builtins.int] | None = ...,
+        reqIds: collections.abc.Iterable[builtins.int] | None = ...,
     ) -> None: ...
-    def ClearField(self, field_name: typing_extensions.Literal["reqIds1", b"reqIds1"]) -> None: ...
+    def ClearField(self, field_name: typing_extensions.Literal["reqIds", b"reqIds"]) -> None: ...
 
 global___DrvDevInfoReq = DrvDevInfoReq
 
@@ -550,15 +552,15 @@ global___DrvDevInfoReq = DrvDevInfoReq
 class DrvDevInfoResp(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    RESPIDS1_FIELD_NUMBER: builtins.int
+    RESPIDS_FIELD_NUMBER: builtins.int
     @property
-    def respIds1(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.int]: ...
+    def respIds(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.int]: ...
     def __init__(
         self,
         *,
-        respIds1: collections.abc.Iterable[builtins.int] | None = ...,
+        respIds: collections.abc.Iterable[builtins.int] | None = ...,
     ) -> None: ...
-    def ClearField(self, field_name: typing_extensions.Literal["respIds1", b"respIds1"]) -> None: ...
+    def ClearField(self, field_name: typing_extensions.Literal["respIds", b"respIds"]) -> None: ...
 
 global___DrvDevInfoResp = DrvDevInfoResp
 
@@ -566,33 +568,33 @@ global___DrvDevInfoResp = DrvDevInfoResp
 class DrvUpgradeReport(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    DEVNAME1_FIELD_NUMBER: builtins.int
-    OTAID2_FIELD_NUMBER: builtins.int
-    VERSION3_FIELD_NUMBER: builtins.int
-    PROGRESS4_FIELD_NUMBER: builtins.int
-    RESULT5_FIELD_NUMBER: builtins.int
-    MESSAGE6_FIELD_NUMBER: builtins.int
-    PROPERTIES7_FIELD_NUMBER: builtins.int
-    devname1: builtins.str
-    otaid2: builtins.str
-    version3: builtins.str
-    progress4: builtins.int
-    result5: builtins.int
-    message6: builtins.str
-    properties7: builtins.str
+    DEVNAME_FIELD_NUMBER: builtins.int
+    OTAID_FIELD_NUMBER: builtins.int
+    VERSION_FIELD_NUMBER: builtins.int
+    PROGRESS_FIELD_NUMBER: builtins.int
+    RESULT_FIELD_NUMBER: builtins.int
+    MESSAGE_FIELD_NUMBER: builtins.int
+    PROPERTIES_FIELD_NUMBER: builtins.int
+    devname: builtins.str
+    otaid: builtins.str
+    version: builtins.str
+    progress: builtins.int
+    result: builtins.int
+    message: builtins.str
+    properties: builtins.str
     def __init__(
         self,
         *,
-        devname1: builtins.str | None = ...,
-        otaid2: builtins.str | None = ...,
-        version3: builtins.str | None = ...,
-        progress4: builtins.int | None = ...,
-        result5: builtins.int | None = ...,
-        message6: builtins.str | None = ...,
-        properties7: builtins.str | None = ...,
+        devname: builtins.str | None = ...,
+        otaid: builtins.str | None = ...,
+        version: builtins.str | None = ...,
+        progress: builtins.int | None = ...,
+        result: builtins.int | None = ...,
+        message: builtins.str | None = ...,
+        properties: builtins.str | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["devname1", b"devname1", "message6", b"message6", "otaid2", b"otaid2", "progress4", b"progress4", "properties7", b"properties7", "result5", b"result5", "version3", b"version3"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["devname1", b"devname1", "message6", b"message6", "otaid2", b"otaid2", "progress4", b"progress4", "properties7", b"properties7", "result5", b"result5", "version3", b"version3"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["devname", b"devname", "message", b"message", "otaid", b"otaid", "progress", b"progress", "properties", b"properties", "result", b"result", "version", b"version"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["devname", b"devname", "message", b"message", "otaid", b"otaid", "progress", b"progress", "properties", b"properties", "result", b"result", "version", b"version"]) -> None: ...
 
 global___DrvUpgradeReport = DrvUpgradeReport
 
@@ -600,24 +602,24 @@ global___DrvUpgradeReport = DrvUpgradeReport
 class WifiIotStatusReport(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    WIFICONNECTED1_FIELD_NUMBER: builtins.int
-    IOTCONNECTED2_FIELD_NUMBER: builtins.int
-    PRODUCTKEY3_FIELD_NUMBER: builtins.int
-    DEVICENAME4_FIELD_NUMBER: builtins.int
-    wifiConnected1: builtins.bool
-    iotConnected2: builtins.bool
-    productKey3: builtins.str
-    deviceName4: builtins.str
+    WIFICONNECTED_FIELD_NUMBER: builtins.int
+    IOTCONNECTED_FIELD_NUMBER: builtins.int
+    PRODUCTKEY_FIELD_NUMBER: builtins.int
+    DEVICENAME_FIELD_NUMBER: builtins.int
+    wifiConnected: builtins.bool
+    iotConnected: builtins.bool
+    productKey: builtins.str
+    deviceName: builtins.str
     def __init__(
         self,
         *,
-        wifiConnected1: builtins.bool | None = ...,
-        iotConnected2: builtins.bool | None = ...,
-        productKey3: builtins.str | None = ...,
-        deviceName4: builtins.str | None = ...,
+        wifiConnected: builtins.bool | None = ...,
+        iotConnected: builtins.bool | None = ...,
+        productKey: builtins.str | None = ...,
+        deviceName: builtins.str | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["deviceName4", b"deviceName4", "iotConnected2", b"iotConnected2", "productKey3", b"productKey3", "wifiConnected1", b"wifiConnected1"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["deviceName4", b"deviceName4", "iotConnected2", b"iotConnected2", "productKey3", b"productKey3", "wifiConnected1", b"wifiConnected1"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["deviceName", b"deviceName", "iotConnected", b"iotConnected", "productKey", b"productKey", "wifiConnected", b"wifiConnected"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["deviceName", b"deviceName", "iotConnected", b"iotConnected", "productKey", b"productKey", "wifiConnected", b"wifiConnected"]) -> None: ...
 
 global___WifiIotStatusReport = WifiIotStatusReport
 
@@ -625,30 +627,30 @@ global___WifiIotStatusReport = WifiIotStatusReport
 class DrvUploadFileToAppReq(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    BIZID1_FIELD_NUMBER: builtins.int
-    OPERATION2_FIELD_NUMBER: builtins.int
-    SERVERIP3_FIELD_NUMBER: builtins.int
-    SERVERPORT4_FIELD_NUMBER: builtins.int
-    NUM5_FIELD_NUMBER: builtins.int
-    TYPE6_FIELD_NUMBER: builtins.int
-    bizId1: builtins.str
-    operation2: builtins.int
-    serverIp3: builtins.int
-    serverPort4: builtins.int
-    num5: builtins.int
-    type6: builtins.int
+    BIZID_FIELD_NUMBER: builtins.int
+    OPERATION_FIELD_NUMBER: builtins.int
+    SERVERIP_FIELD_NUMBER: builtins.int
+    SERVERPORT_FIELD_NUMBER: builtins.int
+    NUM_FIELD_NUMBER: builtins.int
+    TYPE_FIELD_NUMBER: builtins.int
+    bizId: builtins.str
+    operation: builtins.int
+    serverIp: builtins.int
+    serverPort: builtins.int
+    num: builtins.int
+    type: builtins.int
     def __init__(
         self,
         *,
-        bizId1: builtins.str | None = ...,
-        operation2: builtins.int | None = ...,
-        serverIp3: builtins.int | None = ...,
-        serverPort4: builtins.int | None = ...,
-        num5: builtins.int | None = ...,
-        type6: builtins.int | None = ...,
+        bizId: builtins.str | None = ...,
+        operation: builtins.int | None = ...,
+        serverIp: builtins.int | None = ...,
+        serverPort: builtins.int | None = ...,
+        num: builtins.int | None = ...,
+        type: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["bizId1", b"bizId1", "num5", b"num5", "operation2", b"operation2", "serverIp3", b"serverIp3", "serverPort4", b"serverPort4", "type6", b"type6"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["bizId1", b"bizId1", "num5", b"num5", "operation2", b"operation2", "serverIp3", b"serverIp3", "serverPort4", b"serverPort4", "type6", b"type6"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["bizId", b"bizId", "num", b"num", "operation", b"operation", "serverIp", b"serverIp", "serverPort", b"serverPort", "type", b"type"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["bizId", b"bizId", "num", b"num", "operation", b"operation", "serverIp", b"serverIp", "serverPort", b"serverPort", "type", b"type"]) -> None: ...
 
 global___DrvUploadFileToAppReq = DrvUploadFileToAppReq
 
@@ -656,21 +658,21 @@ global___DrvUploadFileToAppReq = DrvUploadFileToAppReq
 class DrvUploadFileToAppRsp(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    BIZID1_FIELD_NUMBER: builtins.int
-    OPERATION2_FIELD_NUMBER: builtins.int
-    RESULT3_FIELD_NUMBER: builtins.int
-    bizId1: builtins.str
-    operation2: builtins.int
-    result3: builtins.int
+    BIZID_FIELD_NUMBER: builtins.int
+    OPERATION_FIELD_NUMBER: builtins.int
+    RESULT_FIELD_NUMBER: builtins.int
+    bizId: builtins.str
+    operation: builtins.int
+    result: builtins.int
     def __init__(
         self,
         *,
-        bizId1: builtins.str | None = ...,
-        operation2: builtins.int | None = ...,
-        result3: builtins.int | None = ...,
+        bizId: builtins.str | None = ...,
+        operation: builtins.int | None = ...,
+        result: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["bizId1", b"bizId1", "operation2", b"operation2", "result3", b"result3"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["bizId1", b"bizId1", "operation2", b"operation2", "result3", b"result3"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["bizId", b"bizId", "operation", b"operation", "result", b"result"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["bizId", b"bizId", "operation", b"operation", "result", b"result"]) -> None: ...
 
 global___DrvUploadFileToAppRsp = DrvUploadFileToAppRsp
 
@@ -678,15 +680,15 @@ global___DrvUploadFileToAppRsp = DrvUploadFileToAppRsp
 class GetNetworkInfoReq(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    REQIDS1_FIELD_NUMBER: builtins.int
-    reqIds1: builtins.int
+    REQIDS_FIELD_NUMBER: builtins.int
+    reqIds: builtins.int
     def __init__(
         self,
         *,
-        reqIds1: builtins.int | None = ...,
+        reqIds: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["reqIds1", b"reqIds1"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["reqIds1", b"reqIds1"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["reqIds", b"reqIds"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["reqIds", b"reqIds"]) -> None: ...
 
 global___GetNetworkInfoReq = GetNetworkInfoReq
 
@@ -694,33 +696,33 @@ global___GetNetworkInfoReq = GetNetworkInfoReq
 class GetNetworkInfoRsp(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    REQIDS1_FIELD_NUMBER: builtins.int
-    WIFISSID2_FIELD_NUMBER: builtins.int
-    WIFIMAC3_FIELD_NUMBER: builtins.int
-    WIFIRSSI4_FIELD_NUMBER: builtins.int
-    IP5_FIELD_NUMBER: builtins.int
-    MASK6_FIELD_NUMBER: builtins.int
-    GATEWAY7_FIELD_NUMBER: builtins.int
-    reqIds1: builtins.int
-    wifiSsid2: builtins.str
-    wifiMac3: builtins.str
-    wifiRssi4: builtins.int
-    ip5: builtins.int
-    mask6: builtins.int
-    gateway7: builtins.int
+    REQIDS_FIELD_NUMBER: builtins.int
+    WIFISSID_FIELD_NUMBER: builtins.int
+    WIFIMAC_FIELD_NUMBER: builtins.int
+    WIFIRSSI_FIELD_NUMBER: builtins.int
+    IP_FIELD_NUMBER: builtins.int
+    MASK_FIELD_NUMBER: builtins.int
+    GATEWAY_FIELD_NUMBER: builtins.int
+    reqIds: builtins.int
+    wifiSsid: builtins.str
+    wifiMac: builtins.str
+    wifiRssi: builtins.int
+    ip: builtins.int
+    mask: builtins.int
+    gateway: builtins.int
     def __init__(
         self,
         *,
-        reqIds1: builtins.int | None = ...,
-        wifiSsid2: builtins.str | None = ...,
-        wifiMac3: builtins.str | None = ...,
-        wifiRssi4: builtins.int | None = ...,
-        ip5: builtins.int | None = ...,
-        mask6: builtins.int | None = ...,
-        gateway7: builtins.int | None = ...,
+        reqIds: builtins.int | None = ...,
+        wifiSsid: builtins.str | None = ...,
+        wifiMac: builtins.str | None = ...,
+        wifiRssi: builtins.int | None = ...,
+        ip: builtins.int | None = ...,
+        mask: builtins.int | None = ...,
+        gateway: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["gateway7", b"gateway7", "ip5", b"ip5", "mask6", b"mask6", "reqIds1", b"reqIds1", "wifiMac3", b"wifiMac3", "wifiRssi4", b"wifiRssi4", "wifiSsid2", b"wifiSsid2"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["gateway7", b"gateway7", "ip5", b"ip5", "mask6", b"mask6", "reqIds1", b"reqIds1", "wifiMac3", b"wifiMac3", "wifiRssi4", b"wifiRssi4", "wifiSsid2", b"wifiSsid2"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["gateway", b"gateway", "ip", b"ip", "mask", b"mask", "reqIds", b"reqIds", "wifiMac", b"wifiMac", "wifiRssi", b"wifiRssi", "wifiSsid", b"wifiSsid"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["gateway", b"gateway", "ip", b"ip", "mask", b"mask", "reqIds", b"reqIds", "wifiMac", b"wifiMac", "wifiRssi", b"wifiRssi", "wifiSsid", b"wifiSsid"]) -> None: ...
 
 global___GetNetworkInfoRsp = GetNetworkInfoRsp
 
@@ -728,124 +730,125 @@ global___GetNetworkInfoRsp = GetNetworkInfoRsp
 class MctlSys(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    SUBSYSMSG1_FIELD_NUMBER: builtins.int
-    SUBSYSMSG2_FIELD_NUMBER: builtins.int
-    SUBSYSMSG3_FIELD_NUMBER: builtins.int
-    SUBSYSMSG4_FIELD_NUMBER: builtins.int
-    SUBSYSMSG6_FIELD_NUMBER: builtins.int
-    SUBSYSMSG7_FIELD_NUMBER: builtins.int
-    SUBSYSMSG10_FIELD_NUMBER: builtins.int
-    SUBSYSMSG11_FIELD_NUMBER: builtins.int
-    SUBSYSMSG12_FIELD_NUMBER: builtins.int
-    SUBSYSMSG14_FIELD_NUMBER: builtins.int
-    SUBSYSMSG15_FIELD_NUMBER: builtins.int
-    SUBSYSMSG18_FIELD_NUMBER: builtins.int
-    SUBSYSMSG19_FIELD_NUMBER: builtins.int
-    SUBSYSMSG20_FIELD_NUMBER: builtins.int
-    SUBSYSMSG21_FIELD_NUMBER: builtins.int
-    SUBSYSMSG22_FIELD_NUMBER: builtins.int
-    SUBSYSMSG23_FIELD_NUMBER: builtins.int
-    SUBSYSMSG24_FIELD_NUMBER: builtins.int
-    SUBSYSMSG25_FIELD_NUMBER: builtins.int
-    SUBSYSMSG26_FIELD_NUMBER: builtins.int
-    SUBSYSMSG27_FIELD_NUMBER: builtins.int
-    SUBSYSMSG28_FIELD_NUMBER: builtins.int
-    SUBSYSMSG29_FIELD_NUMBER: builtins.int
-    SUBSYSMSG30_FIELD_NUMBER: builtins.int
-    SUBSYSMSG31_FIELD_NUMBER: builtins.int
-    SUBSYSMSG32_FIELD_NUMBER: builtins.int
-    SUBSYSMSG33_FIELD_NUMBER: builtins.int
-    SUBSYSMSG34_FIELD_NUMBER: builtins.int
-    SUBSYSMSG35_FIELD_NUMBER: builtins.int
+    TOAPP_BATINFO_FIELD_NUMBER: builtins.int
+    TOAPP_WORKSTATE_FIELD_NUMBER: builtins.int
+    TODEV_TIMEZONE_FIELD_NUMBER: builtins.int
+    TODEV_DATETIME_FIELD_NUMBER: builtins.int
+    JOBPLAN_FIELD_NUMBER: builtins.int
+    TOAPP_ERRCODE_FIELD_NUMBER: builtins.int
+    TODEV_JOBPLANTIME_FIELD_NUMBER: builtins.int
+    TOAPP_MOWINFO_FIELD_NUMBER: builtins.int
+    BIDIRE_COMMCMD_FIELD_NUMBER: builtins.int
+    PLANJOBDEL_FIELD_NUMBER: builtins.int
+    BORDER_FIELD_NUMBER: builtins.int
+    TOAPP_PLANSTATUS_FIELD_NUMBER: builtins.int
+    TOAPP_UPLOADFILEPROGRESS_FIELD_NUMBER: builtins.int
+    TODEV_DELJOBPLAN_FIELD_NUMBER: builtins.int
+    TODEV_MOWINFOUP_FIELD_NUMBER: builtins.int
+    TODEV_KNIFECONTROL_FIELD_NUMBER: builtins.int
+    TODEV_RESETSYSTEM_FIELD_NUMBER: builtins.int
+    TODEV_RESETSYSTEMSTATUS_FIELD_NUMBER: builtins.int
+    SYSTEMRAPIDSTATE_FIELD_NUMBER: builtins.int
+    SYSTEMTARDSTATE_FIELD_NUMBER: builtins.int
+    SYSTEMUPDATEBUF_FIELD_NUMBER: builtins.int
+    TODEV_TIMECTRLLIGHT_FIELD_NUMBER: builtins.int
+    SYSTEMTMPCYCLETX_FIELD_NUMBER: builtins.int
+    TODEV_OFFCHIPFLASH_FIELD_NUMBER: builtins.int
+    TODEV_GETDEVFWINFO_FIELD_NUMBER: builtins.int
+    TOAPP_DEVICEFWINFO_FIELD_NUMBER: builtins.int
+    TODEV_LORACFGRQ_FIELD_NUMBER: builtins.int
+    TOAPP_LORACFGRSP_FIELD_NUMBER: builtins.int
+    MOWTOAPPINFO_FIELD_NUMBER: builtins.int
     @property
-    def subSysMsg1(self) -> global___SysBatUp: ...
+    def toApp_batInfo(self) -> global___SysBatUp: ...
     @property
-    def subSysMsg2(self) -> global___SysWorkState: ...
+    def toApp_workState(self) -> global___SysWorkState: ...
     @property
-    def subSysMsg3(self) -> global___SysSetTimeZone: ...
+    def toDev_timeZone(self) -> global___SysSetTimeZone: ...
     @property
-    def subSysMsg4(self) -> global___SysSetDateTime: ...
+    def toDev_dateTime(self) -> global___SysSetDateTime: ...
     @property
-    def subSysMsg6(self) -> global___SysJobPlan: ...
+    def jobPlan(self) -> global___SysJobPlan: ...
     @property
-    def subSysMsg7(self) -> global___SysDevErrCode: ...
+    def toApp_errCode(self) -> global___SysDevErrCode: ...
     @property
-    def subSysMsg10(self) -> global___SysJobPlanTime: ...
+    def toDev_jobPlanTime(self) -> global___SysJobPlanTime: ...
     @property
-    def subSysMsg11(self) -> global___SysMowInfo: ...
+    def toApp_mowInfo(self) -> global___SysMowInfo: ...
     @property
-    def subSysMsg12(self) -> global___SysCommCmd: ...
-    subSysMsg14: builtins.int
+    def bidire_commCmd(self) -> global___SysCommCmd: ...
+    planJobDel: builtins.int
     @property
-    def subSysMsg15(self) -> global___SysBorder: ...
+    def border(self) -> global___SysBorder: ...
     @property
-    def subSysMsg18(self) -> global___SysPlanJobStatus: ...
+    def toApp_planStatus(self) -> global___SysPlanJobStatus: ...
     @property
-    def subSysMsg19(self) -> global___SysUploadFileProgress: ...
+    def toApp_uploadFileProgress(self) -> global___SysUploadFileProgress: ...
     @property
-    def subSysMsg20(self) -> global___SysDelJobPlan: ...
-    subSysMsg21: builtins.int
+    def toDev_delJobPlan(self) -> global___SysDelJobPlan: ...
+    toDev_mowInfoUp: builtins.int
     @property
-    def subSysMsg22(self) -> global___SysKnifeControl: ...
-    subSysMsg23: builtins.int
+    def toDev_knifeControl(self) -> global___SysKnifeControl: ...
+    toDev_resetSystem: builtins.int
     @property
-    def subSysMsg24(self) -> global___SysResetSystemStatus: ...
+    def toDev_resetSystemStatus(self) -> global___SysResetSystemStatus: ...
     @property
-    def subSysMsg25(self) -> global___systemRapidStateTunnel_msg: ...
+    def systemRapidState(self) -> global___systemRapidStateTunnel_msg: ...
     @property
-    def subSysMsg26(self) -> global___systemTardStateTunnel_msg: ...
+    def systemTardState(self) -> global___systemTardStateTunnel_msg: ...
     @property
-    def subSysMsg27(self) -> global___systemUpdateBuf_msg: ...
+    def systemUpdateBuf(self) -> global___systemUpdateBuf_msg: ...
     @property
-    def subSysMsg28(self) -> global___TimeCtrlLight: ...
+    def toDev_timeCtrlLight(self) -> global___TimeCtrlLight: ...
     @property
-    def subSysMsg29(self) -> global___systemTmpCycleTx_msg: ...
+    def systemTmpCycleTx(self) -> global___systemTmpCycleTx_msg: ...
     @property
-    def subSysMsg30(self) -> global___SysOffChipFlash: ...
-    subSysMsg31: builtins.int
+    def toDev_offChipFlash(self) -> global___SysOffChipFlash: ...
+    toDev_getDevFWInfo: builtins.int
     @property
-    def subSysMsg32(self) -> global___device_fw_info: ...
+    def toApp_deviceFwInfo(self) -> global___device_fw_info: ...
     @property
-    def subSysMsg33(self) -> global___LoraCfgReq: ...
+    def toDev_loraCfgRq(self) -> global___LoraCfgReq: ...
     @property
-    def subSysMsg34(self) -> global___LoraCfgRsp: ...
+    def toApp_loraCfgRsp(self) -> global___LoraCfgRsp: ...
     @property
-    def subSysMsg35(self) -> global___mow_to_app_info_t: ...
+    def mowToAppInfo(self) -> global___mow_to_app_info_t: ...
     def __init__(
         self,
         *,
-        subSysMsg1: global___SysBatUp | None = ...,
-        subSysMsg2: global___SysWorkState | None = ...,
-        subSysMsg3: global___SysSetTimeZone | None = ...,
-        subSysMsg4: global___SysSetDateTime | None = ...,
-        subSysMsg6: global___SysJobPlan | None = ...,
-        subSysMsg7: global___SysDevErrCode | None = ...,
-        subSysMsg10: global___SysJobPlanTime | None = ...,
-        subSysMsg11: global___SysMowInfo | None = ...,
-        subSysMsg12: global___SysCommCmd | None = ...,
-        subSysMsg14: builtins.int | None = ...,
-        subSysMsg15: global___SysBorder | None = ...,
-        subSysMsg18: global___SysPlanJobStatus | None = ...,
-        subSysMsg19: global___SysUploadFileProgress | None = ...,
-        subSysMsg20: global___SysDelJobPlan | None = ...,
-        subSysMsg21: builtins.int | None = ...,
-        subSysMsg22: global___SysKnifeControl | None = ...,
-        subSysMsg23: builtins.int | None = ...,
-        subSysMsg24: global___SysResetSystemStatus | None = ...,
-        subSysMsg25: global___systemRapidStateTunnel_msg | None = ...,
-        subSysMsg26: global___systemTardStateTunnel_msg | None = ...,
-        subSysMsg27: global___systemUpdateBuf_msg | None = ...,
-        subSysMsg28: global___TimeCtrlLight | None = ...,
-        subSysMsg29: global___systemTmpCycleTx_msg | None = ...,
-        subSysMsg30: global___SysOffChipFlash | None = ...,
-        subSysMsg31: builtins.int | None = ...,
-        subSysMsg32: global___device_fw_info | None = ...,
-        subSysMsg33: global___LoraCfgReq | None = ...,
-        subSysMsg34: global___LoraCfgRsp | None = ...,
-        subSysMsg35: global___mow_to_app_info_t | None = ...,
+        toApp_batInfo: global___SysBatUp | None = ...,
+        toApp_workState: global___SysWorkState | None = ...,
+        toDev_timeZone: global___SysSetTimeZone | None = ...,
+        toDev_dateTime: global___SysSetDateTime | None = ...,
+        jobPlan: global___SysJobPlan | None = ...,
+        toApp_errCode: global___SysDevErrCode | None = ...,
+        toDev_jobPlanTime: global___SysJobPlanTime | None = ...,
+        toApp_mowInfo: global___SysMowInfo | None = ...,
+        bidire_commCmd: global___SysCommCmd | None = ...,
+        planJobDel: builtins.int | None = ...,
+        border: global___SysBorder | None = ...,
+        toApp_planStatus: global___SysPlanJobStatus | None = ...,
+        toApp_uploadFileProgress: global___SysUploadFileProgress | None = ...,
+        toDev_delJobPlan: global___SysDelJobPlan | None = ...,
+        toDev_mowInfoUp: builtins.int | None = ...,
+        toDev_knifeControl: global___SysKnifeControl | None = ...,
+        toDev_resetSystem: builtins.int | None = ...,
+        toDev_resetSystemStatus: global___SysResetSystemStatus | None = ...,
+        systemRapidState: global___systemRapidStateTunnel_msg | None = ...,
+        systemTardState: global___systemTardStateTunnel_msg | None = ...,
+        systemUpdateBuf: global___systemUpdateBuf_msg | None = ...,
+        toDev_timeCtrlLight: global___TimeCtrlLight | None = ...,
+        systemTmpCycleTx: global___systemTmpCycleTx_msg | None = ...,
+        toDev_offChipFlash: global___SysOffChipFlash | None = ...,
+        toDev_getDevFWInfo: builtins.int | None = ...,
+        toApp_deviceFwInfo: global___device_fw_info | None = ...,
+        toDev_loraCfgRq: global___LoraCfgReq | None = ...,
+        toApp_loraCfgRsp: global___LoraCfgRsp | None = ...,
+        mowToAppInfo: global___mow_to_app_info_t | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["subSysMsg1", b"subSysMsg1", "subSysMsg10", b"subSysMsg10", "subSysMsg11", b"subSysMsg11", "subSysMsg12", b"subSysMsg12", "subSysMsg14", b"subSysMsg14", "subSysMsg15", b"subSysMsg15", "subSysMsg18", b"subSysMsg18", "subSysMsg19", b"subSysMsg19", "subSysMsg2", b"subSysMsg2", "subSysMsg20", b"subSysMsg20", "subSysMsg21", b"subSysMsg21", "subSysMsg22", b"subSysMsg22", "subSysMsg23", b"subSysMsg23", "subSysMsg24", b"subSysMsg24", "subSysMsg25", b"subSysMsg25", "subSysMsg26", b"subSysMsg26", "subSysMsg27", b"subSysMsg27", "subSysMsg28", b"subSysMsg28", "subSysMsg29", b"subSysMsg29", "subSysMsg3", b"subSysMsg3", "subSysMsg30", b"subSysMsg30", "subSysMsg31", b"subSysMsg31", "subSysMsg32", b"subSysMsg32", "subSysMsg33", b"subSysMsg33", "subSysMsg34", b"subSysMsg34", "subSysMsg35", b"subSysMsg35", "subSysMsg4", b"subSysMsg4", "subSysMsg6", b"subSysMsg6", "subSysMsg7", b"subSysMsg7"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["subSysMsg1", b"subSysMsg1", "subSysMsg10", b"subSysMsg10", "subSysMsg11", b"subSysMsg11", "subSysMsg12", b"subSysMsg12", "subSysMsg14", b"subSysMsg14", "subSysMsg15", b"subSysMsg15", "subSysMsg18", b"subSysMsg18", "subSysMsg19", b"subSysMsg19", "subSysMsg2", b"subSysMsg2", "subSysMsg20", b"subSysMsg20", "subSysMsg21", b"subSysMsg21", "subSysMsg22", b"subSysMsg22", "subSysMsg23", b"subSysMsg23", "subSysMsg24", b"subSysMsg24", "subSysMsg25", b"subSysMsg25", "subSysMsg26", b"subSysMsg26", "subSysMsg27", b"subSysMsg27", "subSysMsg28", b"subSysMsg28", "subSysMsg29", b"subSysMsg29", "subSysMsg3", b"subSysMsg3", "subSysMsg30", b"subSysMsg30", "subSysMsg31", b"subSysMsg31", "subSysMsg32", b"subSysMsg32", "subSysMsg33", b"subSysMsg33", "subSysMsg34", b"subSysMsg34", "subSysMsg35", b"subSysMsg35", "subSysMsg4", b"subSysMsg4", "subSysMsg6", b"subSysMsg6", "subSysMsg7", b"subSysMsg7"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["bidire_commCmd", b"bidire_commCmd", "border", b"border", "jobPlan", b"jobPlan", "mowToAppInfo", b"mowToAppInfo", "planJobDel", b"planJobDel", "subSysMsg", b"subSysMsg", "systemRapidState", b"systemRapidState", "systemTardState", b"systemTardState", "systemTmpCycleTx", b"systemTmpCycleTx", "systemUpdateBuf", b"systemUpdateBuf", "toApp_batInfo", b"toApp_batInfo", "toApp_deviceFwInfo", b"toApp_deviceFwInfo", "toApp_errCode", b"toApp_errCode", "toApp_loraCfgRsp", b"toApp_loraCfgRsp", "toApp_mowInfo", b"toApp_mowInfo", "toApp_planStatus", b"toApp_planStatus", "toApp_uploadFileProgress", b"toApp_uploadFileProgress", "toApp_workState", b"toApp_workState", "toDev_dateTime", b"toDev_dateTime", "toDev_delJobPlan", b"toDev_delJobPlan", "toDev_getDevFWInfo", b"toDev_getDevFWInfo", "toDev_jobPlanTime", b"toDev_jobPlanTime", "toDev_knifeControl", b"toDev_knifeControl", "toDev_loraCfgRq", b"toDev_loraCfgRq", "toDev_mowInfoUp", b"toDev_mowInfoUp", "toDev_offChipFlash", b"toDev_offChipFlash", "toDev_resetSystem", b"toDev_resetSystem", "toDev_resetSystemStatus", b"toDev_resetSystemStatus", "toDev_timeCtrlLight", b"toDev_timeCtrlLight", "toDev_timeZone", b"toDev_timeZone"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["bidire_commCmd", b"bidire_commCmd", "border", b"border", "jobPlan", b"jobPlan", "mowToAppInfo", b"mowToAppInfo", "planJobDel", b"planJobDel", "subSysMsg", b"subSysMsg", "systemRapidState", b"systemRapidState", "systemTardState", b"systemTardState", "systemTmpCycleTx", b"systemTmpCycleTx", "systemUpdateBuf", b"systemUpdateBuf", "toApp_batInfo", b"toApp_batInfo", "toApp_deviceFwInfo", b"toApp_deviceFwInfo", "toApp_errCode", b"toApp_errCode", "toApp_loraCfgRsp", b"toApp_loraCfgRsp", "toApp_mowInfo", b"toApp_mowInfo", "toApp_planStatus", b"toApp_planStatus", "toApp_uploadFileProgress", b"toApp_uploadFileProgress", "toApp_workState", b"toApp_workState", "toDev_dateTime", b"toDev_dateTime", "toDev_delJobPlan", b"toDev_delJobPlan", "toDev_getDevFWInfo", b"toDev_getDevFWInfo", "toDev_jobPlanTime", b"toDev_jobPlanTime", "toDev_knifeControl", b"toDev_knifeControl", "toDev_loraCfgRq", b"toDev_loraCfgRq", "toDev_mowInfoUp", b"toDev_mowInfoUp", "toDev_offChipFlash", b"toDev_offChipFlash", "toDev_resetSystem", b"toDev_resetSystem", "toDev_resetSystemStatus", b"toDev_resetSystemStatus", "toDev_timeCtrlLight", b"toDev_timeCtrlLight", "toDev_timeZone", b"toDev_timeZone"]) -> None: ...
+    def WhichOneof(self, oneof_group: typing_extensions.Literal["subSysMsg", b"subSysMsg"]) -> typing_extensions.Literal["toApp_batInfo", "toApp_workState", "toDev_timeZone", "toDev_dateTime", "jobPlan", "toApp_errCode", "toDev_jobPlanTime", "toApp_mowInfo", "bidire_commCmd", "planJobDel", "border", "toApp_planStatus", "toApp_uploadFileProgress", "toDev_delJobPlan", "toDev_mowInfoUp", "toDev_knifeControl", "toDev_resetSystem", "toDev_resetSystemStatus", "systemRapidState", "systemTardState", "systemUpdateBuf", "toDev_timeCtrlLight", "systemTmpCycleTx", "toDev_offChipFlash", "toDev_getDevFWInfo", "toApp_deviceFwInfo", "toDev_loraCfgRq", "toApp_loraCfgRsp", "mowToAppInfo"] | None: ...
 
 global___MctlSys = MctlSys
 
@@ -853,15 +856,15 @@ global___MctlSys = MctlSys
 class SysBatUp(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    BATVAL1_FIELD_NUMBER: builtins.int
-    batVal1: builtins.int
+    BATVAL_FIELD_NUMBER: builtins.int
+    batVal: builtins.int
     def __init__(
         self,
         *,
-        batVal1: builtins.int | None = ...,
+        batVal: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["batVal1", b"batVal1"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["batVal1", b"batVal1"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["batVal", b"batVal"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["batVal", b"batVal"]) -> None: ...
 
 global___SysBatUp = SysBatUp
 
@@ -869,24 +872,24 @@ global___SysBatUp = SysBatUp
 class SysWorkState(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    DEVICESTATE1_FIELD_NUMBER: builtins.int
-    CHARGESTATE2_FIELD_NUMBER: builtins.int
-    CMHASH3_FIELD_NUMBER: builtins.int
-    PATHHASH4_FIELD_NUMBER: builtins.int
-    deviceState1: builtins.int
-    chargeState2: builtins.int
-    cmHash3: builtins.int
-    pathHash4: builtins.int
+    DEVICESTATE_FIELD_NUMBER: builtins.int
+    CHARGESTATE_FIELD_NUMBER: builtins.int
+    CMHASH_FIELD_NUMBER: builtins.int
+    PATHHASH_FIELD_NUMBER: builtins.int
+    deviceState: builtins.int
+    chargeState: builtins.int
+    cmHash: builtins.int
+    pathHash: builtins.int
     def __init__(
         self,
         *,
-        deviceState1: builtins.int | None = ...,
-        chargeState2: builtins.int | None = ...,
-        cmHash3: builtins.int | None = ...,
-        pathHash4: builtins.int | None = ...,
+        deviceState: builtins.int | None = ...,
+        chargeState: builtins.int | None = ...,
+        cmHash: builtins.int | None = ...,
+        pathHash: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["chargeState2", b"chargeState2", "cmHash3", b"cmHash3", "deviceState1", b"deviceState1", "pathHash4", b"pathHash4"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["chargeState2", b"chargeState2", "cmHash3", b"cmHash3", "deviceState1", b"deviceState1", "pathHash4", b"pathHash4"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["chargeState", b"chargeState", "cmHash", b"cmHash", "deviceState", b"deviceState", "pathHash", b"pathHash"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["chargeState", b"chargeState", "cmHash", b"cmHash", "deviceState", b"deviceState", "pathHash", b"pathHash"]) -> None: ...
 
 global___SysWorkState = SysWorkState
 
@@ -894,18 +897,18 @@ global___SysWorkState = SysWorkState
 class SysSetTimeZone(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    TIMESTAMP1_FIELD_NUMBER: builtins.int
-    TIMEAREA2_FIELD_NUMBER: builtins.int
-    timeStamp1: builtins.int
-    timeArea2: builtins.int
+    TIMESTAMP_FIELD_NUMBER: builtins.int
+    TIMEAREA_FIELD_NUMBER: builtins.int
+    timeStamp: builtins.int
+    timeArea: builtins.int
     def __init__(
         self,
         *,
-        timeStamp1: builtins.int | None = ...,
-        timeArea2: builtins.int | None = ...,
+        timeStamp: builtins.int | None = ...,
+        timeArea: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["timeArea2", b"timeArea2", "timeStamp1", b"timeStamp1"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["timeArea2", b"timeArea2", "timeStamp1", b"timeStamp1"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["timeArea", b"timeArea", "timeStamp", b"timeStamp"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["timeArea", b"timeArea", "timeStamp", b"timeStamp"]) -> None: ...
 
 global___SysSetTimeZone = SysSetTimeZone
 
@@ -913,39 +916,39 @@ global___SysSetTimeZone = SysSetTimeZone
 class SysSetDateTime(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    YEAR1_FIELD_NUMBER: builtins.int
-    MONTH2_FIELD_NUMBER: builtins.int
-    DATE3_FIELD_NUMBER: builtins.int
-    WEEK4_FIELD_NUMBER: builtins.int
-    HOURS5_FIELD_NUMBER: builtins.int
-    MINUTES6_FIELD_NUMBER: builtins.int
-    SECONDS7_FIELD_NUMBER: builtins.int
-    TIMEZONE8_FIELD_NUMBER: builtins.int
-    DAYLIGHT9_FIELD_NUMBER: builtins.int
-    year1: builtins.int
-    month2: builtins.int
-    date3: builtins.int
-    week4: builtins.int
-    hours5: builtins.int
-    minutes6: builtins.int
-    seconds7: builtins.int
-    timeZone8: builtins.int
-    daylight9: builtins.int
+    YEAR_FIELD_NUMBER: builtins.int
+    MONTH_FIELD_NUMBER: builtins.int
+    DATE_FIELD_NUMBER: builtins.int
+    WEEK_FIELD_NUMBER: builtins.int
+    HOURS_FIELD_NUMBER: builtins.int
+    MINUTES_FIELD_NUMBER: builtins.int
+    SECONDS_FIELD_NUMBER: builtins.int
+    TIMEZONE_FIELD_NUMBER: builtins.int
+    DAYLIGHT_FIELD_NUMBER: builtins.int
+    year: builtins.int
+    month: builtins.int
+    date: builtins.int
+    week: builtins.int
+    hours: builtins.int
+    minutes: builtins.int
+    seconds: builtins.int
+    timeZone: builtins.int
+    daylight: builtins.int
     def __init__(
         self,
         *,
-        year1: builtins.int | None = ...,
-        month2: builtins.int | None = ...,
-        date3: builtins.int | None = ...,
-        week4: builtins.int | None = ...,
-        hours5: builtins.int | None = ...,
-        minutes6: builtins.int | None = ...,
-        seconds7: builtins.int | None = ...,
-        timeZone8: builtins.int | None = ...,
-        daylight9: builtins.int | None = ...,
+        year: builtins.int | None = ...,
+        month: builtins.int | None = ...,
+        date: builtins.int | None = ...,
+        week: builtins.int | None = ...,
+        hours: builtins.int | None = ...,
+        minutes: builtins.int | None = ...,
+        seconds: builtins.int | None = ...,
+        timeZone: builtins.int | None = ...,
+        daylight: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["date3", b"date3", "daylight9", b"daylight9", "hours5", b"hours5", "minutes6", b"minutes6", "month2", b"month2", "seconds7", b"seconds7", "timeZone8", b"timeZone8", "week4", b"week4", "year1", b"year1"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["date3", b"date3", "daylight9", b"daylight9", "hours5", b"hours5", "minutes6", b"minutes6", "month2", b"month2", "seconds7", b"seconds7", "timeZone8", b"timeZone8", "week4", b"week4", "year1", b"year1"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["date", b"date", "daylight", b"daylight", "hours", b"hours", "minutes", b"minutes", "month", b"month", "seconds", b"seconds", "timeZone", b"timeZone", "week", b"week", "year", b"year"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["date", b"date", "daylight", b"daylight", "hours", b"hours", "minutes", b"minutes", "month", b"month", "seconds", b"seconds", "timeZone", b"timeZone", "week", b"week", "year", b"year"]) -> None: ...
 
 global___SysSetDateTime = SysSetDateTime
 
@@ -953,24 +956,24 @@ global___SysSetDateTime = SysSetDateTime
 class SysJobPlan(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    JOBID1_FIELD_NUMBER: builtins.int
-    JOBMODE2_FIELD_NUMBER: builtins.int
-    RAINTACTICS3_FIELD_NUMBER: builtins.int
-    KNIFEHEIGHT4_FIELD_NUMBER: builtins.int
-    jobId1: builtins.int
-    jobMode2: builtins.int
-    rainTactics3: builtins.int
-    knifeHeight4: builtins.int
+    JOBID_FIELD_NUMBER: builtins.int
+    JOBMODE_FIELD_NUMBER: builtins.int
+    RAINTACTICS_FIELD_NUMBER: builtins.int
+    KNIFEHEIGHT_FIELD_NUMBER: builtins.int
+    jobId: builtins.int
+    jobMode: builtins.int
+    rainTactics: builtins.int
+    knifeHeight: builtins.int
     def __init__(
         self,
         *,
-        jobId1: builtins.int | None = ...,
-        jobMode2: builtins.int | None = ...,
-        rainTactics3: builtins.int | None = ...,
-        knifeHeight4: builtins.int | None = ...,
+        jobId: builtins.int | None = ...,
+        jobMode: builtins.int | None = ...,
+        rainTactics: builtins.int | None = ...,
+        knifeHeight: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["jobId1", b"jobId1", "jobMode2", b"jobMode2", "knifeHeight4", b"knifeHeight4", "rainTactics3", b"rainTactics3"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["jobId1", b"jobId1", "jobMode2", b"jobMode2", "knifeHeight4", b"knifeHeight4", "rainTactics3", b"rainTactics3"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["jobId", b"jobId", "jobMode", b"jobMode", "knifeHeight", b"knifeHeight", "rainTactics", b"rainTactics"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["jobId", b"jobId", "jobMode", b"jobMode", "knifeHeight", b"knifeHeight", "rainTactics", b"rainTactics"]) -> None: ...
 
 global___SysJobPlan = SysJobPlan
 
@@ -978,15 +981,15 @@ global___SysJobPlan = SysJobPlan
 class SysDevErrCode(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    ERRORCODE1_FIELD_NUMBER: builtins.int
-    errorCode1: builtins.int
+    ERRORCODE_FIELD_NUMBER: builtins.int
+    errorCode: builtins.int
     def __init__(
         self,
         *,
-        errorCode1: builtins.int | None = ...,
+        errorCode: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["errorCode1", b"errorCode1"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["errorCode1", b"errorCode1"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["errorCode", b"errorCode"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["errorCode", b"errorCode"]) -> None: ...
 
 global___SysDevErrCode = SysDevErrCode
 
@@ -994,37 +997,37 @@ global___SysDevErrCode = SysDevErrCode
 class SysJobPlanTime(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    PLANID1_FIELD_NUMBER: builtins.int
-    STARTJOBTIME2_FIELD_NUMBER: builtins.int
-    ENDJOBTIME3_FIELD_NUMBER: builtins.int
-    TIMEINDAY4_FIELD_NUMBER: builtins.int
-    JOBPLANMODE5_FIELD_NUMBER: builtins.int
-    JOBPLANENABLE6_FIELD_NUMBER: builtins.int
-    EVERYDAY9_FIELD_NUMBER: builtins.int
-    JOBPLAN10_FIELD_NUMBER: builtins.int
-    planId1: builtins.int
-    startJobTime2: builtins.int
-    endJobTime3: builtins.int
-    timeInDay4: builtins.int
-    jobPlanMode5: builtins.int
-    jobPlanEnable6: builtins.int
-    everyDay9: builtins.int
+    PLANID_FIELD_NUMBER: builtins.int
+    STARTJOBTIME_FIELD_NUMBER: builtins.int
+    ENDJOBTIME_FIELD_NUMBER: builtins.int
+    TIMEINDAY_FIELD_NUMBER: builtins.int
+    JOBPLANMODE_FIELD_NUMBER: builtins.int
+    JOBPLANENABLE_FIELD_NUMBER: builtins.int
+    EVERYDAY_FIELD_NUMBER: builtins.int
+    JOBPLAN_FIELD_NUMBER: builtins.int
+    planId: builtins.int
+    startJobTime: builtins.int
+    endJobTime: builtins.int
+    timeInDay: builtins.int
+    jobPlanMode: builtins.int
+    jobPlanEnable: builtins.int
+    everyDay: builtins.int
     @property
-    def jobPlan10(self) -> global___SysJobPlan: ...
+    def jobPlan(self) -> global___SysJobPlan: ...
     def __init__(
         self,
         *,
-        planId1: builtins.int | None = ...,
-        startJobTime2: builtins.int | None = ...,
-        endJobTime3: builtins.int | None = ...,
-        timeInDay4: builtins.int | None = ...,
-        jobPlanMode5: builtins.int | None = ...,
-        jobPlanEnable6: builtins.int | None = ...,
-        everyDay9: builtins.int | None = ...,
-        jobPlan10: global___SysJobPlan | None = ...,
+        planId: builtins.int | None = ...,
+        startJobTime: builtins.int | None = ...,
+        endJobTime: builtins.int | None = ...,
+        timeInDay: builtins.int | None = ...,
+        jobPlanMode: builtins.int | None = ...,
+        jobPlanEnable: builtins.int | None = ...,
+        everyDay: builtins.int | None = ...,
+        jobPlan: global___SysJobPlan | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["endJobTime3", b"endJobTime3", "everyDay9", b"everyDay9", "jobPlan10", b"jobPlan10", "jobPlanEnable6", b"jobPlanEnable6", "jobPlanMode5", b"jobPlanMode5", "planId1", b"planId1", "startJobTime2", b"startJobTime2", "timeInDay4", b"timeInDay4"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["endJobTime3", b"endJobTime3", "everyDay9", b"everyDay9", "jobPlan10", b"jobPlan10", "jobPlanEnable6", b"jobPlanEnable6", "jobPlanMode5", b"jobPlanMode5", "planId1", b"planId1", "startJobTime2", b"startJobTime2", "timeInDay4", b"timeInDay4"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["endJobTime", b"endJobTime", "everyDay", b"everyDay", "jobPlan", b"jobPlan", "jobPlanEnable", b"jobPlanEnable", "jobPlanMode", b"jobPlanMode", "planId", b"planId", "startJobTime", b"startJobTime", "timeInDay", b"timeInDay"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["endJobTime", b"endJobTime", "everyDay", b"everyDay", "jobPlan", b"jobPlan", "jobPlanEnable", b"jobPlanEnable", "jobPlanMode", b"jobPlanMode", "planId", b"planId", "startJobTime", b"startJobTime", "timeInDay", b"timeInDay"]) -> None: ...
 
 global___SysJobPlanTime = SysJobPlanTime
 
@@ -1032,27 +1035,27 @@ global___SysJobPlanTime = SysJobPlanTime
 class SysMowInfo(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    DEVICESTATE1_FIELD_NUMBER: builtins.int
-    BATVAL2_FIELD_NUMBER: builtins.int
-    KNIFEHEIGHT3_FIELD_NUMBER: builtins.int
-    RTKSTATUS4_FIELD_NUMBER: builtins.int
-    RTKSTARS5_FIELD_NUMBER: builtins.int
-    deviceState1: builtins.int
-    batVal2: builtins.int
-    knifeHeight3: builtins.int
-    RTKstatus4: builtins.int
-    RTKstars5: builtins.int
+    DEVICESTATE_FIELD_NUMBER: builtins.int
+    BATVAL_FIELD_NUMBER: builtins.int
+    KNIFEHEIGHT_FIELD_NUMBER: builtins.int
+    RTKSTATUS_FIELD_NUMBER: builtins.int
+    RTKSTARS_FIELD_NUMBER: builtins.int
+    deviceState: builtins.int
+    batVal: builtins.int
+    knifeHeight: builtins.int
+    RTKstatus: builtins.int
+    RTKstars: builtins.int
     def __init__(
         self,
         *,
-        deviceState1: builtins.int | None = ...,
-        batVal2: builtins.int | None = ...,
-        knifeHeight3: builtins.int | None = ...,
-        RTKstatus4: builtins.int | None = ...,
-        RTKstars5: builtins.int | None = ...,
+        deviceState: builtins.int | None = ...,
+        batVal: builtins.int | None = ...,
+        knifeHeight: builtins.int | None = ...,
+        RTKstatus: builtins.int | None = ...,
+        RTKstars: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["RTKstars5", b"RTKstars5", "RTKstatus4", b"RTKstatus4", "batVal2", b"batVal2", "deviceState1", b"deviceState1", "knifeHeight3", b"knifeHeight3"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["RTKstars5", b"RTKstars5", "RTKstatus4", b"RTKstatus4", "batVal2", b"batVal2", "deviceState1", b"deviceState1", "knifeHeight3", b"knifeHeight3"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["RTKstars", b"RTKstars", "RTKstatus", b"RTKstatus", "batVal", b"batVal", "deviceState", b"deviceState", "knifeHeight", b"knifeHeight"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["RTKstars", b"RTKstars", "RTKstatus", b"RTKstatus", "batVal", b"batVal", "deviceState", b"deviceState", "knifeHeight", b"knifeHeight"]) -> None: ...
 
 global___SysMowInfo = SysMowInfo
 
@@ -1060,21 +1063,21 @@ global___SysMowInfo = SysMowInfo
 class SysCommCmd(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    RW1_FIELD_NUMBER: builtins.int
-    ID2_FIELD_NUMBER: builtins.int
-    CONTEXT3_FIELD_NUMBER: builtins.int
-    rw1: builtins.int
-    id2: builtins.int
-    context3: builtins.int
+    RW_FIELD_NUMBER: builtins.int
+    ID_FIELD_NUMBER: builtins.int
+    CONTEXT_FIELD_NUMBER: builtins.int
+    rw: builtins.int
+    id: builtins.int
+    context: builtins.int
     def __init__(
         self,
         *,
-        rw1: builtins.int | None = ...,
-        id2: builtins.int | None = ...,
-        context3: builtins.int | None = ...,
+        rw: builtins.int | None = ...,
+        id: builtins.int | None = ...,
+        context: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["context3", b"context3", "id2", b"id2", "rw1", b"rw1"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["context3", b"context3", "id2", b"id2", "rw1", b"rw1"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["context", b"context", "id", b"id", "rw", b"rw"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["context", b"context", "id", b"id", "rw", b"rw"]) -> None: ...
 
 global___SysCommCmd = SysCommCmd
 
@@ -1082,15 +1085,15 @@ global___SysCommCmd = SysCommCmd
 class SysBorder(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    BORDERVAL1_FIELD_NUMBER: builtins.int
-    borderVal1: builtins.int
+    BORDERVAL_FIELD_NUMBER: builtins.int
+    borderVal: builtins.int
     def __init__(
         self,
         *,
-        borderVal1: builtins.int | None = ...,
+        borderVal: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["borderVal1", b"borderVal1"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["borderVal1", b"borderVal1"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["borderVal", b"borderVal"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["borderVal", b"borderVal"]) -> None: ...
 
 global___SysBorder = SysBorder
 
@@ -1098,15 +1101,15 @@ global___SysBorder = SysBorder
 class SysPlanJobStatus(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    PLANJOBSTATUS1_FIELD_NUMBER: builtins.int
-    planjobStatus1: builtins.int
+    PLANJOBSTATUS_FIELD_NUMBER: builtins.int
+    planjobStatus: builtins.int
     def __init__(
         self,
         *,
-        planjobStatus1: builtins.int | None = ...,
+        planjobStatus: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["planjobStatus1", b"planjobStatus1"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["planjobStatus1", b"planjobStatus1"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["planjobStatus", b"planjobStatus"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["planjobStatus", b"planjobStatus"]) -> None: ...
 
 global___SysPlanJobStatus = SysPlanJobStatus
 
@@ -1114,21 +1117,21 @@ global___SysPlanJobStatus = SysPlanJobStatus
 class SysUploadFileProgress(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    BIZID1_FIELD_NUMBER: builtins.int
-    RESULT2_FIELD_NUMBER: builtins.int
-    PROGRESS3_FIELD_NUMBER: builtins.int
-    bizId1: builtins.str
-    result2: builtins.int
-    progress3: builtins.int
+    BIZID_FIELD_NUMBER: builtins.int
+    RESULT_FIELD_NUMBER: builtins.int
+    PROGRESS_FIELD_NUMBER: builtins.int
+    bizId: builtins.str
+    result: builtins.int
+    progress: builtins.int
     def __init__(
         self,
         *,
-        bizId1: builtins.str | None = ...,
-        result2: builtins.int | None = ...,
-        progress3: builtins.int | None = ...,
+        bizId: builtins.str | None = ...,
+        result: builtins.int | None = ...,
+        progress: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["bizId1", b"bizId1", "progress3", b"progress3", "result2", b"result2"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["bizId1", b"bizId1", "progress3", b"progress3", "result2", b"result2"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["bizId", b"bizId", "progress", b"progress", "result", b"result"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["bizId", b"bizId", "progress", b"progress", "result", b"result"]) -> None: ...
 
 global___SysUploadFileProgress = SysUploadFileProgress
 
@@ -1136,18 +1139,18 @@ global___SysUploadFileProgress = SysUploadFileProgress
 class SysDelJobPlan(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    DEVICEID1_FIELD_NUMBER: builtins.int
-    PLANID2_FIELD_NUMBER: builtins.int
-    deviceId1: builtins.str
-    planId2: builtins.str
+    DEVICEID_FIELD_NUMBER: builtins.int
+    PLANID_FIELD_NUMBER: builtins.int
+    deviceId: builtins.str
+    planId: builtins.str
     def __init__(
         self,
         *,
-        deviceId1: builtins.str | None = ...,
-        planId2: builtins.str | None = ...,
+        deviceId: builtins.str | None = ...,
+        planId: builtins.str | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["deviceId1", b"deviceId1", "planId2", b"planId2"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["deviceId1", b"deviceId1", "planId2", b"planId2"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["deviceId", b"deviceId", "planId", b"planId"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["deviceId", b"deviceId", "planId", b"planId"]) -> None: ...
 
 global___SysDelJobPlan = SysDelJobPlan
 
@@ -1155,18 +1158,18 @@ global___SysDelJobPlan = SysDelJobPlan
 class SysKnifeControl(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    KNIFESTATUS1_FIELD_NUMBER: builtins.int
-    KNIFEHEIGHT2_FIELD_NUMBER: builtins.int
-    knifeStatus1: builtins.int
-    knifeHeight2: builtins.int
+    KNIFESTATUS_FIELD_NUMBER: builtins.int
+    KNIFEHEIGHT_FIELD_NUMBER: builtins.int
+    knifeStatus: builtins.int
+    knifeHeight: builtins.int
     def __init__(
         self,
         *,
-        knifeStatus1: builtins.int | None = ...,
-        knifeHeight2: builtins.int | None = ...,
+        knifeStatus: builtins.int | None = ...,
+        knifeHeight: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["knifeHeight2", b"knifeHeight2", "knifeStatus1", b"knifeStatus1"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["knifeHeight2", b"knifeHeight2", "knifeStatus1", b"knifeStatus1"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["knifeHeight", b"knifeHeight", "knifeStatus", b"knifeStatus"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["knifeHeight", b"knifeHeight", "knifeStatus", b"knifeStatus"]) -> None: ...
 
 global___SysKnifeControl = SysKnifeControl
 
@@ -1174,15 +1177,15 @@ global___SysKnifeControl = SysKnifeControl
 class SysResetSystemStatus(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    RESETSTATUS1_FIELD_NUMBER: builtins.int
-    resetStatus1: builtins.int
+    RESETSTATUS_FIELD_NUMBER: builtins.int
+    resetStatus: builtins.int
     def __init__(
         self,
         *,
-        resetStatus1: builtins.int | None = ...,
+        resetStatus: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["resetStatus1", b"resetStatus1"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["resetStatus1", b"resetStatus1"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["resetStatus", b"resetStatus"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["resetStatus", b"resetStatus"]) -> None: ...
 
 global___SysResetSystemStatus = SysResetSystemStatus
 
@@ -1190,9 +1193,15 @@ global___SysResetSystemStatus = SysResetSystemStatus
 class systemRapidStateTunnel_msg(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
+    DATA_FIELD_NUMBER: builtins.int
+    @property
+    def data(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.int]: ...
     def __init__(
         self,
+        *,
+        data: collections.abc.Iterable[builtins.int] | None = ...,
     ) -> None: ...
+    def ClearField(self, field_name: typing_extensions.Literal["data", b"data"]) -> None: ...
 
 global___systemRapidStateTunnel_msg = systemRapidStateTunnel_msg
 
@@ -1200,9 +1209,15 @@ global___systemRapidStateTunnel_msg = systemRapidStateTunnel_msg
 class systemTardStateTunnel_msg(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
+    DATA_FIELD_NUMBER: builtins.int
+    @property
+    def data(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.int]: ...
     def __init__(
         self,
+        *,
+        data: collections.abc.Iterable[builtins.int] | None = ...,
     ) -> None: ...
+    def ClearField(self, field_name: typing_extensions.Literal["data", b"data"]) -> None: ...
 
 global___systemTardStateTunnel_msg = systemTardStateTunnel_msg
 
@@ -1220,33 +1235,33 @@ global___systemUpdateBuf_msg = systemUpdateBuf_msg
 class TimeCtrlLight(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    OPERATE1_FIELD_NUMBER: builtins.int
-    ENABLE2_FIELD_NUMBER: builtins.int
-    STARTHOUR3_FIELD_NUMBER: builtins.int
-    STARTMIN4_FIELD_NUMBER: builtins.int
-    ENDHOUR5_FIELD_NUMBER: builtins.int
-    ENDMIN6_FIELD_NUMBER: builtins.int
-    ACTION7_FIELD_NUMBER: builtins.int
-    operate1: builtins.int
-    enable2: builtins.int
-    startHour3: builtins.int
-    startMin4: builtins.int
-    endHour5: builtins.int
-    endMin6: builtins.int
-    action7: builtins.int
+    OPERATE_FIELD_NUMBER: builtins.int
+    ENABLE_FIELD_NUMBER: builtins.int
+    STARTHOUR_FIELD_NUMBER: builtins.int
+    STARTMIN_FIELD_NUMBER: builtins.int
+    ENDHOUR_FIELD_NUMBER: builtins.int
+    ENDMIN_FIELD_NUMBER: builtins.int
+    ACTION_FIELD_NUMBER: builtins.int
+    operate: builtins.int
+    enable: builtins.int
+    startHour: builtins.int
+    startMin: builtins.int
+    endHour: builtins.int
+    endMin: builtins.int
+    action: builtins.int
     def __init__(
         self,
         *,
-        operate1: builtins.int | None = ...,
-        enable2: builtins.int | None = ...,
-        startHour3: builtins.int | None = ...,
-        startMin4: builtins.int | None = ...,
-        endHour5: builtins.int | None = ...,
-        endMin6: builtins.int | None = ...,
-        action7: builtins.int | None = ...,
+        operate: builtins.int | None = ...,
+        enable: builtins.int | None = ...,
+        startHour: builtins.int | None = ...,
+        startMin: builtins.int | None = ...,
+        endHour: builtins.int | None = ...,
+        endMin: builtins.int | None = ...,
+        action: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["action7", b"action7", "enable2", b"enable2", "endHour5", b"endHour5", "endMin6", b"endMin6", "operate1", b"operate1", "startHour3", b"startHour3", "startMin4", b"startMin4"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["action7", b"action7", "enable2", b"enable2", "endHour5", b"endHour5", "endMin6", b"endMin6", "operate1", b"operate1", "startHour3", b"startHour3", "startMin4", b"startMin4"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["action", b"action", "enable", b"enable", "endHour", b"endHour", "endMin", b"endMin", "operate", b"operate", "startHour", b"startHour", "startMin", b"startMin"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["action", b"action", "enable", b"enable", "endHour", b"endHour", "endMin", b"endMin", "operate", b"operate", "startHour", b"startHour", "startMin", b"startMin"]) -> None: ...
 
 global___TimeCtrlLight = TimeCtrlLight
 
@@ -1264,36 +1279,36 @@ global___systemTmpCycleTx_msg = systemTmpCycleTx_msg
 class SysOffChipFlash(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    OP1_FIELD_NUMBER: builtins.int
-    ID2_FIELD_NUMBER: builtins.int
-    STARTADDR3_FIELD_NUMBER: builtins.int
-    OFFSET4_FIELD_NUMBER: builtins.int
-    LENGTH5_FIELD_NUMBER: builtins.int
-    DATA6_FIELD_NUMBER: builtins.int
-    CODE7_FIELD_NUMBER: builtins.int
-    MSG8_FIELD_NUMBER: builtins.int
-    op1: global___Operation.ValueType
-    id2: global___OffPartId.ValueType
-    startAddr3: builtins.int
-    offset4: builtins.int
-    length5: builtins.int
-    data6: builtins.bytes
-    code7: builtins.int
-    msg8: builtins.str
+    OP_FIELD_NUMBER: builtins.int
+    ID_FIELD_NUMBER: builtins.int
+    STARTADDR_FIELD_NUMBER: builtins.int
+    OFFSET_FIELD_NUMBER: builtins.int
+    LENGTH_FIELD_NUMBER: builtins.int
+    DATA_FIELD_NUMBER: builtins.int
+    CODE_FIELD_NUMBER: builtins.int
+    MSG_FIELD_NUMBER: builtins.int
+    op: global___Operation.ValueType
+    id: global___OffPartId.ValueType
+    startAddr: builtins.int
+    offset: builtins.int
+    length: builtins.int
+    data: builtins.bytes
+    code: builtins.int
+    msg: builtins.str
     def __init__(
         self,
         *,
-        op1: global___Operation.ValueType | None = ...,
-        id2: global___OffPartId.ValueType | None = ...,
-        startAddr3: builtins.int | None = ...,
-        offset4: builtins.int | None = ...,
-        length5: builtins.int | None = ...,
-        data6: builtins.bytes | None = ...,
-        code7: builtins.int | None = ...,
-        msg8: builtins.str | None = ...,
+        op: global___Operation.ValueType | None = ...,
+        id: global___OffPartId.ValueType | None = ...,
+        startAddr: builtins.int | None = ...,
+        offset: builtins.int | None = ...,
+        length: builtins.int | None = ...,
+        data: builtins.bytes | None = ...,
+        code: builtins.int | None = ...,
+        msg: builtins.str | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["code7", b"code7", "data6", b"data6", "id2", b"id2", "length5", b"length5", "msg8", b"msg8", "offset4", b"offset4", "op1", b"op1", "startAddr3", b"startAddr3"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["code7", b"code7", "data6", b"data6", "id2", b"id2", "length5", b"length5", "msg8", b"msg8", "offset4", b"offset4", "op1", b"op1", "startAddr3", b"startAddr3"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["code", b"code", "data", b"data", "id", b"id", "length", b"length", "msg", b"msg", "offset", b"offset", "op", b"op", "startAddr", b"startAddr"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["code", b"code", "data", b"data", "id", b"id", "length", b"length", "msg", b"msg", "offset", b"offset", "op", b"op", "startAddr", b"startAddr"]) -> None: ...
 
 global___SysOffChipFlash = SysOffChipFlash
 
@@ -1301,22 +1316,22 @@ global___SysOffChipFlash = SysOffChipFlash
 class device_fw_info(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    RESULT1_FIELD_NUMBER: builtins.int
-    VERSION2_FIELD_NUMBER: builtins.int
-    MOD3_FIELD_NUMBER: builtins.int
-    result1: builtins.int
-    version2: builtins.str
+    RESULT_FIELD_NUMBER: builtins.int
+    VERSION_FIELD_NUMBER: builtins.int
+    MOD_FIELD_NUMBER: builtins.int
+    result: builtins.int
+    version: builtins.str
     @property
-    def mod3(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.str]: ...
+    def mod(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.str]: ...
     def __init__(
         self,
         *,
-        result1: builtins.int | None = ...,
-        version2: builtins.str | None = ...,
-        mod3: collections.abc.Iterable[builtins.str] | None = ...,
+        result: builtins.int | None = ...,
+        version: builtins.str | None = ...,
+        mod: collections.abc.Iterable[builtins.str] | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["result1", b"result1", "version2", b"version2"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["mod3", b"mod3", "result1", b"result1", "version2", b"version2"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["result", b"result", "version", b"version"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["mod", b"mod", "result", b"result", "version", b"version"]) -> None: ...
 
 global___device_fw_info = device_fw_info
 
@@ -1324,18 +1339,18 @@ global___device_fw_info = device_fw_info
 class LoraCfgReq(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    OP1_FIELD_NUMBER: builtins.int
-    CFG2_FIELD_NUMBER: builtins.int
-    op1: builtins.int
-    cfg2: builtins.str
+    OP_FIELD_NUMBER: builtins.int
+    CFG_FIELD_NUMBER: builtins.int
+    op: builtins.int
+    cfg: builtins.str
     def __init__(
         self,
         *,
-        op1: builtins.int | None = ...,
-        cfg2: builtins.str | None = ...,
+        op: builtins.int | None = ...,
+        cfg: builtins.str | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["cfg2", b"cfg2", "op1", b"op1"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["cfg2", b"cfg2", "op1", b"op1"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["cfg", b"cfg", "op", b"op"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["cfg", b"cfg", "op", b"op"]) -> None: ...
 
 global___LoraCfgReq = LoraCfgReq
 
@@ -1343,24 +1358,24 @@ global___LoraCfgReq = LoraCfgReq
 class LoraCfgRsp(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    RESULT1_FIELD_NUMBER: builtins.int
-    OP2_FIELD_NUMBER: builtins.int
-    CFG3_FIELD_NUMBER: builtins.int
-    FACCFG4_FIELD_NUMBER: builtins.int
-    result1: builtins.int
-    op2: builtins.int
-    cfg3: builtins.str
-    facCfg4: builtins.str
+    RESULT_FIELD_NUMBER: builtins.int
+    OP_FIELD_NUMBER: builtins.int
+    CFG_FIELD_NUMBER: builtins.int
+    FACCFG_FIELD_NUMBER: builtins.int
+    result: builtins.int
+    op: builtins.int
+    cfg: builtins.str
+    facCfg: builtins.str
     def __init__(
         self,
         *,
-        result1: builtins.int | None = ...,
-        op2: builtins.int | None = ...,
-        cfg3: builtins.str | None = ...,
-        facCfg4: builtins.str | None = ...,
+        result: builtins.int | None = ...,
+        op: builtins.int | None = ...,
+        cfg: builtins.str | None = ...,
+        facCfg: builtins.str | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["cfg3", b"cfg3", "facCfg4", b"facCfg4", "op2", b"op2", "result1", b"result1"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["cfg3", b"cfg3", "facCfg4", b"facCfg4", "op2", b"op2", "result1", b"result1"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["cfg", b"cfg", "facCfg", b"facCfg", "op", b"op", "result", b"result"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["cfg", b"cfg", "facCfg", b"facCfg", "op", b"op", "result", b"result"]) -> None: ...
 
 global___LoraCfgRsp = LoraCfgRsp
 
@@ -1368,18 +1383,18 @@ global___LoraCfgRsp = LoraCfgRsp
 class mow_to_app_info_t(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    TYPE1_FIELD_NUMBER: builtins.int
-    CMD2_FIELD_NUMBER: builtins.int
-    type1: builtins.int
-    cmd2: builtins.int
+    TYPE_FIELD_NUMBER: builtins.int
+    CMD_FIELD_NUMBER: builtins.int
+    type: builtins.int
+    cmd: builtins.int
     def __init__(
         self,
         *,
-        type1: builtins.int | None = ...,
-        cmd2: builtins.int | None = ...,
+        type: builtins.int | None = ...,
+        cmd: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["cmd2", b"cmd2", "type1", b"type1"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["cmd2", b"cmd2", "type1", b"type1"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["cmd", b"cmd", "type", b"type"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["cmd", b"cmd", "type", b"type"]) -> None: ...
 
 global___mow_to_app_info_t = mow_to_app_info_t
 
@@ -1387,181 +1402,182 @@ global___mow_to_app_info_t = mow_to_app_info_t
 class MctlNav(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    SUBNAVMSG1_FIELD_NUMBER: builtins.int
-    SUBNAVMSG2_FIELD_NUMBER: builtins.int
-    SUBNAVMSG3_FIELD_NUMBER: builtins.int
-    SUBNAVMSG4_FIELD_NUMBER: builtins.int
-    SUBNAVMSG5_FIELD_NUMBER: builtins.int
-    SUBNAVMSG6_FIELD_NUMBER: builtins.int
-    SUBNAVMSG7_FIELD_NUMBER: builtins.int
-    SUBNAVMSG8_FIELD_NUMBER: builtins.int
-    SUBNAVMSG9_FIELD_NUMBER: builtins.int
-    SUBNAVMSG10_FIELD_NUMBER: builtins.int
-    SUBNAVMSG11_FIELD_NUMBER: builtins.int
-    SUBNAVMSG12_FIELD_NUMBER: builtins.int
-    SUBNAVMSG13_FIELD_NUMBER: builtins.int
-    SUBNAVMSG14_FIELD_NUMBER: builtins.int
-    SUBNAVMSG15_FIELD_NUMBER: builtins.int
-    SUBNAVMSG16_FIELD_NUMBER: builtins.int
-    SUBNAVMSG17_FIELD_NUMBER: builtins.int
-    SUBNAVMSG18_FIELD_NUMBER: builtins.int
-    SUBNAVMSG19_FIELD_NUMBER: builtins.int
-    SUBNAVMSG20_FIELD_NUMBER: builtins.int
-    SUBNAVMSG21_FIELD_NUMBER: builtins.int
-    SUBNAVMSG22_FIELD_NUMBER: builtins.int
-    SUBNAVMSG23_FIELD_NUMBER: builtins.int
-    SUBNAVMSG24_FIELD_NUMBER: builtins.int
-    SUBNAVMSG25_FIELD_NUMBER: builtins.int
-    SUBNAVMSG26_FIELD_NUMBER: builtins.int
-    SUBNAVMSG27_FIELD_NUMBER: builtins.int
-    SUBNAVMSG28_FIELD_NUMBER: builtins.int
-    SUBNAVMSG29_FIELD_NUMBER: builtins.int
-    SUBNAVMSG30_FIELD_NUMBER: builtins.int
-    SUBNAVMSG31_FIELD_NUMBER: builtins.int
-    SUBNAVMSG32_FIELD_NUMBER: builtins.int
-    SUBNAVMSG33_FIELD_NUMBER: builtins.int
-    SUBNAVMSG34_FIELD_NUMBER: builtins.int
-    SUBNAVMSG35_FIELD_NUMBER: builtins.int
-    SUBNAVMSG36_FIELD_NUMBER: builtins.int
-    SUBNAVMSG37_FIELD_NUMBER: builtins.int
-    SUBNAVMSG38_FIELD_NUMBER: builtins.int
-    SUBNAVMSG39_FIELD_NUMBER: builtins.int
-    SUBNAVMSG40_FIELD_NUMBER: builtins.int
-    SUBNAVMSG41_FIELD_NUMBER: builtins.int
-    SUBNAVMSG42_FIELD_NUMBER: builtins.int
-    SUBNAVMSG43_FIELD_NUMBER: builtins.int
-    SUBNAVMSG44_FIELD_NUMBER: builtins.int
-    SUBNAVMSG45_FIELD_NUMBER: builtins.int
-    SUBNAVMSG46_FIELD_NUMBER: builtins.int
+    TOAPP_LATUP_FIELD_NUMBER: builtins.int
+    TOAPP_POSUP_FIELD_NUMBER: builtins.int
+    TODEV_CHLLINEDATA_FIELD_NUMBER: builtins.int
+    TOAPP_TASKINFO_FIELD_NUMBER: builtins.int
+    TOAPP_OPTLINEUP_FIELD_NUMBER: builtins.int
+    TOAPP_OPTBORDERINFO_FIELD_NUMBER: builtins.int
+    TOAPP_OPTOBSINFO_FIELD_NUMBER: builtins.int
+    TODEV_TASKINFOACK_FIELD_NUMBER: builtins.int
+    TODEV_OPTBORDERINFOACK_FIELD_NUMBER: builtins.int
+    TODEV_OPTOBSINFOACK_FIELD_NUMBER: builtins.int
+    TODEV_OPTLINEUPACK_FIELD_NUMBER: builtins.int
+    TOAPP_CHGPILETO_FIELD_NUMBER: builtins.int
+    TODEV_SUSTASK_FIELD_NUMBER: builtins.int
+    TODEV_RECHGCMD_FIELD_NUMBER: builtins.int
+    TODEV_EDGECMD_FIELD_NUMBER: builtins.int
+    TODEV_DRAWBORDER_FIELD_NUMBER: builtins.int
+    TODEV_DRAWBORDEREND_FIELD_NUMBER: builtins.int
+    TODEV_DRAWOBS_FIELD_NUMBER: builtins.int
+    TODEV_DRAWOBSEND_FIELD_NUMBER: builtins.int
+    TODEV_CHLLINE_FIELD_NUMBER: builtins.int
+    TODEV_CHLLINEDEV_FIELD_NUMBER: builtins.int
+    TODEV_SAVETASK_FIELD_NUMBER: builtins.int
+    TODEV_CANCELSUSCMD_FIELD_NUMBER: builtins.int
+    TODEV_RESETCHGPILE_FIELD_NUMBER: builtins.int
+    TODEV_CANCELDRAWCMD_FIELD_NUMBER: builtins.int
+    TODEV_ONETOUCHLEAVEPILE_FIELD_NUMBER: builtins.int
+    TODEV_MOWTASK_FIELD_NUMBER: builtins.int
+    TOAPP_BSTATE_FIELD_NUMBER: builtins.int
+    TODEV_LATUPACK_FIELD_NUMBER: builtins.int
+    TODEV_GETHASH_FIELD_NUMBER: builtins.int
+    TOAPP_GETHASHACK_FIELD_NUMBER: builtins.int
+    TODEV_GETCOMMONDATA_FIELD_NUMBER: builtins.int
+    TOAPP_GETCOMMONDATAACK_FIELD_NUMBER: builtins.int
+    BIDIRE_REQCONVERPATH_FIELD_NUMBER: builtins.int
+    TOAPP_ZIGZAG_FIELD_NUMBER: builtins.int
+    TODEV_ZIGZAGACK_FIELD_NUMBER: builtins.int
+    TODEV_TASKCTRL_FIELD_NUMBER: builtins.int
+    BIDIRE_TASKID_FIELD_NUMBER: builtins.int
+    TOAPP_BP_FIELD_NUMBER: builtins.int
+    TODEV_PLANJOBSET_FIELD_NUMBER: builtins.int
+    TODEV_UNABLETIMESET_FIELD_NUMBER: builtins.int
+    SIMULATIONCMD_FIELD_NUMBER: builtins.int
+    TODEV_WORKREPORTUPDATECMD_FIELD_NUMBER: builtins.int
+    TOAPP_WORKREPORTUPDATEACK_FIELD_NUMBER: builtins.int
+    TODEV_WORKREPORTCMD_FIELD_NUMBER: builtins.int
+    TOAPP_WORKREPORTACK_FIELD_NUMBER: builtins.int
     @property
-    def subNavMsg1(self) -> global___NavLatLonUp: ...
+    def toApp_latUp(self) -> global___NavLatLonUp: ...
     @property
-    def subNavMsg2(self) -> global___NavPosUp: ...
+    def toApp_posUp(self) -> global___NavPosUp: ...
     @property
-    def subNavMsg3(self) -> global___NavCHlLineData: ...
+    def toDev_CHlLineData(self) -> global___NavCHlLineData: ...
     @property
-    def subNavMsg4(self) -> global___NavTaskInfo: ...
+    def toApp_taskInfo(self) -> global___NavTaskInfo: ...
     @property
-    def subNavMsg5(self) -> global___NavOptLineUp: ...
+    def toApp_optLineUp(self) -> global___NavOptLineUp: ...
     @property
-    def subNavMsg6(self) -> global___NavOptiBorderInfo: ...
+    def toApp_optBorderInfo(self) -> global___NavOptiBorderInfo: ...
     @property
-    def subNavMsg7(self) -> global___NavOptObsInfo: ...
+    def toApp_optObsInfo(self) -> global___NavOptObsInfo: ...
     @property
-    def subNavMsg8(self) -> global___NavResFrame: ...
+    def toDev_taskInfoAck(self) -> global___NavResFrame: ...
     @property
-    def subNavMsg9(self) -> global___NavResFrame: ...
+    def toDev_optBorderInfoAck(self) -> global___NavResFrame: ...
     @property
-    def subNavMsg10(self) -> global___NavResFrame: ...
+    def toDev_optObsInfoAck(self) -> global___NavResFrame: ...
     @property
-    def subNavMsg11(self) -> global___NavResFrame: ...
+    def toDev_optLineUpAck(self) -> global___NavResFrame: ...
     @property
-    def subNavMsg12(self) -> global___chargePileType: ...
-    subNavMsg13: builtins.int
-    subNavMsg14: builtins.int
-    subNavMsg15: builtins.int
-    subNavMsg16: builtins.int
-    subNavMsg17: builtins.int
-    subNavMsg18: builtins.int
-    subNavMsg19: builtins.int
-    subNavMsg20: builtins.int
-    subNavMsg21: builtins.int
-    subNavMsg22: builtins.int
-    subNavMsg23: builtins.int
-    subNavMsg24: builtins.int
-    subNavMsg25: builtins.int
-    subNavMsg26: builtins.int
+    def toApp_chgPileTo(self) -> global___chargePileType: ...
+    toDev_susTask: builtins.int
+    toDev_rechgCmd: builtins.int
+    toDev_edgeCmd: builtins.int
+    toDev_drawBorder: builtins.int
+    toDev_drawBorderEnd: builtins.int
+    toDev_drawObs: builtins.int
+    toDev_drawObsEnd: builtins.int
+    toDev_chlLine: builtins.int
+    toDev_chlLineDev: builtins.int
+    toDev_saveTask: builtins.int
+    toDev_cancelSusCmd: builtins.int
+    toDev_resetChgPile: builtins.int
+    toDev_cancelDrawCmd: builtins.int
+    toDev_oneTouchLeavePile: builtins.int
     @property
-    def subNavMsg27(self) -> global___NavStartJob: ...
+    def toDev_mowTask(self) -> global___NavStartJob: ...
     @property
-    def subNavMsg28(self) -> global___NavBorderState: ...
-    subNavMsg29: builtins.int
+    def toApp_bState(self) -> global___NavBorderState: ...
+    toDev_latUpAck: builtins.int
     @property
-    def subNavMsg30(self) -> global___NavGetHashList: ...
+    def toDev_getHash(self) -> global___NavGetHashList: ...
     @property
-    def subNavMsg31(self) -> global___NavGetHashListAck: ...
+    def toApp_getHashAck(self) -> global___NavGetHashListAck: ...
     @property
-    def subNavMsg32(self) -> global___NavGetCommData: ...
+    def toDev_getCommonData(self) -> global___NavGetCommData: ...
     @property
-    def subNavMsg33(self) -> global___NavGetCommDataAck: ...
+    def toApp_getCommonDataAck(self) -> global___NavGetCommDataAck: ...
     @property
-    def subNavMsg34(self) -> global___NavReqCoverPath: ...
+    def bidire_reqconverPath(self) -> global___NavReqCoverPath: ...
     @property
-    def subNavMsg35(self) -> global___NavUploadZigZagResult: ...
+    def toApp_zigZag(self) -> global___NavUploadZigZagResult: ...
     @property
-    def subNavMsg36(self) -> global___NavUploadZigZagResultAck: ...
+    def toDev_zigZagAck(self) -> global___NavUploadZigZagResultAck: ...
     @property
-    def subNavMsg37(self) -> global___NavTaskCtrl: ...
+    def toDev_taskCtrl(self) -> global___NavTaskCtrl: ...
     @property
-    def subNavMsg38(self) -> global___NavTaskIdRw: ...
+    def bidire_taskId(self) -> global___NavTaskIdRw: ...
     @property
-    def subNavMsg39(self) -> global___NavTaskBreakPoint: ...
+    def toApp_BP(self) -> global___NavTaskBreakPoint: ...
     @property
-    def subNavMsg40(self) -> global___NavPlanJobSet: ...
+    def toDev_planJobSet(self) -> global___NavPlanJobSet: ...
     @property
-    def subNavMsg41(self) -> global___NavUnableTimeSet: ...
+    def toDev_unableTimeSet(self) -> global___NavUnableTimeSet: ...
     @property
-    def subNavMsg42(self) -> global___SimulationCmdData: ...
+    def simulationCmd(self) -> global___SimulationCmdData: ...
     @property
-    def subNavMsg43(self) -> global___WorkReportUpdateCmd: ...
+    def toDev_workReportUpdateCmd(self) -> global___WorkReportUpdateCmd: ...
     @property
-    def subNavMsg44(self) -> global___WorkReportUpdateAck: ...
+    def toApp_workReportUpdateAck(self) -> global___WorkReportUpdateAck: ...
     @property
-    def subNavMsg45(self) -> global___WorkReportCmdData: ...
+    def toDev_workReportCmd(self) -> global___WorkReportCmdData: ...
     @property
-    def subNavMsg46(self) -> global___WorkReportInfoAck: ...
+    def toApp_workReportAck(self) -> global___WorkReportInfoAck: ...
     def __init__(
         self,
         *,
-        subNavMsg1: global___NavLatLonUp | None = ...,
-        subNavMsg2: global___NavPosUp | None = ...,
-        subNavMsg3: global___NavCHlLineData | None = ...,
-        subNavMsg4: global___NavTaskInfo | None = ...,
-        subNavMsg5: global___NavOptLineUp | None = ...,
-        subNavMsg6: global___NavOptiBorderInfo | None = ...,
-        subNavMsg7: global___NavOptObsInfo | None = ...,
-        subNavMsg8: global___NavResFrame | None = ...,
-        subNavMsg9: global___NavResFrame | None = ...,
-        subNavMsg10: global___NavResFrame | None = ...,
-        subNavMsg11: global___NavResFrame | None = ...,
-        subNavMsg12: global___chargePileType | None = ...,
-        subNavMsg13: builtins.int | None = ...,
-        subNavMsg14: builtins.int | None = ...,
-        subNavMsg15: builtins.int | None = ...,
-        subNavMsg16: builtins.int | None = ...,
-        subNavMsg17: builtins.int | None = ...,
-        subNavMsg18: builtins.int | None = ...,
-        subNavMsg19: builtins.int | None = ...,
-        subNavMsg20: builtins.int | None = ...,
-        subNavMsg21: builtins.int | None = ...,
-        subNavMsg22: builtins.int | None = ...,
-        subNavMsg23: builtins.int | None = ...,
-        subNavMsg24: builtins.int | None = ...,
-        subNavMsg25: builtins.int | None = ...,
-        subNavMsg26: builtins.int | None = ...,
-        subNavMsg27: global___NavStartJob | None = ...,
-        subNavMsg28: global___NavBorderState | None = ...,
-        subNavMsg29: builtins.int | None = ...,
-        subNavMsg30: global___NavGetHashList | None = ...,
-        subNavMsg31: global___NavGetHashListAck | None = ...,
-        subNavMsg32: global___NavGetCommData | None = ...,
-        subNavMsg33: global___NavGetCommDataAck | None = ...,
-        subNavMsg34: global___NavReqCoverPath | None = ...,
-        subNavMsg35: global___NavUploadZigZagResult | None = ...,
-        subNavMsg36: global___NavUploadZigZagResultAck | None = ...,
-        subNavMsg37: global___NavTaskCtrl | None = ...,
-        subNavMsg38: global___NavTaskIdRw | None = ...,
-        subNavMsg39: global___NavTaskBreakPoint | None = ...,
-        subNavMsg40: global___NavPlanJobSet | None = ...,
-        subNavMsg41: global___NavUnableTimeSet | None = ...,
-        subNavMsg42: global___SimulationCmdData | None = ...,
-        subNavMsg43: global___WorkReportUpdateCmd | None = ...,
-        subNavMsg44: global___WorkReportUpdateAck | None = ...,
-        subNavMsg45: global___WorkReportCmdData | None = ...,
-        subNavMsg46: global___WorkReportInfoAck | None = ...,
+        toApp_latUp: global___NavLatLonUp | None = ...,
+        toApp_posUp: global___NavPosUp | None = ...,
+        toDev_CHlLineData: global___NavCHlLineData | None = ...,
+        toApp_taskInfo: global___NavTaskInfo | None = ...,
+        toApp_optLineUp: global___NavOptLineUp | None = ...,
+        toApp_optBorderInfo: global___NavOptiBorderInfo | None = ...,
+        toApp_optObsInfo: global___NavOptObsInfo | None = ...,
+        toDev_taskInfoAck: global___NavResFrame | None = ...,
+        toDev_optBorderInfoAck: global___NavResFrame | None = ...,
+        toDev_optObsInfoAck: global___NavResFrame | None = ...,
+        toDev_optLineUpAck: global___NavResFrame | None = ...,
+        toApp_chgPileTo: global___chargePileType | None = ...,
+        toDev_susTask: builtins.int | None = ...,
+        toDev_rechgCmd: builtins.int | None = ...,
+        toDev_edgeCmd: builtins.int | None = ...,
+        toDev_drawBorder: builtins.int | None = ...,
+        toDev_drawBorderEnd: builtins.int | None = ...,
+        toDev_drawObs: builtins.int | None = ...,
+        toDev_drawObsEnd: builtins.int | None = ...,
+        toDev_chlLine: builtins.int | None = ...,
+        toDev_chlLineDev: builtins.int | None = ...,
+        toDev_saveTask: builtins.int | None = ...,
+        toDev_cancelSusCmd: builtins.int | None = ...,
+        toDev_resetChgPile: builtins.int | None = ...,
+        toDev_cancelDrawCmd: builtins.int | None = ...,
+        toDev_oneTouchLeavePile: builtins.int | None = ...,
+        toDev_mowTask: global___NavStartJob | None = ...,
+        toApp_bState: global___NavBorderState | None = ...,
+        toDev_latUpAck: builtins.int | None = ...,
+        toDev_getHash: global___NavGetHashList | None = ...,
+        toApp_getHashAck: global___NavGetHashListAck | None = ...,
+        toDev_getCommonData: global___NavGetCommData | None = ...,
+        toApp_getCommonDataAck: global___NavGetCommDataAck | None = ...,
+        bidire_reqconverPath: global___NavReqCoverPath | None = ...,
+        toApp_zigZag: global___NavUploadZigZagResult | None = ...,
+        toDev_zigZagAck: global___NavUploadZigZagResultAck | None = ...,
+        toDev_taskCtrl: global___NavTaskCtrl | None = ...,
+        bidire_taskId: global___NavTaskIdRw | None = ...,
+        toApp_BP: global___NavTaskBreakPoint | None = ...,
+        toDev_planJobSet: global___NavPlanJobSet | None = ...,
+        toDev_unableTimeSet: global___NavUnableTimeSet | None = ...,
+        simulationCmd: global___SimulationCmdData | None = ...,
+        toDev_workReportUpdateCmd: global___WorkReportUpdateCmd | None = ...,
+        toApp_workReportUpdateAck: global___WorkReportUpdateAck | None = ...,
+        toDev_workReportCmd: global___WorkReportCmdData | None = ...,
+        toApp_workReportAck: global___WorkReportInfoAck | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["subNavMsg1", b"subNavMsg1", "subNavMsg10", b"subNavMsg10", "subNavMsg11", b"subNavMsg11", "subNavMsg12", b"subNavMsg12", "subNavMsg13", b"subNavMsg13", "subNavMsg14", b"subNavMsg14", "subNavMsg15", b"subNavMsg15", "subNavMsg16", b"subNavMsg16", "subNavMsg17", b"subNavMsg17", "subNavMsg18", b"subNavMsg18", "subNavMsg19", b"subNavMsg19", "subNavMsg2", b"subNavMsg2", "subNavMsg20", b"subNavMsg20", "subNavMsg21", b"subNavMsg21", "subNavMsg22", b"subNavMsg22", "subNavMsg23", b"subNavMsg23", "subNavMsg24", b"subNavMsg24", "subNavMsg25", b"subNavMsg25", "subNavMsg26", b"subNavMsg26", "subNavMsg27", b"subNavMsg27", "subNavMsg28", b"subNavMsg28", "subNavMsg29", b"subNavMsg29", "subNavMsg3", b"subNavMsg3", "subNavMsg30", b"subNavMsg30", "subNavMsg31", b"subNavMsg31", "subNavMsg32", b"subNavMsg32", "subNavMsg33", b"subNavMsg33", "subNavMsg34", b"subNavMsg34", "subNavMsg35", b"subNavMsg35", "subNavMsg36", b"subNavMsg36", "subNavMsg37", b"subNavMsg37", "subNavMsg38", b"subNavMsg38", "subNavMsg39", b"subNavMsg39", "subNavMsg4", b"subNavMsg4", "subNavMsg40", b"subNavMsg40", "subNavMsg41", b"subNavMsg41", "subNavMsg42", b"subNavMsg42", "subNavMsg43", b"subNavMsg43", "subNavMsg44", b"subNavMsg44", "subNavMsg45", b"subNavMsg45", "subNavMsg46", b"subNavMsg46", "subNavMsg5", b"subNavMsg5", "subNavMsg6", b"subNavMsg6", "subNavMsg7", b"subNavMsg7", "subNavMsg8", b"subNavMsg8", "subNavMsg9", b"subNavMsg9"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["subNavMsg1", b"subNavMsg1", "subNavMsg10", b"subNavMsg10", "subNavMsg11", b"subNavMsg11", "subNavMsg12", b"subNavMsg12", "subNavMsg13", b"subNavMsg13", "subNavMsg14", b"subNavMsg14", "subNavMsg15", b"subNavMsg15", "subNavMsg16", b"subNavMsg16", "subNavMsg17", b"subNavMsg17", "subNavMsg18", b"subNavMsg18", "subNavMsg19", b"subNavMsg19", "subNavMsg2", b"subNavMsg2", "subNavMsg20", b"subNavMsg20", "subNavMsg21", b"subNavMsg21", "subNavMsg22", b"subNavMsg22", "subNavMsg23", b"subNavMsg23", "subNavMsg24", b"subNavMsg24", "subNavMsg25", b"subNavMsg25", "subNavMsg26", b"subNavMsg26", "subNavMsg27", b"subNavMsg27", "subNavMsg28", b"subNavMsg28", "subNavMsg29", b"subNavMsg29", "subNavMsg3", b"subNavMsg3", "subNavMsg30", b"subNavMsg30", "subNavMsg31", b"subNavMsg31", "subNavMsg32", b"subNavMsg32", "subNavMsg33", b"subNavMsg33", "subNavMsg34", b"subNavMsg34", "subNavMsg35", b"subNavMsg35", "subNavMsg36", b"subNavMsg36", "subNavMsg37", b"subNavMsg37", "subNavMsg38", b"subNavMsg38", "subNavMsg39", b"subNavMsg39", "subNavMsg4", b"subNavMsg4", "subNavMsg40", b"subNavMsg40", "subNavMsg41", b"subNavMsg41", "subNavMsg42", b"subNavMsg42", "subNavMsg43", b"subNavMsg43", "subNavMsg44", b"subNavMsg44", "subNavMsg45", b"subNavMsg45", "subNavMsg46", b"subNavMsg46", "subNavMsg5", b"subNavMsg5", "subNavMsg6", b"subNavMsg6", "subNavMsg7", b"subNavMsg7", "subNavMsg8", b"subNavMsg8", "subNavMsg9", b"subNavMsg9"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["bidire_reqconverPath", b"bidire_reqconverPath", "bidire_taskId", b"bidire_taskId", "simulationCmd", b"simulationCmd", "subNavMsg", b"subNavMsg", "toApp_BP", b"toApp_BP", "toApp_bState", b"toApp_bState", "toApp_chgPileTo", b"toApp_chgPileTo", "toApp_getCommonDataAck", b"toApp_getCommonDataAck", "toApp_getHashAck", b"toApp_getHashAck", "toApp_latUp", b"toApp_latUp", "toApp_optBorderInfo", b"toApp_optBorderInfo", "toApp_optLineUp", b"toApp_optLineUp", "toApp_optObsInfo", b"toApp_optObsInfo", "toApp_posUp", b"toApp_posUp", "toApp_taskInfo", b"toApp_taskInfo", "toApp_workReportAck", b"toApp_workReportAck", "toApp_workReportUpdateAck", b"toApp_workReportUpdateAck", "toApp_zigZag", b"toApp_zigZag", "toDev_CHlLineData", b"toDev_CHlLineData", "toDev_cancelDrawCmd", b"toDev_cancelDrawCmd", "toDev_cancelSusCmd", b"toDev_cancelSusCmd", "toDev_chlLine", b"toDev_chlLine", "toDev_chlLineDev", b"toDev_chlLineDev", "toDev_drawBorder", b"toDev_drawBorder", "toDev_drawBorderEnd", b"toDev_drawBorderEnd", "toDev_drawObs", b"toDev_drawObs", "toDev_drawObsEnd", b"toDev_drawObsEnd", "toDev_edgeCmd", b"toDev_edgeCmd", "toDev_getCommonData", b"toDev_getCommonData", "toDev_getHash", b"toDev_getHash", "toDev_latUpAck", b"toDev_latUpAck", "toDev_mowTask", b"toDev_mowTask", "toDev_oneTouchLeavePile", b"toDev_oneTouchLeavePile", "toDev_optBorderInfoAck", b"toDev_optBorderInfoAck", "toDev_optLineUpAck", b"toDev_optLineUpAck", "toDev_optObsInfoAck", b"toDev_optObsInfoAck", "toDev_planJobSet", b"toDev_planJobSet", "toDev_rechgCmd", b"toDev_rechgCmd", "toDev_resetChgPile", b"toDev_resetChgPile", "toDev_saveTask", b"toDev_saveTask", "toDev_susTask", b"toDev_susTask", "toDev_taskCtrl", b"toDev_taskCtrl", "toDev_taskInfoAck", b"toDev_taskInfoAck", "toDev_unableTimeSet", b"toDev_unableTimeSet", "toDev_workReportCmd", b"toDev_workReportCmd", "toDev_workReportUpdateCmd", b"toDev_workReportUpdateCmd", "toDev_zigZagAck", b"toDev_zigZagAck"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["bidire_reqconverPath", b"bidire_reqconverPath", "bidire_taskId", b"bidire_taskId", "simulationCmd", b"simulationCmd", "subNavMsg", b"subNavMsg", "toApp_BP", b"toApp_BP", "toApp_bState", b"toApp_bState", "toApp_chgPileTo", b"toApp_chgPileTo", "toApp_getCommonDataAck", b"toApp_getCommonDataAck", "toApp_getHashAck", b"toApp_getHashAck", "toApp_latUp", b"toApp_latUp", "toApp_optBorderInfo", b"toApp_optBorderInfo", "toApp_optLineUp", b"toApp_optLineUp", "toApp_optObsInfo", b"toApp_optObsInfo", "toApp_posUp", b"toApp_posUp", "toApp_taskInfo", b"toApp_taskInfo", "toApp_workReportAck", b"toApp_workReportAck", "toApp_workReportUpdateAck", b"toApp_workReportUpdateAck", "toApp_zigZag", b"toApp_zigZag", "toDev_CHlLineData", b"toDev_CHlLineData", "toDev_cancelDrawCmd", b"toDev_cancelDrawCmd", "toDev_cancelSusCmd", b"toDev_cancelSusCmd", "toDev_chlLine", b"toDev_chlLine", "toDev_chlLineDev", b"toDev_chlLineDev", "toDev_drawBorder", b"toDev_drawBorder", "toDev_drawBorderEnd", b"toDev_drawBorderEnd", "toDev_drawObs", b"toDev_drawObs", "toDev_drawObsEnd", b"toDev_drawObsEnd", "toDev_edgeCmd", b"toDev_edgeCmd", "toDev_getCommonData", b"toDev_getCommonData", "toDev_getHash", b"toDev_getHash", "toDev_latUpAck", b"toDev_latUpAck", "toDev_mowTask", b"toDev_mowTask", "toDev_oneTouchLeavePile", b"toDev_oneTouchLeavePile", "toDev_optBorderInfoAck", b"toDev_optBorderInfoAck", "toDev_optLineUpAck", b"toDev_optLineUpAck", "toDev_optObsInfoAck", b"toDev_optObsInfoAck", "toDev_planJobSet", b"toDev_planJobSet", "toDev_rechgCmd", b"toDev_rechgCmd", "toDev_resetChgPile", b"toDev_resetChgPile", "toDev_saveTask", b"toDev_saveTask", "toDev_susTask", b"toDev_susTask", "toDev_taskCtrl", b"toDev_taskCtrl", "toDev_taskInfoAck", b"toDev_taskInfoAck", "toDev_unableTimeSet", b"toDev_unableTimeSet", "toDev_workReportCmd", b"toDev_workReportCmd", "toDev_workReportUpdateCmd", b"toDev_workReportUpdateCmd", "toDev_zigZagAck", b"toDev_zigZagAck"]) -> None: ...
+    def WhichOneof(self, oneof_group: typing_extensions.Literal["subNavMsg", b"subNavMsg"]) -> typing_extensions.Literal["toApp_latUp", "toApp_posUp", "toDev_CHlLineData", "toApp_taskInfo", "toApp_optLineUp", "toApp_optBorderInfo", "toApp_optObsInfo", "toDev_taskInfoAck", "toDev_optBorderInfoAck", "toDev_optObsInfoAck", "toDev_optLineUpAck", "toApp_chgPileTo", "toDev_susTask", "toDev_rechgCmd", "toDev_edgeCmd", "toDev_drawBorder", "toDev_drawBorderEnd", "toDev_drawObs", "toDev_drawObsEnd", "toDev_chlLine", "toDev_chlLineDev", "toDev_saveTask", "toDev_cancelSusCmd", "toDev_resetChgPile", "toDev_cancelDrawCmd", "toDev_oneTouchLeavePile", "toDev_mowTask", "toApp_bState", "toDev_latUpAck", "toDev_getHash", "toApp_getHashAck", "toDev_getCommonData", "toApp_getCommonDataAck", "bidire_reqconverPath", "toApp_zigZag", "toDev_zigZagAck", "toDev_taskCtrl", "bidire_taskId", "toApp_BP", "toDev_planJobSet", "toDev_unableTimeSet", "simulationCmd", "toDev_workReportUpdateCmd", "toApp_workReportUpdateAck", "toDev_workReportCmd", "toApp_workReportAck"] | None: ...
 
 global___MctlNav = MctlNav
 
@@ -1569,18 +1585,18 @@ global___MctlNav = MctlNav
 class NavLatLonUp(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    LAT1_FIELD_NUMBER: builtins.int
-    LON2_FIELD_NUMBER: builtins.int
-    lat1: builtins.float
-    lon2: builtins.float
+    LAT_FIELD_NUMBER: builtins.int
+    LON_FIELD_NUMBER: builtins.int
+    lat: builtins.float
+    lon: builtins.float
     def __init__(
         self,
         *,
-        lat1: builtins.float | None = ...,
-        lon2: builtins.float | None = ...,
+        lat: builtins.float | None = ...,
+        lon: builtins.float | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["lat1", b"lat1", "lon2", b"lon2"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["lat1", b"lat1", "lon2", b"lon2"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["lat", b"lat", "lon", b"lon"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["lat", b"lat", "lon", b"lon"]) -> None: ...
 
 global___NavLatLonUp = NavLatLonUp
 
@@ -1588,48 +1604,48 @@ global___NavLatLonUp = NavLatLonUp
 class NavPosUp(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    X1_FIELD_NUMBER: builtins.int
-    Y2_FIELD_NUMBER: builtins.int
-    STATUS3_FIELD_NUMBER: builtins.int
-    TOWARD4_FIELD_NUMBER: builtins.int
-    STARS5_FIELD_NUMBER: builtins.int
-    AGE6_FIELD_NUMBER: builtins.int
-    LATSTDDEV7_FIELD_NUMBER: builtins.int
-    LONSTDDEV8_FIELD_NUMBER: builtins.int
-    L2DFSTARS9_FIELD_NUMBER: builtins.int
-    POSTYPE10_FIELD_NUMBER: builtins.int
-    CHASHID11_FIELD_NUMBER: builtins.int
-    POSLEVEL12_FIELD_NUMBER: builtins.int
-    x1: builtins.float
-    y2: builtins.float
-    status3: builtins.int
-    toward4: builtins.int
-    stars5: builtins.int
-    age6: builtins.float
-    latStddev7: builtins.float
-    lonStddev8: builtins.float
-    l2DfStars9: builtins.int
-    posType10: builtins.int
-    cHashId11: builtins.int
-    posLevel12: builtins.int
+    X_FIELD_NUMBER: builtins.int
+    Y_FIELD_NUMBER: builtins.int
+    STATUS_FIELD_NUMBER: builtins.int
+    TOWARD_FIELD_NUMBER: builtins.int
+    STARS_FIELD_NUMBER: builtins.int
+    AGE_FIELD_NUMBER: builtins.int
+    LATSTDDEV_FIELD_NUMBER: builtins.int
+    LONSTDDEV_FIELD_NUMBER: builtins.int
+    L2DFSTARS_FIELD_NUMBER: builtins.int
+    POSTYPE_FIELD_NUMBER: builtins.int
+    CHASHID_FIELD_NUMBER: builtins.int
+    POSLEVEL_FIELD_NUMBER: builtins.int
+    x: builtins.float
+    y: builtins.float
+    status: builtins.int
+    toward: builtins.int
+    stars: builtins.int
+    age: builtins.float
+    latStddev: builtins.float
+    lonStddev: builtins.float
+    l2DfStars: builtins.int
+    posType: builtins.int
+    cHashId: builtins.int
+    posLevel: builtins.int
     def __init__(
         self,
         *,
-        x1: builtins.float | None = ...,
-        y2: builtins.float | None = ...,
-        status3: builtins.int | None = ...,
-        toward4: builtins.int | None = ...,
-        stars5: builtins.int | None = ...,
-        age6: builtins.float | None = ...,
-        latStddev7: builtins.float | None = ...,
-        lonStddev8: builtins.float | None = ...,
-        l2DfStars9: builtins.int | None = ...,
-        posType10: builtins.int | None = ...,
-        cHashId11: builtins.int | None = ...,
-        posLevel12: builtins.int | None = ...,
+        x: builtins.float | None = ...,
+        y: builtins.float | None = ...,
+        status: builtins.int | None = ...,
+        toward: builtins.int | None = ...,
+        stars: builtins.int | None = ...,
+        age: builtins.float | None = ...,
+        latStddev: builtins.float | None = ...,
+        lonStddev: builtins.float | None = ...,
+        l2DfStars: builtins.int | None = ...,
+        posType: builtins.int | None = ...,
+        cHashId: builtins.int | None = ...,
+        posLevel: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["age6", b"age6", "cHashId11", b"cHashId11", "l2DfStars9", b"l2DfStars9", "latStddev7", b"latStddev7", "lonStddev8", b"lonStddev8", "posLevel12", b"posLevel12", "posType10", b"posType10", "stars5", b"stars5", "status3", b"status3", "toward4", b"toward4", "x1", b"x1", "y2", b"y2"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["age6", b"age6", "cHashId11", b"cHashId11", "l2DfStars9", b"l2DfStars9", "latStddev7", b"latStddev7", "lonStddev8", b"lonStddev8", "posLevel12", b"posLevel12", "posType10", b"posType10", "stars5", b"stars5", "status3", b"status3", "toward4", b"toward4", "x1", b"x1", "y2", b"y2"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["age", b"age", "cHashId", b"cHashId", "l2DfStars", b"l2DfStars", "latStddev", b"latStddev", "lonStddev", b"lonStddev", "posLevel", b"posLevel", "posType", b"posType", "stars", b"stars", "status", b"status", "toward", b"toward", "x", b"x", "y", b"y"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["age", b"age", "cHashId", b"cHashId", "l2DfStars", b"l2DfStars", "latStddev", b"latStddev", "lonStddev", b"lonStddev", "posLevel", b"posLevel", "posType", b"posType", "stars", b"stars", "status", b"status", "toward", b"toward", "x", b"x", "y", b"y"]) -> None: ...
 
 global___NavPosUp = NavPosUp
 
@@ -1637,24 +1653,24 @@ global___NavPosUp = NavPosUp
 class NavCHlLineData(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    STARTJOBRI1_FIELD_NUMBER: builtins.int
-    ENDJOBRI2_FIELD_NUMBER: builtins.int
-    CURRENTFRAME3_FIELD_NUMBER: builtins.int
-    CHANNELLINELEN4_FIELD_NUMBER: builtins.int
-    startJobRI1: builtins.int
-    endJobRI2: builtins.int
-    currentFrame3: builtins.int
-    channelLineLen4: builtins.int
+    STARTJOBRI_FIELD_NUMBER: builtins.int
+    ENDJOBRI_FIELD_NUMBER: builtins.int
+    CURRENTFRAME_FIELD_NUMBER: builtins.int
+    CHANNELLINELEN_FIELD_NUMBER: builtins.int
+    startJobRI: builtins.int
+    endJobRI: builtins.int
+    currentFrame: builtins.int
+    channelLineLen: builtins.int
     def __init__(
         self,
         *,
-        startJobRI1: builtins.int | None = ...,
-        endJobRI2: builtins.int | None = ...,
-        currentFrame3: builtins.int | None = ...,
-        channelLineLen4: builtins.int | None = ...,
+        startJobRI: builtins.int | None = ...,
+        endJobRI: builtins.int | None = ...,
+        currentFrame: builtins.int | None = ...,
+        channelLineLen: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["channelLineLen4", b"channelLineLen4", "currentFrame3", b"currentFrame3", "endJobRI2", b"endJobRI2", "startJobRI1", b"startJobRI1"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["channelLineLen4", b"channelLineLen4", "currentFrame3", b"currentFrame3", "endJobRI2", b"endJobRI2", "startJobRI1", b"startJobRI1"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["channelLineLen", b"channelLineLen", "currentFrame", b"currentFrame", "endJobRI", b"endJobRI", "startJobRI", b"startJobRI"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["channelLineLen", b"channelLineLen", "currentFrame", b"currentFrame", "endJobRI", b"endJobRI", "startJobRI", b"startJobRI"]) -> None: ...
 
 global___NavCHlLineData = NavCHlLineData
 
@@ -1662,31 +1678,31 @@ global___NavCHlLineData = NavCHlLineData
 class NavTaskInfo(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    AREA1_FIELD_NUMBER: builtins.int
-    TIME2_FIELD_NUMBER: builtins.int
-    ALLFRAME3_FIELD_NUMBER: builtins.int
-    CURRENTFRAME4_FIELD_NUMBER: builtins.int
-    PATHLEN5_FIELD_NUMBER: builtins.int
-    DC6_FIELD_NUMBER: builtins.int
-    area1: builtins.int
-    time2: builtins.int
-    allFrame3: builtins.int
-    currentFrame4: builtins.int
-    pathlen5: builtins.int
+    AREA_FIELD_NUMBER: builtins.int
+    TIME_FIELD_NUMBER: builtins.int
+    ALLFRAME_FIELD_NUMBER: builtins.int
+    CURRENTFRAME_FIELD_NUMBER: builtins.int
+    PATHLEN_FIELD_NUMBER: builtins.int
+    DC_FIELD_NUMBER: builtins.int
+    area: builtins.int
+    time: builtins.int
+    allFrame: builtins.int
+    currentFrame: builtins.int
+    pathlen: builtins.int
     @property
-    def dc6(self) -> google.protobuf.internal.containers.RepeatedCompositeFieldContainer[global___CommDataCouple]: ...
+    def dc(self) -> google.protobuf.internal.containers.RepeatedCompositeFieldContainer[global___CommDataCouple]: ...
     def __init__(
         self,
         *,
-        area1: builtins.int | None = ...,
-        time2: builtins.int | None = ...,
-        allFrame3: builtins.int | None = ...,
-        currentFrame4: builtins.int | None = ...,
-        pathlen5: builtins.int | None = ...,
-        dc6: collections.abc.Iterable[global___CommDataCouple] | None = ...,
+        area: builtins.int | None = ...,
+        time: builtins.int | None = ...,
+        allFrame: builtins.int | None = ...,
+        currentFrame: builtins.int | None = ...,
+        pathlen: builtins.int | None = ...,
+        dc: collections.abc.Iterable[global___CommDataCouple] | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["allFrame3", b"allFrame3", "area1", b"area1", "currentFrame4", b"currentFrame4", "pathlen5", b"pathlen5", "time2", b"time2"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["allFrame3", b"allFrame3", "area1", b"area1", "currentFrame4", b"currentFrame4", "dc6", b"dc6", "pathlen5", b"pathlen5", "time2", b"time2"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["allFrame", b"allFrame", "area", b"area", "currentFrame", b"currentFrame", "pathlen", b"pathlen", "time", b"time"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["allFrame", b"allFrame", "area", b"area", "currentFrame", b"currentFrame", "dc", b"dc", "pathlen", b"pathlen", "time", b"time"]) -> None: ...
 
 global___NavTaskInfo = NavTaskInfo
 
@@ -1694,18 +1710,18 @@ global___NavTaskInfo = NavTaskInfo
 class CommDataCouple(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    X1_FIELD_NUMBER: builtins.int
-    Y2_FIELD_NUMBER: builtins.int
-    x1: builtins.float
-    y2: builtins.float
+    X_FIELD_NUMBER: builtins.int
+    Y_FIELD_NUMBER: builtins.int
+    x: builtins.float
+    y: builtins.float
     def __init__(
         self,
         *,
-        x1: builtins.float | None = ...,
-        y2: builtins.float | None = ...,
+        x: builtins.float | None = ...,
+        y: builtins.float | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["x1", b"x1", "y2", b"y2"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["x1", b"x1", "y2", b"y2"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["x", b"x", "y", b"y"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["x", b"x", "y", b"y"]) -> None: ...
 
 global___CommDataCouple = CommDataCouple
 
@@ -1713,31 +1729,31 @@ global___CommDataCouple = CommDataCouple
 class NavOptLineUp(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    STARTJOBRI1_FIELD_NUMBER: builtins.int
-    ENDJOBRI2_FIELD_NUMBER: builtins.int
-    ALLFRAME3_FIELD_NUMBER: builtins.int
-    CURRENTFRAME4_FIELD_NUMBER: builtins.int
-    CHANNELDATALEN5_FIELD_NUMBER: builtins.int
-    DC6_FIELD_NUMBER: builtins.int
-    startJobRI1: builtins.int
-    endJobRI2: builtins.int
-    allFrame3: builtins.int
-    currentFrame4: builtins.int
-    channelDataLen5: builtins.int
+    STARTJOBRI_FIELD_NUMBER: builtins.int
+    ENDJOBRI_FIELD_NUMBER: builtins.int
+    ALLFRAME_FIELD_NUMBER: builtins.int
+    CURRENTFRAME_FIELD_NUMBER: builtins.int
+    CHANNELDATALEN_FIELD_NUMBER: builtins.int
+    DC_FIELD_NUMBER: builtins.int
+    startJobRI: builtins.int
+    endJobRI: builtins.int
+    allFrame: builtins.int
+    currentFrame: builtins.int
+    channelDataLen: builtins.int
     @property
-    def dc6(self) -> google.protobuf.internal.containers.RepeatedCompositeFieldContainer[global___CommDataCouple]: ...
+    def dc(self) -> google.protobuf.internal.containers.RepeatedCompositeFieldContainer[global___CommDataCouple]: ...
     def __init__(
         self,
         *,
-        startJobRI1: builtins.int | None = ...,
-        endJobRI2: builtins.int | None = ...,
-        allFrame3: builtins.int | None = ...,
-        currentFrame4: builtins.int | None = ...,
-        channelDataLen5: builtins.int | None = ...,
-        dc6: collections.abc.Iterable[global___CommDataCouple] | None = ...,
+        startJobRI: builtins.int | None = ...,
+        endJobRI: builtins.int | None = ...,
+        allFrame: builtins.int | None = ...,
+        currentFrame: builtins.int | None = ...,
+        channelDataLen: builtins.int | None = ...,
+        dc: collections.abc.Iterable[global___CommDataCouple] | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["allFrame3", b"allFrame3", "channelDataLen5", b"channelDataLen5", "currentFrame4", b"currentFrame4", "endJobRI2", b"endJobRI2", "startJobRI1", b"startJobRI1"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["allFrame3", b"allFrame3", "channelDataLen5", b"channelDataLen5", "currentFrame4", b"currentFrame4", "dc6", b"dc6", "endJobRI2", b"endJobRI2", "startJobRI1", b"startJobRI1"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["allFrame", b"allFrame", "channelDataLen", b"channelDataLen", "currentFrame", b"currentFrame", "endJobRI", b"endJobRI", "startJobRI", b"startJobRI"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["allFrame", b"allFrame", "channelDataLen", b"channelDataLen", "currentFrame", b"currentFrame", "dc", b"dc", "endJobRI", b"endJobRI", "startJobRI", b"startJobRI"]) -> None: ...
 
 global___NavOptLineUp = NavOptLineUp
 
@@ -1745,28 +1761,28 @@ global___NavOptLineUp = NavOptLineUp
 class NavOptiBorderInfo(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    JOBID1_FIELD_NUMBER: builtins.int
-    ALLFRAME2_FIELD_NUMBER: builtins.int
-    CURRENTFRAME3_FIELD_NUMBER: builtins.int
-    BORDERDATALEN4_FIELD_NUMBER: builtins.int
-    DC5_FIELD_NUMBER: builtins.int
-    jobId1: builtins.int
-    allFrame2: builtins.int
-    currentFrame3: builtins.int
-    borderDataLen4: builtins.int
+    JOBID_FIELD_NUMBER: builtins.int
+    ALLFRAME_FIELD_NUMBER: builtins.int
+    CURRENTFRAME_FIELD_NUMBER: builtins.int
+    BORDERDATALEN_FIELD_NUMBER: builtins.int
+    DC_FIELD_NUMBER: builtins.int
+    jobId: builtins.int
+    allFrame: builtins.int
+    currentFrame: builtins.int
+    borderDataLen: builtins.int
     @property
-    def dc5(self) -> google.protobuf.internal.containers.RepeatedCompositeFieldContainer[global___CommDataCouple]: ...
+    def dc(self) -> google.protobuf.internal.containers.RepeatedCompositeFieldContainer[global___CommDataCouple]: ...
     def __init__(
         self,
         *,
-        jobId1: builtins.int | None = ...,
-        allFrame2: builtins.int | None = ...,
-        currentFrame3: builtins.int | None = ...,
-        borderDataLen4: builtins.int | None = ...,
-        dc5: collections.abc.Iterable[global___CommDataCouple] | None = ...,
+        jobId: builtins.int | None = ...,
+        allFrame: builtins.int | None = ...,
+        currentFrame: builtins.int | None = ...,
+        borderDataLen: builtins.int | None = ...,
+        dc: collections.abc.Iterable[global___CommDataCouple] | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["allFrame2", b"allFrame2", "borderDataLen4", b"borderDataLen4", "currentFrame3", b"currentFrame3", "jobId1", b"jobId1"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["allFrame2", b"allFrame2", "borderDataLen4", b"borderDataLen4", "currentFrame3", b"currentFrame3", "dc5", b"dc5", "jobId1", b"jobId1"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["allFrame", b"allFrame", "borderDataLen", b"borderDataLen", "currentFrame", b"currentFrame", "jobId", b"jobId"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["allFrame", b"allFrame", "borderDataLen", b"borderDataLen", "currentFrame", b"currentFrame", "dc", b"dc", "jobId", b"jobId"]) -> None: ...
 
 global___NavOptiBorderInfo = NavOptiBorderInfo
 
@@ -1774,28 +1790,28 @@ global___NavOptiBorderInfo = NavOptiBorderInfo
 class NavOptObsInfo(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    OBSTACLEID1_FIELD_NUMBER: builtins.int
-    ALLFRAME2_FIELD_NUMBER: builtins.int
-    CURRENTFRAME3_FIELD_NUMBER: builtins.int
-    OBSTACLEDATALEN4_FIELD_NUMBER: builtins.int
-    DC5_FIELD_NUMBER: builtins.int
-    obstacleId1: builtins.int
-    allFrame2: builtins.int
-    currentFrame3: builtins.int
-    obstacleDataLen4: builtins.int
+    OBSTACLEID_FIELD_NUMBER: builtins.int
+    ALLFRAME_FIELD_NUMBER: builtins.int
+    CURRENTFRAME_FIELD_NUMBER: builtins.int
+    OBSTACLEDATALEN_FIELD_NUMBER: builtins.int
+    DC_FIELD_NUMBER: builtins.int
+    obstacleId: builtins.int
+    allFrame: builtins.int
+    currentFrame: builtins.int
+    obstacleDataLen: builtins.int
     @property
-    def dc5(self) -> google.protobuf.internal.containers.RepeatedCompositeFieldContainer[global___CommDataCouple]: ...
+    def dc(self) -> google.protobuf.internal.containers.RepeatedCompositeFieldContainer[global___CommDataCouple]: ...
     def __init__(
         self,
         *,
-        obstacleId1: builtins.int | None = ...,
-        allFrame2: builtins.int | None = ...,
-        currentFrame3: builtins.int | None = ...,
-        obstacleDataLen4: builtins.int | None = ...,
-        dc5: collections.abc.Iterable[global___CommDataCouple] | None = ...,
+        obstacleId: builtins.int | None = ...,
+        allFrame: builtins.int | None = ...,
+        currentFrame: builtins.int | None = ...,
+        obstacleDataLen: builtins.int | None = ...,
+        dc: collections.abc.Iterable[global___CommDataCouple] | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["allFrame2", b"allFrame2", "currentFrame3", b"currentFrame3", "obstacleDataLen4", b"obstacleDataLen4", "obstacleId1", b"obstacleId1"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["allFrame2", b"allFrame2", "currentFrame3", b"currentFrame3", "dc5", b"dc5", "obstacleDataLen4", b"obstacleDataLen4", "obstacleId1", b"obstacleId1"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["allFrame", b"allFrame", "currentFrame", b"currentFrame", "obstacleDataLen", b"obstacleDataLen", "obstacleId", b"obstacleId"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["allFrame", b"allFrame", "currentFrame", b"currentFrame", "dc", b"dc", "obstacleDataLen", b"obstacleDataLen", "obstacleId", b"obstacleId"]) -> None: ...
 
 global___NavOptObsInfo = NavOptObsInfo
 
@@ -1803,15 +1819,15 @@ global___NavOptObsInfo = NavOptObsInfo
 class NavResFrame(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    FRAMEID1_FIELD_NUMBER: builtins.int
-    frameId1: builtins.int
+    FRAMEID_FIELD_NUMBER: builtins.int
+    frameId: builtins.int
     def __init__(
         self,
         *,
-        frameId1: builtins.int | None = ...,
+        frameId: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["frameId1", b"frameId1"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["frameId1", b"frameId1"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["frameId", b"frameId"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["frameId", b"frameId"]) -> None: ...
 
 global___NavResFrame = NavResFrame
 
@@ -1819,21 +1835,21 @@ global___NavResFrame = NavResFrame
 class chargePileType(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    TOWARD1_FIELD_NUMBER: builtins.int
-    X2_FIELD_NUMBER: builtins.int
-    Y3_FIELD_NUMBER: builtins.int
-    toward1: builtins.int
-    x2: builtins.float
-    y3: builtins.float
+    TOWARD_FIELD_NUMBER: builtins.int
+    X_FIELD_NUMBER: builtins.int
+    Y_FIELD_NUMBER: builtins.int
+    toward: builtins.int
+    x: builtins.float
+    y: builtins.float
     def __init__(
         self,
         *,
-        toward1: builtins.int | None = ...,
-        x2: builtins.float | None = ...,
-        y3: builtins.float | None = ...,
+        toward: builtins.int | None = ...,
+        x: builtins.float | None = ...,
+        y: builtins.float | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["toward1", b"toward1", "x2", b"x2", "y3", b"y3"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["toward1", b"toward1", "x2", b"x2", "y3", b"y3"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["toward", b"toward", "x", b"x", "y", b"y"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["toward", b"toward", "x", b"x", "y", b"y"]) -> None: ...
 
 global___chargePileType = chargePileType
 
@@ -1841,39 +1857,39 @@ global___chargePileType = chargePileType
 class NavStartJob(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    JOBID1_FIELD_NUMBER: builtins.int
-    JOBVER2_FIELD_NUMBER: builtins.int
-    JOBMODE3_FIELD_NUMBER: builtins.int
-    RAINTACTICS4_FIELD_NUMBER: builtins.int
-    KINFEHEIGHT5_FIELD_NUMBER: builtins.int
-    SPEED6_FIELD_NUMBER: builtins.int
-    CHANNELWIDTH7_FIELD_NUMBER: builtins.int
-    ULTRAWAVE8_FIELD_NUMBER: builtins.int
-    CHANNELMODE9_FIELD_NUMBER: builtins.int
-    jobId1: builtins.int
-    jobVer2: builtins.int
-    jobMode3: builtins.int
-    rainTactics4: builtins.int
-    kinfeHeight5: builtins.int
-    speed6: builtins.float
-    channelWidth7: builtins.int
-    ultraWave8: builtins.int
-    channelMode9: builtins.int
+    JOBID_FIELD_NUMBER: builtins.int
+    JOBVER_FIELD_NUMBER: builtins.int
+    JOBMODE_FIELD_NUMBER: builtins.int
+    RAINTACTICS_FIELD_NUMBER: builtins.int
+    KINFEHEIGHT_FIELD_NUMBER: builtins.int
+    SPEED_FIELD_NUMBER: builtins.int
+    CHANNELWIDTH_FIELD_NUMBER: builtins.int
+    ULTRAWAVE_FIELD_NUMBER: builtins.int
+    CHANNELMODE_FIELD_NUMBER: builtins.int
+    jobId: builtins.int
+    jobVer: builtins.int
+    jobMode: builtins.int
+    rainTactics: builtins.int
+    kinfeHeight: builtins.int
+    speed: builtins.float
+    channelWidth: builtins.int
+    ultraWave: builtins.int
+    channelMode: builtins.int
     def __init__(
         self,
         *,
-        jobId1: builtins.int | None = ...,
-        jobVer2: builtins.int | None = ...,
-        jobMode3: builtins.int | None = ...,
-        rainTactics4: builtins.int | None = ...,
-        kinfeHeight5: builtins.int | None = ...,
-        speed6: builtins.float | None = ...,
-        channelWidth7: builtins.int | None = ...,
-        ultraWave8: builtins.int | None = ...,
-        channelMode9: builtins.int | None = ...,
+        jobId: builtins.int | None = ...,
+        jobVer: builtins.int | None = ...,
+        jobMode: builtins.int | None = ...,
+        rainTactics: builtins.int | None = ...,
+        kinfeHeight: builtins.int | None = ...,
+        speed: builtins.float | None = ...,
+        channelWidth: builtins.int | None = ...,
+        ultraWave: builtins.int | None = ...,
+        channelMode: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["channelMode9", b"channelMode9", "channelWidth7", b"channelWidth7", "jobId1", b"jobId1", "jobMode3", b"jobMode3", "jobVer2", b"jobVer2", "kinfeHeight5", b"kinfeHeight5", "rainTactics4", b"rainTactics4", "speed6", b"speed6", "ultraWave8", b"ultraWave8"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["channelMode9", b"channelMode9", "channelWidth7", b"channelWidth7", "jobId1", b"jobId1", "jobMode3", b"jobMode3", "jobVer2", b"jobVer2", "kinfeHeight5", b"kinfeHeight5", "rainTactics4", b"rainTactics4", "speed6", b"speed6", "ultraWave8", b"ultraWave8"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["channelMode", b"channelMode", "channelWidth", b"channelWidth", "jobId", b"jobId", "jobMode", b"jobMode", "jobVer", b"jobVer", "kinfeHeight", b"kinfeHeight", "rainTactics", b"rainTactics", "speed", b"speed", "ultraWave", b"ultraWave"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["channelMode", b"channelMode", "channelWidth", b"channelWidth", "jobId", b"jobId", "jobMode", b"jobMode", "jobVer", b"jobVer", "kinfeHeight", b"kinfeHeight", "rainTactics", b"rainTactics", "speed", b"speed", "ultraWave", b"ultraWave"]) -> None: ...
 
 global___NavStartJob = NavStartJob
 
@@ -1881,15 +1897,15 @@ global___NavStartJob = NavStartJob
 class NavBorderState(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    BDSTATE1_FIELD_NUMBER: builtins.int
-    bdstate1: builtins.int
+    BDSTATE_FIELD_NUMBER: builtins.int
+    bdstate: builtins.int
     def __init__(
         self,
         *,
-        bdstate1: builtins.int | None = ...,
+        bdstate: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["bdstate1", b"bdstate1"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["bdstate1", b"bdstate1"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["bdstate", b"bdstate"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["bdstate", b"bdstate"]) -> None: ...
 
 global___NavBorderState = NavBorderState
 
@@ -1897,30 +1913,30 @@ global___NavBorderState = NavBorderState
 class NavGetHashList(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    PVER1_FIELD_NUMBER: builtins.int
-    SUBCMD2_FIELD_NUMBER: builtins.int
-    TOTALFRAME3_FIELD_NUMBER: builtins.int
-    CURRENTFRAME4_FIELD_NUMBER: builtins.int
-    DATAHASH5_FIELD_NUMBER: builtins.int
-    RESERVED6_FIELD_NUMBER: builtins.int
-    pver1: builtins.int
-    subCmd2: builtins.int
-    totalFrame3: builtins.int
-    currentFrame4: builtins.int
-    dataHash5: builtins.int
-    reserved6: builtins.str
+    PVER_FIELD_NUMBER: builtins.int
+    SUBCMD_FIELD_NUMBER: builtins.int
+    TOTALFRAME_FIELD_NUMBER: builtins.int
+    CURRENTFRAME_FIELD_NUMBER: builtins.int
+    DATAHASH_FIELD_NUMBER: builtins.int
+    RESERVED_FIELD_NUMBER: builtins.int
+    pver: builtins.int
+    subCmd: builtins.int
+    totalFrame: builtins.int
+    currentFrame: builtins.int
+    dataHash: builtins.int
+    reserved: builtins.str
     def __init__(
         self,
         *,
-        pver1: builtins.int | None = ...,
-        subCmd2: builtins.int | None = ...,
-        totalFrame3: builtins.int | None = ...,
-        currentFrame4: builtins.int | None = ...,
-        dataHash5: builtins.int | None = ...,
-        reserved6: builtins.str | None = ...,
+        pver: builtins.int | None = ...,
+        subCmd: builtins.int | None = ...,
+        totalFrame: builtins.int | None = ...,
+        currentFrame: builtins.int | None = ...,
+        dataHash: builtins.int | None = ...,
+        reserved: builtins.str | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["currentFrame4", b"currentFrame4", "dataHash5", b"dataHash5", "pver1", b"pver1", "reserved6", b"reserved6", "subCmd2", b"subCmd2", "totalFrame3", b"totalFrame3"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["currentFrame4", b"currentFrame4", "dataHash5", b"dataHash5", "pver1", b"pver1", "reserved6", b"reserved6", "subCmd2", b"subCmd2", "totalFrame3", b"totalFrame3"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["currentFrame", b"currentFrame", "dataHash", b"dataHash", "pver", b"pver", "reserved", b"reserved", "subCmd", b"subCmd", "totalFrame", b"totalFrame"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["currentFrame", b"currentFrame", "dataHash", b"dataHash", "pver", b"pver", "reserved", b"reserved", "subCmd", b"subCmd", "totalFrame", b"totalFrame"]) -> None: ...
 
 global___NavGetHashList = NavGetHashList
 
@@ -1928,33 +1944,33 @@ global___NavGetHashList = NavGetHashList
 class NavGetHashListAck(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    PVER1_FIELD_NUMBER: builtins.int
-    SUBCMD2_FIELD_NUMBER: builtins.int
-    TOTALFRAME3_FIELD_NUMBER: builtins.int
-    CURRENTFRAME4_FIELD_NUMBER: builtins.int
-    DATAHASH5_FIELD_NUMBER: builtins.int
-    HASHLEN6_FIELD_NUMBER: builtins.int
-    RESERVED7_FIELD_NUMBER: builtins.int
-    pver1: builtins.int
-    subCmd2: builtins.int
-    totalFrame3: builtins.int
-    currentFrame4: builtins.int
-    dataHash5: builtins.int
-    hashLen6: builtins.int
-    reserved7: builtins.str
+    PVER_FIELD_NUMBER: builtins.int
+    SUBCMD_FIELD_NUMBER: builtins.int
+    TOTALFRAME_FIELD_NUMBER: builtins.int
+    CURRENTFRAME_FIELD_NUMBER: builtins.int
+    DATAHASH_FIELD_NUMBER: builtins.int
+    HASHLEN_FIELD_NUMBER: builtins.int
+    RESERVED_FIELD_NUMBER: builtins.int
+    pver: builtins.int
+    subCmd: builtins.int
+    totalFrame: builtins.int
+    currentFrame: builtins.int
+    dataHash: builtins.int
+    hashLen: builtins.int
+    reserved: builtins.str
     def __init__(
         self,
         *,
-        pver1: builtins.int | None = ...,
-        subCmd2: builtins.int | None = ...,
-        totalFrame3: builtins.int | None = ...,
-        currentFrame4: builtins.int | None = ...,
-        dataHash5: builtins.int | None = ...,
-        hashLen6: builtins.int | None = ...,
-        reserved7: builtins.str | None = ...,
+        pver: builtins.int | None = ...,
+        subCmd: builtins.int | None = ...,
+        totalFrame: builtins.int | None = ...,
+        currentFrame: builtins.int | None = ...,
+        dataHash: builtins.int | None = ...,
+        hashLen: builtins.int | None = ...,
+        reserved: builtins.str | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["currentFrame4", b"currentFrame4", "dataHash5", b"dataHash5", "hashLen6", b"hashLen6", "pver1", b"pver1", "reserved7", b"reserved7", "subCmd2", b"subCmd2", "totalFrame3", b"totalFrame3"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["currentFrame4", b"currentFrame4", "dataHash5", b"dataHash5", "hashLen6", b"hashLen6", "pver1", b"pver1", "reserved7", b"reserved7", "subCmd2", b"subCmd2", "totalFrame3", b"totalFrame3"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["currentFrame", b"currentFrame", "dataHash", b"dataHash", "hashLen", b"hashLen", "pver", b"pver", "reserved", b"reserved", "subCmd", b"subCmd", "totalFrame", b"totalFrame"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["currentFrame", b"currentFrame", "dataHash", b"dataHash", "hashLen", b"hashLen", "pver", b"pver", "reserved", b"reserved", "subCmd", b"subCmd", "totalFrame", b"totalFrame"]) -> None: ...
 
 global___NavGetHashListAck = NavGetHashListAck
 
@@ -1962,45 +1978,45 @@ global___NavGetHashListAck = NavGetHashListAck
 class NavGetCommData(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    PVER1_FIELD_NUMBER: builtins.int
-    SUBCMD2_FIELD_NUMBER: builtins.int
-    ACTION3_FIELD_NUMBER: builtins.int
-    TYPE4_FIELD_NUMBER: builtins.int
-    HASH5_FIELD_NUMBER: builtins.int
-    PATERNALHASHA6_FIELD_NUMBER: builtins.int
-    PATERNALHASHB7_FIELD_NUMBER: builtins.int
-    TOTALFRAME8_FIELD_NUMBER: builtins.int
-    CURRENTFRAME9_FIELD_NUMBER: builtins.int
-    DATAHASH10_FIELD_NUMBER: builtins.int
-    RESERVED11_FIELD_NUMBER: builtins.int
-    pver1: builtins.int
-    subCmd2: builtins.int
-    action3: builtins.int
-    type4: builtins.int
-    hash5: builtins.int
-    paternalHashA6: builtins.int
-    paternalHashB7: builtins.int
-    totalFrame8: builtins.int
-    currentFrame9: builtins.int
-    dataHash10: builtins.int
-    reserved11: builtins.str
+    PVER_FIELD_NUMBER: builtins.int
+    SUBCMD_FIELD_NUMBER: builtins.int
+    ACTION_FIELD_NUMBER: builtins.int
+    TYPE_FIELD_NUMBER: builtins.int
+    HASH_FIELD_NUMBER: builtins.int
+    PATERNALHASHA_FIELD_NUMBER: builtins.int
+    PATERNALHASHB_FIELD_NUMBER: builtins.int
+    TOTALFRAME_FIELD_NUMBER: builtins.int
+    CURRENTFRAME_FIELD_NUMBER: builtins.int
+    DATAHASH_FIELD_NUMBER: builtins.int
+    RESERVED_FIELD_NUMBER: builtins.int
+    pver: builtins.int
+    subCmd: builtins.int
+    action: builtins.int
+    type: builtins.int
+    hash: builtins.int
+    paternalHashA: builtins.int
+    paternalHashB: builtins.int
+    totalFrame: builtins.int
+    currentFrame: builtins.int
+    dataHash: builtins.int
+    reserved: builtins.str
     def __init__(
         self,
         *,
-        pver1: builtins.int | None = ...,
-        subCmd2: builtins.int | None = ...,
-        action3: builtins.int | None = ...,
-        type4: builtins.int | None = ...,
-        hash5: builtins.int | None = ...,
-        paternalHashA6: builtins.int | None = ...,
-        paternalHashB7: builtins.int | None = ...,
-        totalFrame8: builtins.int | None = ...,
-        currentFrame9: builtins.int | None = ...,
-        dataHash10: builtins.int | None = ...,
-        reserved11: builtins.str | None = ...,
+        pver: builtins.int | None = ...,
+        subCmd: builtins.int | None = ...,
+        action: builtins.int | None = ...,
+        type: builtins.int | None = ...,
+        hash: builtins.int | None = ...,
+        paternalHashA: builtins.int | None = ...,
+        paternalHashB: builtins.int | None = ...,
+        totalFrame: builtins.int | None = ...,
+        currentFrame: builtins.int | None = ...,
+        dataHash: builtins.int | None = ...,
+        reserved: builtins.str | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["action3", b"action3", "currentFrame9", b"currentFrame9", "dataHash10", b"dataHash10", "hash5", b"hash5", "paternalHashA6", b"paternalHashA6", "paternalHashB7", b"paternalHashB7", "pver1", b"pver1", "reserved11", b"reserved11", "subCmd2", b"subCmd2", "totalFrame8", b"totalFrame8", "type4", b"type4"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["action3", b"action3", "currentFrame9", b"currentFrame9", "dataHash10", b"dataHash10", "hash5", b"hash5", "paternalHashA6", b"paternalHashA6", "paternalHashB7", b"paternalHashB7", "pver1", b"pver1", "reserved11", b"reserved11", "subCmd2", b"subCmd2", "totalFrame8", b"totalFrame8", "type4", b"type4"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["action", b"action", "currentFrame", b"currentFrame", "dataHash", b"dataHash", "hash", b"hash", "paternalHashA", b"paternalHashA", "paternalHashB", b"paternalHashB", "pver", b"pver", "reserved", b"reserved", "subCmd", b"subCmd", "totalFrame", b"totalFrame", "type", b"type"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["action", b"action", "currentFrame", b"currentFrame", "dataHash", b"dataHash", "hash", b"hash", "paternalHashA", b"paternalHashA", "paternalHashB", b"paternalHashB", "pver", b"pver", "reserved", b"reserved", "subCmd", b"subCmd", "totalFrame", b"totalFrame", "type", b"type"]) -> None: ...
 
 global___NavGetCommData = NavGetCommData
 
@@ -2008,55 +2024,55 @@ global___NavGetCommData = NavGetCommData
 class NavGetCommDataAck(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    PVER1_FIELD_NUMBER: builtins.int
-    SUBCMD2_FIELD_NUMBER: builtins.int
-    RESULT3_FIELD_NUMBER: builtins.int
-    ACTION4_FIELD_NUMBER: builtins.int
-    TYPE5_FIELD_NUMBER: builtins.int
-    HASH6_FIELD_NUMBER: builtins.int
-    PATERNALHASHA7_FIELD_NUMBER: builtins.int
-    PATERNALHASHB8_FIELD_NUMBER: builtins.int
-    TOTALFRAME9_FIELD_NUMBER: builtins.int
-    CURRENTFRAME10_FIELD_NUMBER: builtins.int
-    DATAHASH11_FIELD_NUMBER: builtins.int
-    DATALEN12_FIELD_NUMBER: builtins.int
-    DATACOUPLE13_FIELD_NUMBER: builtins.int
-    RESERVED14_FIELD_NUMBER: builtins.int
-    pver1: builtins.int
-    subCmd2: builtins.int
-    result3: builtins.int
-    action4: builtins.int
-    type5: builtins.int
-    hash6: builtins.int
-    paternalHashA7: builtins.int
-    paternalHashB8: builtins.int
-    totalFrame9: builtins.int
-    currentFrame10: builtins.int
-    dataHash11: builtins.int
-    dataLen12: builtins.int
+    PVER_FIELD_NUMBER: builtins.int
+    SUBCMD_FIELD_NUMBER: builtins.int
+    RESULT_FIELD_NUMBER: builtins.int
+    ACTION_FIELD_NUMBER: builtins.int
+    TYPE_FIELD_NUMBER: builtins.int
+    HASH_FIELD_NUMBER: builtins.int
+    PATERNALHASHA_FIELD_NUMBER: builtins.int
+    PATERNALHASHB_FIELD_NUMBER: builtins.int
+    TOTALFRAME_FIELD_NUMBER: builtins.int
+    CURRENTFRAME_FIELD_NUMBER: builtins.int
+    DATAHASH_FIELD_NUMBER: builtins.int
+    DATALEN_FIELD_NUMBER: builtins.int
+    DATACOUPLE_FIELD_NUMBER: builtins.int
+    RESERVED_FIELD_NUMBER: builtins.int
+    pver: builtins.int
+    subCmd: builtins.int
+    result: builtins.int
+    action: builtins.int
+    type: builtins.int
+    hash: builtins.int
+    paternalHashA: builtins.int
+    paternalHashB: builtins.int
+    totalFrame: builtins.int
+    currentFrame: builtins.int
+    dataHash: builtins.int
+    dataLen: builtins.int
     @property
-    def dataCouple13(self) -> google.protobuf.internal.containers.RepeatedCompositeFieldContainer[global___CommDataCouple]: ...
-    reserved14: builtins.str
+    def dataCouple(self) -> google.protobuf.internal.containers.RepeatedCompositeFieldContainer[global___CommDataCouple]: ...
+    reserved: builtins.str
     def __init__(
         self,
         *,
-        pver1: builtins.int | None = ...,
-        subCmd2: builtins.int | None = ...,
-        result3: builtins.int | None = ...,
-        action4: builtins.int | None = ...,
-        type5: builtins.int | None = ...,
-        hash6: builtins.int | None = ...,
-        paternalHashA7: builtins.int | None = ...,
-        paternalHashB8: builtins.int | None = ...,
-        totalFrame9: builtins.int | None = ...,
-        currentFrame10: builtins.int | None = ...,
-        dataHash11: builtins.int | None = ...,
-        dataLen12: builtins.int | None = ...,
-        dataCouple13: collections.abc.Iterable[global___CommDataCouple] | None = ...,
-        reserved14: builtins.str | None = ...,
+        pver: builtins.int | None = ...,
+        subCmd: builtins.int | None = ...,
+        result: builtins.int | None = ...,
+        action: builtins.int | None = ...,
+        type: builtins.int | None = ...,
+        hash: builtins.int | None = ...,
+        paternalHashA: builtins.int | None = ...,
+        paternalHashB: builtins.int | None = ...,
+        totalFrame: builtins.int | None = ...,
+        currentFrame: builtins.int | None = ...,
+        dataHash: builtins.int | None = ...,
+        dataLen: builtins.int | None = ...,
+        dataCouple: collections.abc.Iterable[global___CommDataCouple] | None = ...,
+        reserved: builtins.str | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["action4", b"action4", "currentFrame10", b"currentFrame10", "dataHash11", b"dataHash11", "dataLen12", b"dataLen12", "hash6", b"hash6", "paternalHashA7", b"paternalHashA7", "paternalHashB8", b"paternalHashB8", "pver1", b"pver1", "reserved14", b"reserved14", "result3", b"result3", "subCmd2", b"subCmd2", "totalFrame9", b"totalFrame9", "type5", b"type5"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["action4", b"action4", "currentFrame10", b"currentFrame10", "dataCouple13", b"dataCouple13", "dataHash11", b"dataHash11", "dataLen12", b"dataLen12", "hash6", b"hash6", "paternalHashA7", b"paternalHashA7", "paternalHashB8", b"paternalHashB8", "pver1", b"pver1", "reserved14", b"reserved14", "result3", b"result3", "subCmd2", b"subCmd2", "totalFrame9", b"totalFrame9", "type5", b"type5"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["action", b"action", "currentFrame", b"currentFrame", "dataHash", b"dataHash", "dataLen", b"dataLen", "hash", b"hash", "paternalHashA", b"paternalHashA", "paternalHashB", b"paternalHashB", "pver", b"pver", "reserved", b"reserved", "result", b"result", "subCmd", b"subCmd", "totalFrame", b"totalFrame", "type", b"type"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["action", b"action", "currentFrame", b"currentFrame", "dataCouple", b"dataCouple", "dataHash", b"dataHash", "dataLen", b"dataLen", "hash", b"hash", "paternalHashA", b"paternalHashA", "paternalHashB", b"paternalHashB", "pver", b"pver", "reserved", b"reserved", "result", b"result", "subCmd", b"subCmd", "totalFrame", b"totalFrame", "type", b"type"]) -> None: ...
 
 global___NavGetCommDataAck = NavGetCommDataAck
 
@@ -2064,57 +2080,57 @@ global___NavGetCommDataAck = NavGetCommDataAck
 class NavReqCoverPath(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    PVER1_FIELD_NUMBER: builtins.int
-    JOBID2_FIELD_NUMBER: builtins.int
-    JOBVER3_FIELD_NUMBER: builtins.int
-    JOBMODE4_FIELD_NUMBER: builtins.int
-    SUBCMD5_FIELD_NUMBER: builtins.int
-    EDGEMODE6_FIELD_NUMBER: builtins.int
-    KNIFEHEIGHT7_FIELD_NUMBER: builtins.int
-    CHANNELWIDTH8_FIELD_NUMBER: builtins.int
-    ULTRAWAVE9_FIELD_NUMBER: builtins.int
-    CHANNELMODE10_FIELD_NUMBER: builtins.int
-    TOWARD11_FIELD_NUMBER: builtins.int
-    SPEED12_FIELD_NUMBER: builtins.int
-    PATHHASH14_FIELD_NUMBER: builtins.int
-    RESERVED15_FIELD_NUMBER: builtins.int
-    RESULT16_FIELD_NUMBER: builtins.int
-    pver1: builtins.int
-    jobId2: builtins.int
-    jobVer3: builtins.int
-    jobMode4: builtins.int
-    subCmd5: builtins.int
-    edgeMode6: builtins.int
-    knifeHeight7: builtins.int
-    channelWidth8: builtins.int
-    ultraWave9: builtins.int
-    channelMode10: builtins.int
-    toward11: builtins.int
-    speed12: builtins.float
-    pathHash14: builtins.int
-    reserved15: builtins.str
-    result16: builtins.int
+    PVER_FIELD_NUMBER: builtins.int
+    JOBID_FIELD_NUMBER: builtins.int
+    JOBVER_FIELD_NUMBER: builtins.int
+    JOBMODE_FIELD_NUMBER: builtins.int
+    SUBCMD_FIELD_NUMBER: builtins.int
+    EDGEMODE_FIELD_NUMBER: builtins.int
+    KNIFEHEIGHT_FIELD_NUMBER: builtins.int
+    CHANNELWIDTH_FIELD_NUMBER: builtins.int
+    ULTRAWAVE_FIELD_NUMBER: builtins.int
+    CHANNELMODE_FIELD_NUMBER: builtins.int
+    TOWARD_FIELD_NUMBER: builtins.int
+    SPEED_FIELD_NUMBER: builtins.int
+    PATHHASH_FIELD_NUMBER: builtins.int
+    RESERVED_FIELD_NUMBER: builtins.int
+    RESULT_FIELD_NUMBER: builtins.int
+    pver: builtins.int
+    jobId: builtins.int
+    jobVer: builtins.int
+    jobMode: builtins.int
+    subCmd: builtins.int
+    edgeMode: builtins.int
+    knifeHeight: builtins.int
+    channelWidth: builtins.int
+    ultraWave: builtins.int
+    channelMode: builtins.int
+    toward: builtins.int
+    speed: builtins.float
+    pathHash: builtins.int
+    reserved: builtins.str
+    result: builtins.int
     def __init__(
         self,
         *,
-        pver1: builtins.int | None = ...,
-        jobId2: builtins.int | None = ...,
-        jobVer3: builtins.int | None = ...,
-        jobMode4: builtins.int | None = ...,
-        subCmd5: builtins.int | None = ...,
-        edgeMode6: builtins.int | None = ...,
-        knifeHeight7: builtins.int | None = ...,
-        channelWidth8: builtins.int | None = ...,
-        ultraWave9: builtins.int | None = ...,
-        channelMode10: builtins.int | None = ...,
-        toward11: builtins.int | None = ...,
-        speed12: builtins.float | None = ...,
-        pathHash14: builtins.int | None = ...,
-        reserved15: builtins.str | None = ...,
-        result16: builtins.int | None = ...,
+        pver: builtins.int | None = ...,
+        jobId: builtins.int | None = ...,
+        jobVer: builtins.int | None = ...,
+        jobMode: builtins.int | None = ...,
+        subCmd: builtins.int | None = ...,
+        edgeMode: builtins.int | None = ...,
+        knifeHeight: builtins.int | None = ...,
+        channelWidth: builtins.int | None = ...,
+        ultraWave: builtins.int | None = ...,
+        channelMode: builtins.int | None = ...,
+        toward: builtins.int | None = ...,
+        speed: builtins.float | None = ...,
+        pathHash: builtins.int | None = ...,
+        reserved: builtins.str | None = ...,
+        result: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["channelMode10", b"channelMode10", "channelWidth8", b"channelWidth8", "edgeMode6", b"edgeMode6", "jobId2", b"jobId2", "jobMode4", b"jobMode4", "jobVer3", b"jobVer3", "knifeHeight7", b"knifeHeight7", "pathHash14", b"pathHash14", "pver1", b"pver1", "reserved15", b"reserved15", "result16", b"result16", "speed12", b"speed12", "subCmd5", b"subCmd5", "toward11", b"toward11", "ultraWave9", b"ultraWave9"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["channelMode10", b"channelMode10", "channelWidth8", b"channelWidth8", "edgeMode6", b"edgeMode6", "jobId2", b"jobId2", "jobMode4", b"jobMode4", "jobVer3", b"jobVer3", "knifeHeight7", b"knifeHeight7", "pathHash14", b"pathHash14", "pver1", b"pver1", "reserved15", b"reserved15", "result16", b"result16", "speed12", b"speed12", "subCmd5", b"subCmd5", "toward11", b"toward11", "ultraWave9", b"ultraWave9"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["channelMode", b"channelMode", "channelWidth", b"channelWidth", "edgeMode", b"edgeMode", "jobId", b"jobId", "jobMode", b"jobMode", "jobVer", b"jobVer", "knifeHeight", b"knifeHeight", "pathHash", b"pathHash", "pver", b"pver", "reserved", b"reserved", "result", b"result", "speed", b"speed", "subCmd", b"subCmd", "toward", b"toward", "ultraWave", b"ultraWave"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["channelMode", b"channelMode", "channelWidth", b"channelWidth", "edgeMode", b"edgeMode", "jobId", b"jobId", "jobMode", b"jobMode", "jobVer", b"jobVer", "knifeHeight", b"knifeHeight", "pathHash", b"pathHash", "pver", b"pver", "reserved", b"reserved", "result", b"result", "speed", b"speed", "subCmd", b"subCmd", "toward", b"toward", "ultraWave", b"ultraWave"]) -> None: ...
 
 global___NavReqCoverPath = NavReqCoverPath
 
@@ -2122,73 +2138,73 @@ global___NavReqCoverPath = NavReqCoverPath
 class NavUploadZigZagResult(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    PVER1_FIELD_NUMBER: builtins.int
-    JOBID2_FIELD_NUMBER: builtins.int
-    JOBVER3_FIELD_NUMBER: builtins.int
-    RESULT4_FIELD_NUMBER: builtins.int
-    AREA5_FIELD_NUMBER: builtins.int
-    TIME6_FIELD_NUMBER: builtins.int
-    TOTALZONENUM7_FIELD_NUMBER: builtins.int
-    CURRENTZONEPATHNUM8_FIELD_NUMBER: builtins.int
-    CURRENTZONEPATHID9_FIELD_NUMBER: builtins.int
-    CURRENTZONE10_FIELD_NUMBER: builtins.int
-    CURRENTHASH11_FIELD_NUMBER: builtins.int
-    TOTALFRAME12_FIELD_NUMBER: builtins.int
-    CURRENTFRAME13_FIELD_NUMBER: builtins.int
-    CHANNELMODE14_FIELD_NUMBER: builtins.int
-    CHANNELMODEID15_FIELD_NUMBER: builtins.int
-    DATAHASH16_FIELD_NUMBER: builtins.int
-    DATALEN17_FIELD_NUMBER: builtins.int
-    RESERVED18_FIELD_NUMBER: builtins.int
-    DATACOUPLE19_FIELD_NUMBER: builtins.int
-    SUBCMD20_FIELD_NUMBER: builtins.int
-    pver1: builtins.int
-    jobId2: builtins.int
-    jobVer3: builtins.int
-    result4: builtins.int
-    area5: builtins.int
-    time6: builtins.int
-    totalZoneNum7: builtins.int
-    currentZonePathNum8: builtins.int
-    currentZonePathId9: builtins.int
-    currentZone10: builtins.int
-    currentHash11: builtins.int
-    totalFrame12: builtins.int
-    currentFrame13: builtins.int
-    channelMode14: builtins.int
-    channelModeId15: builtins.int
-    dataHash16: builtins.int
-    dataLen17: builtins.int
-    reserved18: builtins.str
+    PVER_FIELD_NUMBER: builtins.int
+    JOBID_FIELD_NUMBER: builtins.int
+    JOBVER_FIELD_NUMBER: builtins.int
+    RESULT_FIELD_NUMBER: builtins.int
+    AREA_FIELD_NUMBER: builtins.int
+    TIME_FIELD_NUMBER: builtins.int
+    TOTALZONENUM_FIELD_NUMBER: builtins.int
+    CURRENTZONEPATHNUM_FIELD_NUMBER: builtins.int
+    CURRENTZONEPATHID_FIELD_NUMBER: builtins.int
+    CURRENTZONE_FIELD_NUMBER: builtins.int
+    CURRENTHASH_FIELD_NUMBER: builtins.int
+    TOTALFRAME_FIELD_NUMBER: builtins.int
+    CURRENTFRAME_FIELD_NUMBER: builtins.int
+    CHANNELMODE_FIELD_NUMBER: builtins.int
+    CHANNELMODEID_FIELD_NUMBER: builtins.int
+    DATAHASH_FIELD_NUMBER: builtins.int
+    DATALEN_FIELD_NUMBER: builtins.int
+    RESERVED_FIELD_NUMBER: builtins.int
+    DATACOUPLE_FIELD_NUMBER: builtins.int
+    SUBCMD_FIELD_NUMBER: builtins.int
+    pver: builtins.int
+    jobId: builtins.int
+    jobVer: builtins.int
+    result: builtins.int
+    area: builtins.int
+    time: builtins.int
+    totalZoneNum: builtins.int
+    currentZonePathNum: builtins.int
+    currentZonePathId: builtins.int
+    currentZone: builtins.int
+    currentHash: builtins.int
+    totalFrame: builtins.int
+    currentFrame: builtins.int
+    channelMode: builtins.int
+    channelModeId: builtins.int
+    dataHash: builtins.int
+    dataLen: builtins.int
+    reserved: builtins.str
     @property
-    def dataCouple19(self) -> google.protobuf.internal.containers.RepeatedCompositeFieldContainer[global___CommDataCouple]: ...
-    subCmd20: builtins.int
+    def dataCouple(self) -> google.protobuf.internal.containers.RepeatedCompositeFieldContainer[global___CommDataCouple]: ...
+    subCmd: builtins.int
     def __init__(
         self,
         *,
-        pver1: builtins.int | None = ...,
-        jobId2: builtins.int | None = ...,
-        jobVer3: builtins.int | None = ...,
-        result4: builtins.int | None = ...,
-        area5: builtins.int | None = ...,
-        time6: builtins.int | None = ...,
-        totalZoneNum7: builtins.int | None = ...,
-        currentZonePathNum8: builtins.int | None = ...,
-        currentZonePathId9: builtins.int | None = ...,
-        currentZone10: builtins.int | None = ...,
-        currentHash11: builtins.int | None = ...,
-        totalFrame12: builtins.int | None = ...,
-        currentFrame13: builtins.int | None = ...,
-        channelMode14: builtins.int | None = ...,
-        channelModeId15: builtins.int | None = ...,
-        dataHash16: builtins.int | None = ...,
-        dataLen17: builtins.int | None = ...,
-        reserved18: builtins.str | None = ...,
-        dataCouple19: collections.abc.Iterable[global___CommDataCouple] | None = ...,
-        subCmd20: builtins.int | None = ...,
+        pver: builtins.int | None = ...,
+        jobId: builtins.int | None = ...,
+        jobVer: builtins.int | None = ...,
+        result: builtins.int | None = ...,
+        area: builtins.int | None = ...,
+        time: builtins.int | None = ...,
+        totalZoneNum: builtins.int | None = ...,
+        currentZonePathNum: builtins.int | None = ...,
+        currentZonePathId: builtins.int | None = ...,
+        currentZone: builtins.int | None = ...,
+        currentHash: builtins.int | None = ...,
+        totalFrame: builtins.int | None = ...,
+        currentFrame: builtins.int | None = ...,
+        channelMode: builtins.int | None = ...,
+        channelModeId: builtins.int | None = ...,
+        dataHash: builtins.int | None = ...,
+        dataLen: builtins.int | None = ...,
+        reserved: builtins.str | None = ...,
+        dataCouple: collections.abc.Iterable[global___CommDataCouple] | None = ...,
+        subCmd: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["area5", b"area5", "channelMode14", b"channelMode14", "channelModeId15", b"channelModeId15", "currentFrame13", b"currentFrame13", "currentHash11", b"currentHash11", "currentZone10", b"currentZone10", "currentZonePathId9", b"currentZonePathId9", "currentZonePathNum8", b"currentZonePathNum8", "dataHash16", b"dataHash16", "dataLen17", b"dataLen17", "jobId2", b"jobId2", "jobVer3", b"jobVer3", "pver1", b"pver1", "reserved18", b"reserved18", "result4", b"result4", "subCmd20", b"subCmd20", "time6", b"time6", "totalFrame12", b"totalFrame12", "totalZoneNum7", b"totalZoneNum7"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["area5", b"area5", "channelMode14", b"channelMode14", "channelModeId15", b"channelModeId15", "currentFrame13", b"currentFrame13", "currentHash11", b"currentHash11", "currentZone10", b"currentZone10", "currentZonePathId9", b"currentZonePathId9", "currentZonePathNum8", b"currentZonePathNum8", "dataCouple19", b"dataCouple19", "dataHash16", b"dataHash16", "dataLen17", b"dataLen17", "jobId2", b"jobId2", "jobVer3", b"jobVer3", "pver1", b"pver1", "reserved18", b"reserved18", "result4", b"result4", "subCmd20", b"subCmd20", "time6", b"time6", "totalFrame12", b"totalFrame12", "totalZoneNum7", b"totalZoneNum7"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["area", b"area", "channelMode", b"channelMode", "channelModeId", b"channelModeId", "currentFrame", b"currentFrame", "currentHash", b"currentHash", "currentZone", b"currentZone", "currentZonePathId", b"currentZonePathId", "currentZonePathNum", b"currentZonePathNum", "dataHash", b"dataHash", "dataLen", b"dataLen", "jobId", b"jobId", "jobVer", b"jobVer", "pver", b"pver", "reserved", b"reserved", "result", b"result", "subCmd", b"subCmd", "time", b"time", "totalFrame", b"totalFrame", "totalZoneNum", b"totalZoneNum"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["area", b"area", "channelMode", b"channelMode", "channelModeId", b"channelModeId", "currentFrame", b"currentFrame", "currentHash", b"currentHash", "currentZone", b"currentZone", "currentZonePathId", b"currentZonePathId", "currentZonePathNum", b"currentZonePathNum", "dataCouple", b"dataCouple", "dataHash", b"dataHash", "dataLen", b"dataLen", "jobId", b"jobId", "jobVer", b"jobVer", "pver", b"pver", "reserved", b"reserved", "result", b"result", "subCmd", b"subCmd", "time", b"time", "totalFrame", b"totalFrame", "totalZoneNum", b"totalZoneNum"]) -> None: ...
 
 global___NavUploadZigZagResult = NavUploadZigZagResult
 
@@ -2196,36 +2212,36 @@ global___NavUploadZigZagResult = NavUploadZigZagResult
 class NavUploadZigZagResultAck(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    PVER1_FIELD_NUMBER: builtins.int
-    CURRENTZONE2_FIELD_NUMBER: builtins.int
-    CURRENTHASH3_FIELD_NUMBER: builtins.int
-    TOTALFRAME4_FIELD_NUMBER: builtins.int
-    CURRENTFRAME5_FIELD_NUMBER: builtins.int
-    DATAHASH6_FIELD_NUMBER: builtins.int
-    RESERVED7_FIELD_NUMBER: builtins.int
-    SUBCMD8_FIELD_NUMBER: builtins.int
-    pver1: builtins.int
-    currentZone2: builtins.int
-    currentHash3: builtins.int
-    totalFrame4: builtins.int
-    currentFrame5: builtins.int
-    dataHash6: builtins.int
-    reserved7: builtins.str
-    subCmd8: builtins.int
+    PVER_FIELD_NUMBER: builtins.int
+    CURRENTZONE_FIELD_NUMBER: builtins.int
+    CURRENTHASH_FIELD_NUMBER: builtins.int
+    TOTALFRAME_FIELD_NUMBER: builtins.int
+    CURRENTFRAME_FIELD_NUMBER: builtins.int
+    DATAHASH_FIELD_NUMBER: builtins.int
+    RESERVED_FIELD_NUMBER: builtins.int
+    SUBCMD_FIELD_NUMBER: builtins.int
+    pver: builtins.int
+    currentZone: builtins.int
+    currentHash: builtins.int
+    totalFrame: builtins.int
+    currentFrame: builtins.int
+    dataHash: builtins.int
+    reserved: builtins.str
+    subCmd: builtins.int
     def __init__(
         self,
         *,
-        pver1: builtins.int | None = ...,
-        currentZone2: builtins.int | None = ...,
-        currentHash3: builtins.int | None = ...,
-        totalFrame4: builtins.int | None = ...,
-        currentFrame5: builtins.int | None = ...,
-        dataHash6: builtins.int | None = ...,
-        reserved7: builtins.str | None = ...,
-        subCmd8: builtins.int | None = ...,
+        pver: builtins.int | None = ...,
+        currentZone: builtins.int | None = ...,
+        currentHash: builtins.int | None = ...,
+        totalFrame: builtins.int | None = ...,
+        currentFrame: builtins.int | None = ...,
+        dataHash: builtins.int | None = ...,
+        reserved: builtins.str | None = ...,
+        subCmd: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["currentFrame5", b"currentFrame5", "currentHash3", b"currentHash3", "currentZone2", b"currentZone2", "dataHash6", b"dataHash6", "pver1", b"pver1", "reserved7", b"reserved7", "subCmd8", b"subCmd8", "totalFrame4", b"totalFrame4"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["currentFrame5", b"currentFrame5", "currentHash3", b"currentHash3", "currentZone2", b"currentZone2", "dataHash6", b"dataHash6", "pver1", b"pver1", "reserved7", b"reserved7", "subCmd8", b"subCmd8", "totalFrame4", b"totalFrame4"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["currentFrame", b"currentFrame", "currentHash", b"currentHash", "currentZone", b"currentZone", "dataHash", b"dataHash", "pver", b"pver", "reserved", b"reserved", "subCmd", b"subCmd", "totalFrame", b"totalFrame"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["currentFrame", b"currentFrame", "currentHash", b"currentHash", "currentZone", b"currentZone", "dataHash", b"dataHash", "pver", b"pver", "reserved", b"reserved", "subCmd", b"subCmd", "totalFrame", b"totalFrame"]) -> None: ...
 
 global___NavUploadZigZagResultAck = NavUploadZigZagResultAck
 
@@ -2233,24 +2249,24 @@ global___NavUploadZigZagResultAck = NavUploadZigZagResultAck
 class NavTaskCtrl(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    TYPE1_FIELD_NUMBER: builtins.int
-    ACTION2_FIELD_NUMBER: builtins.int
-    RESULT3_FIELD_NUMBER: builtins.int
-    RESERVED4_FIELD_NUMBER: builtins.int
-    type1: builtins.int
-    action2: builtins.int
-    result3: builtins.int
-    reserved4: builtins.str
+    TYPE_FIELD_NUMBER: builtins.int
+    ACTION_FIELD_NUMBER: builtins.int
+    RESULT_FIELD_NUMBER: builtins.int
+    RESERVED_FIELD_NUMBER: builtins.int
+    type: builtins.int
+    action: builtins.int
+    result: builtins.int
+    reserved: builtins.str
     def __init__(
         self,
         *,
-        type1: builtins.int | None = ...,
-        action2: builtins.int | None = ...,
-        result3: builtins.int | None = ...,
-        reserved4: builtins.str | None = ...,
+        type: builtins.int | None = ...,
+        action: builtins.int | None = ...,
+        result: builtins.int | None = ...,
+        reserved: builtins.str | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["action2", b"action2", "reserved4", b"reserved4", "result3", b"result3", "type1", b"type1"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["action2", b"action2", "reserved4", b"reserved4", "result3", b"result3", "type1", b"type1"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["action", b"action", "reserved", b"reserved", "result", b"result", "type", b"type"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["action", b"action", "reserved", b"reserved", "result", b"result", "type", b"type"]) -> None: ...
 
 global___NavTaskCtrl = NavTaskCtrl
 
@@ -2258,30 +2274,30 @@ global___NavTaskCtrl = NavTaskCtrl
 class NavTaskIdRw(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    PVER1_FIELD_NUMBER: builtins.int
-    SUBCMD2_FIELD_NUMBER: builtins.int
-    TASKNAME3_FIELD_NUMBER: builtins.int
-    TASKID4_FIELD_NUMBER: builtins.int
-    RESULT5_FIELD_NUMBER: builtins.int
-    RESERVED6_FIELD_NUMBER: builtins.int
-    pver1: builtins.int
-    subCmd2: builtins.int
-    taskName3: builtins.str
-    taskId4: builtins.str
-    result5: builtins.int
-    reserved6: builtins.str
+    PVER_FIELD_NUMBER: builtins.int
+    SUBCMD_FIELD_NUMBER: builtins.int
+    TASKNAME_FIELD_NUMBER: builtins.int
+    TASKID_FIELD_NUMBER: builtins.int
+    RESULT_FIELD_NUMBER: builtins.int
+    RESERVED_FIELD_NUMBER: builtins.int
+    pver: builtins.int
+    subCmd: builtins.int
+    taskName: builtins.str
+    taskId: builtins.str
+    result: builtins.int
+    reserved: builtins.str
     def __init__(
         self,
         *,
-        pver1: builtins.int | None = ...,
-        subCmd2: builtins.int | None = ...,
-        taskName3: builtins.str | None = ...,
-        taskId4: builtins.str | None = ...,
-        result5: builtins.int | None = ...,
-        reserved6: builtins.str | None = ...,
+        pver: builtins.int | None = ...,
+        subCmd: builtins.int | None = ...,
+        taskName: builtins.str | None = ...,
+        taskId: builtins.str | None = ...,
+        result: builtins.int | None = ...,
+        reserved: builtins.str | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["pver1", b"pver1", "reserved6", b"reserved6", "result5", b"result5", "subCmd2", b"subCmd2", "taskId4", b"taskId4", "taskName3", b"taskName3"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["pver1", b"pver1", "reserved6", b"reserved6", "result5", b"result5", "subCmd2", b"subCmd2", "taskId4", b"taskId4", "taskName3", b"taskName3"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["pver", b"pver", "reserved", b"reserved", "result", b"result", "subCmd", b"subCmd", "taskId", b"taskId", "taskName", b"taskName"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["pver", b"pver", "reserved", b"reserved", "result", b"result", "subCmd", b"subCmd", "taskId", b"taskId", "taskName", b"taskName"]) -> None: ...
 
 global___NavTaskIdRw = NavTaskIdRw
 
@@ -2289,30 +2305,30 @@ global___NavTaskIdRw = NavTaskIdRw
 class NavTaskBreakPoint(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    X1_FIELD_NUMBER: builtins.int
-    Y2_FIELD_NUMBER: builtins.int
-    TOWARD3_FIELD_NUMBER: builtins.int
-    FLAG4_FIELD_NUMBER: builtins.int
-    ACTION5_FIELD_NUMBER: builtins.int
-    ZONEHASH6_FIELD_NUMBER: builtins.int
-    x1: builtins.float
-    y2: builtins.float
-    toward3: builtins.int
-    flag4: builtins.int
-    action5: builtins.int
-    zoneHash6: builtins.int
+    X_FIELD_NUMBER: builtins.int
+    Y_FIELD_NUMBER: builtins.int
+    TOWARD_FIELD_NUMBER: builtins.int
+    FLAG_FIELD_NUMBER: builtins.int
+    ACTION_FIELD_NUMBER: builtins.int
+    ZONEHASH_FIELD_NUMBER: builtins.int
+    x: builtins.float
+    y: builtins.float
+    toward: builtins.int
+    flag: builtins.int
+    action: builtins.int
+    zoneHash: builtins.int
     def __init__(
         self,
         *,
-        x1: builtins.float | None = ...,
-        y2: builtins.float | None = ...,
-        toward3: builtins.int | None = ...,
-        flag4: builtins.int | None = ...,
-        action5: builtins.int | None = ...,
-        zoneHash6: builtins.int | None = ...,
+        x: builtins.float | None = ...,
+        y: builtins.float | None = ...,
+        toward: builtins.int | None = ...,
+        flag: builtins.int | None = ...,
+        action: builtins.int | None = ...,
+        zoneHash: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["action5", b"action5", "flag4", b"flag4", "toward3", b"toward3", "x1", b"x1", "y2", b"y2", "zoneHash6", b"zoneHash6"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["action5", b"action5", "flag4", b"flag4", "toward3", b"toward3", "x1", b"x1", "y2", b"y2", "zoneHash6", b"zoneHash6"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["action", b"action", "flag", b"flag", "toward", b"toward", "x", b"x", "y", b"y", "zoneHash", b"zoneHash"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["action", b"action", "flag", b"flag", "toward", b"toward", "x", b"x", "y", b"y", "zoneHash", b"zoneHash"]) -> None: ...
 
 global___NavTaskBreakPoint = NavTaskBreakPoint
 
@@ -2320,99 +2336,99 @@ global___NavTaskBreakPoint = NavTaskBreakPoint
 class NavPlanJobSet(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    PVER1_FIELD_NUMBER: builtins.int
-    SUBCMD2_FIELD_NUMBER: builtins.int
-    AREA3_FIELD_NUMBER: builtins.int
-    WORKTIME4_FIELD_NUMBER: builtins.int
-    VERSION5_FIELD_NUMBER: builtins.int
-    ID6_FIELD_NUMBER: builtins.int
-    USERID7_FIELD_NUMBER: builtins.int
-    DEVICEID8_FIELD_NUMBER: builtins.int
-    PLANID9_FIELD_NUMBER: builtins.int
-    TASKID10_FIELD_NUMBER: builtins.int
-    JOBID11_FIELD_NUMBER: builtins.int
-    STARTTIME12_FIELD_NUMBER: builtins.int
-    ENDTIME13_FIELD_NUMBER: builtins.int
-    WEEK14_FIELD_NUMBER: builtins.int
-    KNIFEHEIGHT15_FIELD_NUMBER: builtins.int
-    MODEL16_FIELD_NUMBER: builtins.int
-    EDGEMODE17_FIELD_NUMBER: builtins.int
-    REQUIREDTIME18_FIELD_NUMBER: builtins.int
-    ROUTEANGLE19_FIELD_NUMBER: builtins.int
-    ROUTEMODEL20_FIELD_NUMBER: builtins.int
-    ROUTESPACING21_FIELD_NUMBER: builtins.int
-    ULTRASONICBARRIER22_FIELD_NUMBER: builtins.int
-    TOTALPLANNUM23_FIELD_NUMBER: builtins.int
-    PLANINDEX24_FIELD_NUMBER: builtins.int
-    RESULT25_FIELD_NUMBER: builtins.int
-    SPEED26_FIELD_NUMBER: builtins.int
-    TASKNAME27_FIELD_NUMBER: builtins.int
-    JOBNAME28_FIELD_NUMBER: builtins.int
-    RESERVED30_FIELD_NUMBER: builtins.int
-    pver1: builtins.int
-    subCmd2: builtins.int
-    area3: builtins.int
-    workTime4: builtins.int
-    version5: builtins.str
-    id6: builtins.str
-    userId7: builtins.str
-    deviceId8: builtins.str
-    planId9: builtins.str
-    taskId10: builtins.str
-    jobId11: builtins.str
-    startTime12: builtins.str
-    endTime13: builtins.str
-    week14: builtins.int
-    knifeHeight15: builtins.int
-    model16: builtins.int
-    edgeMode17: builtins.int
-    requiredTime18: builtins.int
-    routeAngle19: builtins.int
-    routeModel20: builtins.int
-    routeSpacing21: builtins.int
-    ultrasonicBarrier22: builtins.int
-    totalPlanNum23: builtins.int
-    planIndex24: builtins.int
-    result25: builtins.int
-    speed26: builtins.float
-    taskName27: builtins.str
-    jobName28: builtins.str
-    reserved30: builtins.str
+    PVER_FIELD_NUMBER: builtins.int
+    SUBCMD_FIELD_NUMBER: builtins.int
+    AREA_FIELD_NUMBER: builtins.int
+    WORKTIME_FIELD_NUMBER: builtins.int
+    VERSION_FIELD_NUMBER: builtins.int
+    ID_FIELD_NUMBER: builtins.int
+    USERID_FIELD_NUMBER: builtins.int
+    DEVICEID_FIELD_NUMBER: builtins.int
+    PLANID_FIELD_NUMBER: builtins.int
+    TASKID_FIELD_NUMBER: builtins.int
+    JOBID_FIELD_NUMBER: builtins.int
+    STARTTIME_FIELD_NUMBER: builtins.int
+    ENDTIME_FIELD_NUMBER: builtins.int
+    WEEK_FIELD_NUMBER: builtins.int
+    KNIFEHEIGHT_FIELD_NUMBER: builtins.int
+    MODEL_FIELD_NUMBER: builtins.int
+    EDGEMODE_FIELD_NUMBER: builtins.int
+    REQUIREDTIME_FIELD_NUMBER: builtins.int
+    ROUTEANGLE_FIELD_NUMBER: builtins.int
+    ROUTEMODEL_FIELD_NUMBER: builtins.int
+    ROUTESPACING_FIELD_NUMBER: builtins.int
+    ULTRASONICBARRIER_FIELD_NUMBER: builtins.int
+    TOTALPLANNUM_FIELD_NUMBER: builtins.int
+    PLANINDEX_FIELD_NUMBER: builtins.int
+    RESULT_FIELD_NUMBER: builtins.int
+    SPEED_FIELD_NUMBER: builtins.int
+    TASKNAME_FIELD_NUMBER: builtins.int
+    JOBNAME_FIELD_NUMBER: builtins.int
+    RESERVED_FIELD_NUMBER: builtins.int
+    pver: builtins.int
+    subCmd: builtins.int
+    area: builtins.int
+    workTime: builtins.int
+    version: builtins.str
+    id: builtins.str
+    userId: builtins.str
+    deviceId: builtins.str
+    planId: builtins.str
+    taskId: builtins.str
+    jobId: builtins.str
+    startTime: builtins.str
+    endTime: builtins.str
+    week: builtins.int
+    knifeHeight: builtins.int
+    model: builtins.int
+    edgeMode: builtins.int
+    requiredTime: builtins.int
+    routeAngle: builtins.int
+    routeModel: builtins.int
+    routeSpacing: builtins.int
+    ultrasonicBarrier: builtins.int
+    totalPlanNum: builtins.int
+    planIndex: builtins.int
+    result: builtins.int
+    speed: builtins.float
+    taskName: builtins.str
+    jobName: builtins.str
+    reserved: builtins.str
     def __init__(
         self,
         *,
-        pver1: builtins.int | None = ...,
-        subCmd2: builtins.int | None = ...,
-        area3: builtins.int | None = ...,
-        workTime4: builtins.int | None = ...,
-        version5: builtins.str | None = ...,
-        id6: builtins.str | None = ...,
-        userId7: builtins.str | None = ...,
-        deviceId8: builtins.str | None = ...,
-        planId9: builtins.str | None = ...,
-        taskId10: builtins.str | None = ...,
-        jobId11: builtins.str | None = ...,
-        startTime12: builtins.str | None = ...,
-        endTime13: builtins.str | None = ...,
-        week14: builtins.int | None = ...,
-        knifeHeight15: builtins.int | None = ...,
-        model16: builtins.int | None = ...,
-        edgeMode17: builtins.int | None = ...,
-        requiredTime18: builtins.int | None = ...,
-        routeAngle19: builtins.int | None = ...,
-        routeModel20: builtins.int | None = ...,
-        routeSpacing21: builtins.int | None = ...,
-        ultrasonicBarrier22: builtins.int | None = ...,
-        totalPlanNum23: builtins.int | None = ...,
-        planIndex24: builtins.int | None = ...,
-        result25: builtins.int | None = ...,
-        speed26: builtins.float | None = ...,
-        taskName27: builtins.str | None = ...,
-        jobName28: builtins.str | None = ...,
-        reserved30: builtins.str | None = ...,
+        pver: builtins.int | None = ...,
+        subCmd: builtins.int | None = ...,
+        area: builtins.int | None = ...,
+        workTime: builtins.int | None = ...,
+        version: builtins.str | None = ...,
+        id: builtins.str | None = ...,
+        userId: builtins.str | None = ...,
+        deviceId: builtins.str | None = ...,
+        planId: builtins.str | None = ...,
+        taskId: builtins.str | None = ...,
+        jobId: builtins.str | None = ...,
+        startTime: builtins.str | None = ...,
+        endTime: builtins.str | None = ...,
+        week: builtins.int | None = ...,
+        knifeHeight: builtins.int | None = ...,
+        model: builtins.int | None = ...,
+        edgeMode: builtins.int | None = ...,
+        requiredTime: builtins.int | None = ...,
+        routeAngle: builtins.int | None = ...,
+        routeModel: builtins.int | None = ...,
+        routeSpacing: builtins.int | None = ...,
+        ultrasonicBarrier: builtins.int | None = ...,
+        totalPlanNum: builtins.int | None = ...,
+        planIndex: builtins.int | None = ...,
+        result: builtins.int | None = ...,
+        speed: builtins.float | None = ...,
+        taskName: builtins.str | None = ...,
+        jobName: builtins.str | None = ...,
+        reserved: builtins.str | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["area3", b"area3", "deviceId8", b"deviceId8", "edgeMode17", b"edgeMode17", "endTime13", b"endTime13", "id6", b"id6", "jobId11", b"jobId11", "jobName28", b"jobName28", "knifeHeight15", b"knifeHeight15", "model16", b"model16", "planId9", b"planId9", "planIndex24", b"planIndex24", "pver1", b"pver1", "requiredTime18", b"requiredTime18", "reserved30", b"reserved30", "result25", b"result25", "routeAngle19", b"routeAngle19", "routeModel20", b"routeModel20", "routeSpacing21", b"routeSpacing21", "speed26", b"speed26", "startTime12", b"startTime12", "subCmd2", b"subCmd2", "taskId10", b"taskId10", "taskName27", b"taskName27", "totalPlanNum23", b"totalPlanNum23", "ultrasonicBarrier22", b"ultrasonicBarrier22", "userId7", b"userId7", "version5", b"version5", "week14", b"week14", "workTime4", b"workTime4"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["area3", b"area3", "deviceId8", b"deviceId8", "edgeMode17", b"edgeMode17", "endTime13", b"endTime13", "id6", b"id6", "jobId11", b"jobId11", "jobName28", b"jobName28", "knifeHeight15", b"knifeHeight15", "model16", b"model16", "planId9", b"planId9", "planIndex24", b"planIndex24", "pver1", b"pver1", "requiredTime18", b"requiredTime18", "reserved30", b"reserved30", "result25", b"result25", "routeAngle19", b"routeAngle19", "routeModel20", b"routeModel20", "routeSpacing21", b"routeSpacing21", "speed26", b"speed26", "startTime12", b"startTime12", "subCmd2", b"subCmd2", "taskId10", b"taskId10", "taskName27", b"taskName27", "totalPlanNum23", b"totalPlanNum23", "ultrasonicBarrier22", b"ultrasonicBarrier22", "userId7", b"userId7", "version5", b"version5", "week14", b"week14", "workTime4", b"workTime4"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["area", b"area", "deviceId", b"deviceId", "edgeMode", b"edgeMode", "endTime", b"endTime", "id", b"id", "jobId", b"jobId", "jobName", b"jobName", "knifeHeight", b"knifeHeight", "model", b"model", "planId", b"planId", "planIndex", b"planIndex", "pver", b"pver", "requiredTime", b"requiredTime", "reserved", b"reserved", "result", b"result", "routeAngle", b"routeAngle", "routeModel", b"routeModel", "routeSpacing", b"routeSpacing", "speed", b"speed", "startTime", b"startTime", "subCmd", b"subCmd", "taskId", b"taskId", "taskName", b"taskName", "totalPlanNum", b"totalPlanNum", "ultrasonicBarrier", b"ultrasonicBarrier", "userId", b"userId", "version", b"version", "week", b"week", "workTime", b"workTime"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["area", b"area", "deviceId", b"deviceId", "edgeMode", b"edgeMode", "endTime", b"endTime", "id", b"id", "jobId", b"jobId", "jobName", b"jobName", "knifeHeight", b"knifeHeight", "model", b"model", "planId", b"planId", "planIndex", b"planIndex", "pver", b"pver", "requiredTime", b"requiredTime", "reserved", b"reserved", "result", b"result", "routeAngle", b"routeAngle", "routeModel", b"routeModel", "routeSpacing", b"routeSpacing", "speed", b"speed", "startTime", b"startTime", "subCmd", b"subCmd", "taskId", b"taskId", "taskName", b"taskName", "totalPlanNum", b"totalPlanNum", "ultrasonicBarrier", b"ultrasonicBarrier", "userId", b"userId", "version", b"version", "week", b"week", "workTime", b"workTime"]) -> None: ...
 
 global___NavPlanJobSet = NavPlanJobSet
 
@@ -2420,30 +2436,30 @@ global___NavPlanJobSet = NavPlanJobSet
 class NavUnableTimeSet(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    SUBCMD1_FIELD_NUMBER: builtins.int
-    DEVICEID2_FIELD_NUMBER: builtins.int
-    UNABLESTARTTIME3_FIELD_NUMBER: builtins.int
-    UNABLEENDTIME4_FIELD_NUMBER: builtins.int
-    RESULT5_FIELD_NUMBER: builtins.int
-    RESERVED6_FIELD_NUMBER: builtins.int
-    subCmd1: builtins.int
-    deviceId2: builtins.str
-    unableStartTime3: builtins.str
-    unableEndTime4: builtins.str
-    result5: builtins.int
-    reserved6: builtins.str
+    SUBCMD_FIELD_NUMBER: builtins.int
+    DEVICEID_FIELD_NUMBER: builtins.int
+    UNABLESTARTTIME_FIELD_NUMBER: builtins.int
+    UNABLEENDTIME_FIELD_NUMBER: builtins.int
+    RESULT_FIELD_NUMBER: builtins.int
+    RESERVED_FIELD_NUMBER: builtins.int
+    subCmd: builtins.int
+    deviceId: builtins.str
+    unableStartTime: builtins.str
+    unableEndTime: builtins.str
+    result: builtins.int
+    reserved: builtins.str
     def __init__(
         self,
         *,
-        subCmd1: builtins.int | None = ...,
-        deviceId2: builtins.str | None = ...,
-        unableStartTime3: builtins.str | None = ...,
-        unableEndTime4: builtins.str | None = ...,
-        result5: builtins.int | None = ...,
-        reserved6: builtins.str | None = ...,
+        subCmd: builtins.int | None = ...,
+        deviceId: builtins.str | None = ...,
+        unableStartTime: builtins.str | None = ...,
+        unableEndTime: builtins.str | None = ...,
+        result: builtins.int | None = ...,
+        reserved: builtins.str | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["deviceId2", b"deviceId2", "reserved6", b"reserved6", "result5", b"result5", "subCmd1", b"subCmd1", "unableEndTime4", b"unableEndTime4", "unableStartTime3", b"unableStartTime3"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["deviceId2", b"deviceId2", "reserved6", b"reserved6", "result5", b"result5", "subCmd1", b"subCmd1", "unableEndTime4", b"unableEndTime4", "unableStartTime3", b"unableStartTime3"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["deviceId", b"deviceId", "reserved", b"reserved", "result", b"result", "subCmd", b"subCmd", "unableEndTime", b"unableEndTime", "unableStartTime", b"unableStartTime"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["deviceId", b"deviceId", "reserved", b"reserved", "result", b"result", "subCmd", b"subCmd", "unableEndTime", b"unableEndTime", "unableStartTime", b"unableStartTime"]) -> None: ...
 
 global___NavUnableTimeSet = NavUnableTimeSet
 
@@ -2451,18 +2467,18 @@ global___NavUnableTimeSet = NavUnableTimeSet
 class SimulationCmdData(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    SUBCMD1_FIELD_NUMBER: builtins.int
-    PARAMID2_FIELD_NUMBER: builtins.int
-    subCmd1: builtins.int
-    paramId2: builtins.int
+    SUBCMD_FIELD_NUMBER: builtins.int
+    PARAMID_FIELD_NUMBER: builtins.int
+    subCmd: builtins.int
+    paramId: builtins.int
     def __init__(
         self,
         *,
-        subCmd1: builtins.int | None = ...,
-        paramId2: builtins.int | None = ...,
+        subCmd: builtins.int | None = ...,
+        paramId: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["paramId2", b"paramId2", "subCmd1", b"subCmd1"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["paramId2", b"paramId2", "subCmd1", b"subCmd1"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["paramId", b"paramId", "subCmd", b"subCmd"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["paramId", b"paramId", "subCmd", b"subCmd"]) -> None: ...
 
 global___SimulationCmdData = SimulationCmdData
 
@@ -2470,15 +2486,15 @@ global___SimulationCmdData = SimulationCmdData
 class WorkReportUpdateCmd(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    SUBCMD1_FIELD_NUMBER: builtins.int
-    subCmd1: builtins.int
+    SUBCMD_FIELD_NUMBER: builtins.int
+    subCmd: builtins.int
     def __init__(
         self,
         *,
-        subCmd1: builtins.int | None = ...,
+        subCmd: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["subCmd1", b"subCmd1"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["subCmd1", b"subCmd1"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["subCmd", b"subCmd"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["subCmd", b"subCmd"]) -> None: ...
 
 global___WorkReportUpdateCmd = WorkReportUpdateCmd
 
@@ -2486,18 +2502,18 @@ global___WorkReportUpdateCmd = WorkReportUpdateCmd
 class WorkReportUpdateAck(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    UPDATEFLAG1_FIELD_NUMBER: builtins.int
-    INFONUM2_FIELD_NUMBER: builtins.int
-    updateFlag1: builtins.bool
-    infoNum2: builtins.int
+    UPDATEFLAG_FIELD_NUMBER: builtins.int
+    INFONUM_FIELD_NUMBER: builtins.int
+    updateFlag: builtins.bool
+    infoNum: builtins.int
     def __init__(
         self,
         *,
-        updateFlag1: builtins.bool | None = ...,
-        infoNum2: builtins.int | None = ...,
+        updateFlag: builtins.bool | None = ...,
+        infoNum: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["infoNum2", b"infoNum2", "updateFlag1", b"updateFlag1"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["infoNum2", b"infoNum2", "updateFlag1", b"updateFlag1"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["infoNum", b"infoNum", "updateFlag", b"updateFlag"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["infoNum", b"infoNum", "updateFlag", b"updateFlag"]) -> None: ...
 
 global___WorkReportUpdateAck = WorkReportUpdateAck
 
@@ -2505,18 +2521,18 @@ global___WorkReportUpdateAck = WorkReportUpdateAck
 class WorkReportCmdData(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    SUBCMD1_FIELD_NUMBER: builtins.int
-    GETINFONUM2_FIELD_NUMBER: builtins.int
-    subCmd1: builtins.int
-    getInfoNum2: builtins.int
+    SUBCMD_FIELD_NUMBER: builtins.int
+    GETINFONUM_FIELD_NUMBER: builtins.int
+    subCmd: builtins.int
+    getInfoNum: builtins.int
     def __init__(
         self,
         *,
-        subCmd1: builtins.int | None = ...,
-        getInfoNum2: builtins.int | None = ...,
+        subCmd: builtins.int | None = ...,
+        getInfoNum: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["getInfoNum2", b"getInfoNum2", "subCmd1", b"subCmd1"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["getInfoNum2", b"getInfoNum2", "subCmd1", b"subCmd1"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["getInfoNum", b"getInfoNum", "subCmd", b"subCmd"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["getInfoNum", b"getInfoNum", "subCmd", b"subCmd"]) -> None: ...
 
 global___WorkReportCmdData = WorkReportCmdData
 
@@ -2524,45 +2540,45 @@ global___WorkReportCmdData = WorkReportCmdData
 class WorkReportInfoAck(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    INTERRUPTFLAG1_FIELD_NUMBER: builtins.int
-    STARTWORKTIME2_FIELD_NUMBER: builtins.int
-    ENDWORKTIME3_FIELD_NUMBER: builtins.int
-    WORKTIMEUSED4_FIELD_NUMBER: builtins.int
-    WORKARES5_FIELD_NUMBER: builtins.int
-    WORKPROGRESS6_FIELD_NUMBER: builtins.int
-    HEIGHTOFKNIFE7_FIELD_NUMBER: builtins.int
-    WORKTYPE8_FIELD_NUMBER: builtins.int
-    WORKRESULT9_FIELD_NUMBER: builtins.int
-    TOTALACKNUM10_FIELD_NUMBER: builtins.int
-    CURRENTACKNUM11_FIELD_NUMBER: builtins.int
-    interruptFlag1: builtins.bool
-    startWorkTime2: builtins.int
-    endWorkTime3: builtins.int
-    workTimeUsed4: builtins.int
-    workAres5: builtins.float
-    workProgress6: builtins.int
-    heightOfKnife7: builtins.int
-    workType8: builtins.int
-    workResult9: builtins.int
-    totalAckNum10: builtins.int
-    currentAckNum11: builtins.int
+    INTERRUPTFLAG_FIELD_NUMBER: builtins.int
+    STARTWORKTIME_FIELD_NUMBER: builtins.int
+    ENDWORKTIME_FIELD_NUMBER: builtins.int
+    WORKTIMEUSED_FIELD_NUMBER: builtins.int
+    WORKARES_FIELD_NUMBER: builtins.int
+    WORKPROGRESS_FIELD_NUMBER: builtins.int
+    HEIGHTOFKNIFE_FIELD_NUMBER: builtins.int
+    WORKTYPE_FIELD_NUMBER: builtins.int
+    WORKRESULT_FIELD_NUMBER: builtins.int
+    TOTALACKNUM_FIELD_NUMBER: builtins.int
+    CURRENTACKNUM_FIELD_NUMBER: builtins.int
+    interruptFlag: builtins.bool
+    startWorkTime: builtins.int
+    endWorkTime: builtins.int
+    workTimeUsed: builtins.int
+    workAres: builtins.float
+    workProgress: builtins.int
+    heightOfKnife: builtins.int
+    workType: builtins.int
+    workResult: builtins.int
+    totalAckNum: builtins.int
+    currentAckNum: builtins.int
     def __init__(
         self,
         *,
-        interruptFlag1: builtins.bool | None = ...,
-        startWorkTime2: builtins.int | None = ...,
-        endWorkTime3: builtins.int | None = ...,
-        workTimeUsed4: builtins.int | None = ...,
-        workAres5: builtins.float | None = ...,
-        workProgress6: builtins.int | None = ...,
-        heightOfKnife7: builtins.int | None = ...,
-        workType8: builtins.int | None = ...,
-        workResult9: builtins.int | None = ...,
-        totalAckNum10: builtins.int | None = ...,
-        currentAckNum11: builtins.int | None = ...,
+        interruptFlag: builtins.bool | None = ...,
+        startWorkTime: builtins.int | None = ...,
+        endWorkTime: builtins.int | None = ...,
+        workTimeUsed: builtins.int | None = ...,
+        workAres: builtins.float | None = ...,
+        workProgress: builtins.int | None = ...,
+        heightOfKnife: builtins.int | None = ...,
+        workType: builtins.int | None = ...,
+        workResult: builtins.int | None = ...,
+        totalAckNum: builtins.int | None = ...,
+        currentAckNum: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["currentAckNum11", b"currentAckNum11", "endWorkTime3", b"endWorkTime3", "heightOfKnife7", b"heightOfKnife7", "interruptFlag1", b"interruptFlag1", "startWorkTime2", b"startWorkTime2", "totalAckNum10", b"totalAckNum10", "workAres5", b"workAres5", "workProgress6", b"workProgress6", "workResult9", b"workResult9", "workTimeUsed4", b"workTimeUsed4", "workType8", b"workType8"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["currentAckNum11", b"currentAckNum11", "endWorkTime3", b"endWorkTime3", "heightOfKnife7", b"heightOfKnife7", "interruptFlag1", b"interruptFlag1", "startWorkTime2", b"startWorkTime2", "totalAckNum10", b"totalAckNum10", "workAres5", b"workAres5", "workProgress6", b"workProgress6", "workResult9", b"workResult9", "workTimeUsed4", b"workTimeUsed4", "workType8", b"workType8"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["currentAckNum", b"currentAckNum", "endWorkTime", b"endWorkTime", "heightOfKnife", b"heightOfKnife", "interruptFlag", b"interruptFlag", "startWorkTime", b"startWorkTime", "totalAckNum", b"totalAckNum", "workAres", b"workAres", "workProgress", b"workProgress", "workResult", b"workResult", "workTimeUsed", b"workTimeUsed", "workType", b"workType"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["currentAckNum", b"currentAckNum", "endWorkTime", b"endWorkTime", "heightOfKnife", b"heightOfKnife", "interruptFlag", b"interruptFlag", "startWorkTime", b"startWorkTime", "totalAckNum", b"totalAckNum", "workAres", b"workAres", "workProgress", b"workProgress", "workResult", b"workResult", "workTimeUsed", b"workTimeUsed", "workType", b"workType"]) -> None: ...
 
 global___WorkReportInfoAck = WorkReportInfoAck
 
@@ -2570,32 +2586,33 @@ global___WorkReportInfoAck = WorkReportInfoAck
 class MctlDriver(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    SUBDRVMSG1_FIELD_NUMBER: builtins.int
-    SUBDRVMSG2_FIELD_NUMBER: builtins.int
-    SUBDRVMSG3_FIELD_NUMBER: builtins.int
-    SUBDRVMSG4_FIELD_NUMBER: builtins.int
-    SUBDRVMSG5_FIELD_NUMBER: builtins.int
+    TODEV_DEVMOTIONCTRL_FIELD_NUMBER: builtins.int
+    TODEV_KNIFEHEIGHTSET_FIELD_NUMBER: builtins.int
+    BIDIRE_SPEEDREADSET_FIELD_NUMBER: builtins.int
+    BIDIRE_KNIFEHEIGHTREPORT_FIELD_NUMBER: builtins.int
+    TOAPP_KNIFESTATUS_FIELD_NUMBER: builtins.int
     @property
-    def subDrvMsg1(self) -> global___DrvMotionCtrl: ...
+    def toDev_devMotionCtrl(self) -> global___DrvMotionCtrl: ...
     @property
-    def subDrvMsg2(self) -> global___DrvKnifeHeight: ...
+    def toDev_knifeHeightSet(self) -> global___DrvKnifeHeight: ...
     @property
-    def subDrvMsg3(self) -> global___DrvSrSpeed: ...
+    def bidire_speedReadSet(self) -> global___DrvSrSpeed: ...
     @property
-    def subDrvMsg4(self) -> global___DrvKnifeHeight: ...
+    def bidire_knifeHeightReport(self) -> global___DrvKnifeHeight: ...
     @property
-    def subDrvMsg5(self) -> global___DrvKnifeStatus: ...
+    def toApp_knifeStatus(self) -> global___DrvKnifeStatus: ...
     def __init__(
         self,
         *,
-        subDrvMsg1: global___DrvMotionCtrl | None = ...,
-        subDrvMsg2: global___DrvKnifeHeight | None = ...,
-        subDrvMsg3: global___DrvSrSpeed | None = ...,
-        subDrvMsg4: global___DrvKnifeHeight | None = ...,
-        subDrvMsg5: global___DrvKnifeStatus | None = ...,
+        toDev_devMotionCtrl: global___DrvMotionCtrl | None = ...,
+        toDev_knifeHeightSet: global___DrvKnifeHeight | None = ...,
+        bidire_speedReadSet: global___DrvSrSpeed | None = ...,
+        bidire_knifeHeightReport: global___DrvKnifeHeight | None = ...,
+        toApp_knifeStatus: global___DrvKnifeStatus | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["subDrvMsg1", b"subDrvMsg1", "subDrvMsg2", b"subDrvMsg2", "subDrvMsg3", b"subDrvMsg3", "subDrvMsg4", b"subDrvMsg4", "subDrvMsg5", b"subDrvMsg5"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["subDrvMsg1", b"subDrvMsg1", "subDrvMsg2", b"subDrvMsg2", "subDrvMsg3", b"subDrvMsg3", "subDrvMsg4", b"subDrvMsg4", "subDrvMsg5", b"subDrvMsg5"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["bidire_knifeHeightReport", b"bidire_knifeHeightReport", "bidire_speedReadSet", b"bidire_speedReadSet", "subDrvMsg", b"subDrvMsg", "toApp_knifeStatus", b"toApp_knifeStatus", "toDev_devMotionCtrl", b"toDev_devMotionCtrl", "toDev_knifeHeightSet", b"toDev_knifeHeightSet"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["bidire_knifeHeightReport", b"bidire_knifeHeightReport", "bidire_speedReadSet", b"bidire_speedReadSet", "subDrvMsg", b"subDrvMsg", "toApp_knifeStatus", b"toApp_knifeStatus", "toDev_devMotionCtrl", b"toDev_devMotionCtrl", "toDev_knifeHeightSet", b"toDev_knifeHeightSet"]) -> None: ...
+    def WhichOneof(self, oneof_group: typing_extensions.Literal["subDrvMsg", b"subDrvMsg"]) -> typing_extensions.Literal["toDev_devMotionCtrl", "toDev_knifeHeightSet", "bidire_speedReadSet", "bidire_knifeHeightReport", "toApp_knifeStatus"] | None: ...
 
 global___MctlDriver = MctlDriver
 
@@ -2603,18 +2620,18 @@ global___MctlDriver = MctlDriver
 class DrvMotionCtrl(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    SETLINEARSPEED1_FIELD_NUMBER: builtins.int
-    SETANGULARSPEED2_FIELD_NUMBER: builtins.int
-    setLinearSpeed1: builtins.int
-    setAngularSpeed2: builtins.int
+    SETLINEARSPEED_FIELD_NUMBER: builtins.int
+    SETANGULARSPEED_FIELD_NUMBER: builtins.int
+    setLinearSpeed: builtins.int
+    setAngularSpeed: builtins.int
     def __init__(
         self,
         *,
-        setLinearSpeed1: builtins.int | None = ...,
-        setAngularSpeed2: builtins.int | None = ...,
+        setLinearSpeed: builtins.int | None = ...,
+        setAngularSpeed: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["setAngularSpeed2", b"setAngularSpeed2", "setLinearSpeed1", b"setLinearSpeed1"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["setAngularSpeed2", b"setAngularSpeed2", "setLinearSpeed1", b"setLinearSpeed1"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["setAngularSpeed", b"setAngularSpeed", "setLinearSpeed", b"setLinearSpeed"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["setAngularSpeed", b"setAngularSpeed", "setLinearSpeed", b"setLinearSpeed"]) -> None: ...
 
 global___DrvMotionCtrl = DrvMotionCtrl
 
@@ -2622,15 +2639,15 @@ global___DrvMotionCtrl = DrvMotionCtrl
 class DrvKnifeHeight(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    KNIFEHEIGHT1_FIELD_NUMBER: builtins.int
-    knifeHeight1: builtins.int
+    KNIFEHEIGHT_FIELD_NUMBER: builtins.int
+    knifeHeight: builtins.int
     def __init__(
         self,
         *,
-        knifeHeight1: builtins.int | None = ...,
+        knifeHeight: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["knifeHeight1", b"knifeHeight1"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["knifeHeight1", b"knifeHeight1"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["knifeHeight", b"knifeHeight"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["knifeHeight", b"knifeHeight"]) -> None: ...
 
 global___DrvKnifeHeight = DrvKnifeHeight
 
@@ -2638,18 +2655,18 @@ global___DrvKnifeHeight = DrvKnifeHeight
 class DrvSrSpeed(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    RW1_FIELD_NUMBER: builtins.int
-    SPEED2_FIELD_NUMBER: builtins.int
-    rw1: builtins.int
-    speed2: builtins.float
+    RW_FIELD_NUMBER: builtins.int
+    SPEED_FIELD_NUMBER: builtins.int
+    rw: builtins.int
+    speed: builtins.float
     def __init__(
         self,
         *,
-        rw1: builtins.int | None = ...,
-        speed2: builtins.float | None = ...,
+        rw: builtins.int | None = ...,
+        speed: builtins.float | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["rw1", b"rw1", "speed2", b"speed2"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["rw1", b"rw1", "speed2", b"speed2"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["rw", b"rw", "speed", b"speed"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["rw", b"rw", "speed", b"speed"]) -> None: ...
 
 global___DrvSrSpeed = DrvSrSpeed
 
@@ -2657,15 +2674,15 @@ global___DrvSrSpeed = DrvSrSpeed
 class DrvKnifeStatus(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
-    KNIFESTATUS1_FIELD_NUMBER: builtins.int
-    knifeStatus1: builtins.int
+    KNIFESTATUS_FIELD_NUMBER: builtins.int
+    knifeStatus: builtins.int
     def __init__(
         self,
         *,
-        knifeStatus1: builtins.int | None = ...,
+        knifeStatus: builtins.int | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["knifeStatus1", b"knifeStatus1"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["knifeStatus1", b"knifeStatus1"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["knifeStatus", b"knifeStatus"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["knifeStatus", b"knifeStatus"]) -> None: ...
 
 global___DrvKnifeStatus = DrvKnifeStatus
 

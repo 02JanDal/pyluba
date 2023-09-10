@@ -706,7 +706,7 @@ if __name__ == "__main__":
                 f.write(f"message {'Root' if k == 'root' else k} " + "{\n")
                 for v_k, (v_type, v_name) in v.items():
                     if v_type.startswith("packed <"):
-                        f.write(f"    repeated {v_type.replace('packed <', '').replace('>', '')} {v_name}{v_k} = {v_k};\n")
+                        f.write(f"    repeated {v_type.replace('packed <', '').replace('>', '')} {v_name} = {v_k};\n")
                     else:
-                        f.write(f"    optional {v_type.replace('enum ', '')} {v_name}{v_k} = {v_k};\n")
+                        f.write(f"    optional {v_type.replace('enum ', '')} {v_name} = {v_k};\n")
                 f.write("}\n\n")

@@ -1,5 +1,5 @@
 from base64 import b64decode
-from typing import Literal
+from typing import Literal, Any, Union
 
 from pydantic import BaseModel
 
@@ -21,19 +21,25 @@ class Base64EncodedProtobuf:
         return data
 
 
-class Value(BaseModel):
+class DeviceProtobufMsgEventValue(BaseModel):
     content: Base64EncodedProtobuf
 
 
-class Params(BaseModel):
-    identifier: Literal["device_protobuf_msg_event"]
+class DeviceWarningEventValue(BaseModel):
+    # TODO: enum for error codes
+    # (see resources/res/values-en-rUS/strings.xml in APK)
+    code: int
+
+
+class GeneralParams(BaseModel):
+    identifier: str
     groupIdList: list[str]
     groupId: str
     categoryKey: Literal["LawnMower"]
     batchId: str
     gmtCreate: int
     productKey: str
-    type: Literal["info"]
+    type: str
     deviceName: str
     iotId: str
     checkLevel: int
@@ -43,11 +49,23 @@ class Params(BaseModel):
     thingType: Literal["DEVICE"]
     time: int
     tenantInstanceId: str
-    value: Value
+    value: Any
+
+
+class DeviceProtobufMsgEventParams(GeneralParams):
+    identifier: Literal["device_protobuf_msg_event"]
+    type: Literal["info"]
+    value: DeviceProtobufMsgEventValue
+
+
+class DeviceWarningEventParams(GeneralParams):
+    identifier: Literal["device_warning_event"]
+    type: Literal["alert"]
+    value: DeviceWarningEventValue
 
 
 class ThingEventMessage(BaseModel):
     method: Literal["thing.events"]
     id: str
-    params: Params
+    params: Union[DeviceProtobufMsgEventParams, DeviceWarningEventParams]
     version: Literal["1.0"]
