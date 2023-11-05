@@ -1,7 +1,3 @@
-# pyluba
+# NOTICE OF ARCHIVAL
 
-This is (will be) a Python package to talk to your [Mammotion Luba robotic lawnmower](https://mammotion.com/en-eu).
-
-This is currently very early and very much work-in-progress, please contact me by opening an issue if you'd like to help!
-
-Most information is currently in the [Wiki](https://github.com/02JanDal/pyluba/wiki).
+This repo has been marked as archived, as the work done here has been merged and will continue over here: https://github.com/mikey0000/pyluba
